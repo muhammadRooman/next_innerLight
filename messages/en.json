@@ -1,14 +1,15 @@
 {
   "NavbarLinks": {
-    "home": "Home",
+    "landing_page": "Home",
     "about": "About us",
-    "courses": "Courses",
+    "contact": "Contact US",
     "benefits": "Benefits",
-    "subscription": "Subscription",
+    "events": "Events",
     "blog": "Blog",
     "JoinNow": "Join Now",
     "en": "En",
-    "ar": "AR"
+    "ar": "AR",
+    "copyright_reserved_Innerlight":"Copyright Reserved Innerlight"
   },
   "HeroBanner": {
     "title": "BEGIN YOUR JOURNEY TO",
@@ -111,5 +112,56 @@
   },
   "Download":{
     "download":"Download The App And Transform Your Journey Today!"
+=======
+  "BenefitsOfHolistic":{
+    "discoverThe":"DISCOVER THE",
+    "benefitsOfHolisticWellness":"Benefits Of Holistic Wellness",
+    "personalization":"Personalization",
+    "get_personalized_attention_along_with":"Get personalized attention along with recommendations for the elevation of your healing experience.",
+    "community":"Community",
+    "develop_a_connection_with_a_supportive_network":"Develop a connection with a supportive network of like-minded individuals on similar wellness journeys.",
+    "accessibility":"Accessibility",
+    "enjoy_high_quality_content_plus_expert_guidance":"Enjoy high-quality content plus expert guidance from the ease of your living space.",
+    "flexibility":"Flexibility",
+    "select_from_a_diverse_range_of_options.":"Select from a diverse range of options tailored to your goals and lifestyle."
+  },
+  "Blog":{
+    "deepen_your_practice":"DEEPEN YOUR PRACTICE",
+    "blogs_and_upcoming_workshops":"Blogs And Upcoming Workshops",
+    "the_mind_body_connection_how_mental_health":"The Mind-Body Connection: How Mental Health Affects Physical Well-Being",
+    "discuss_how_emotional_and_psychological":"Discuss how emotional and psychological health can impact physical health and recovery. Discuss how emotional and psychological health can impact physical health and recovery."
+  },
+  "SubscribeUs":{
+    "subscribeUs":"subscribeUs",
+    "enter_email_address":"Enter Email Address",
+    "follow_us":"Follow Us"
+  },
+  "UpComingWorkShop":{
+  "discuss_how_support_groups":"Discuss how support groups and community connections can enhance the healing process.",
+  "discover_strategies_to_improve":"Discover strategies to improve mental wellness through mindfulness techniques.",
+  "learn_about_the_benefits_of_active":"Learn about the benefits of active listening and empathy in community settings.",
+  "upcoming_workshop":"Upcoming Workshop"
+},
+"BlogCard":{
+  "self_Care_practices_for_daily_healing":"Self-Care Practices for Daily Healing",
+  "share_practical_self_care_routines":"Share practical self-care routines, including journaling, meditation, and grounding exercises. Share practical self-care routines."
+},
+"OurClient":{
+  "reviews":"REVIEWS",
+  "what_our_clients_say_about_us":"What Our Clients Say About Us?",
+  "years_old":"Years Old",
+  "mike_Jonson":"Mike Jonson",
+  "sarah_wilson":"Sarah Wilson",
+  "john_doe":"John Doe",
+  "lorem": "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum."
+},
+"Commitments":{
+  "innerLight":"INNER LIGHT",
+  "commitment_to_your_spiritual_growth":"Commitment To Your Spiritual Growth",
+  "we_are_dedicated_to_guiding":"We are dedicated to guiding individuals toward inner peace, wellness, and spiritual growth through holistic practices.",
+  "our_skilled_healers_and_teachers":"Our skilled healers and teachers bring years of expertise, offering guidance in modalities such as Reiki, sound healing, and more.",
+  "we_believe_in_the_power_of_tailored":"We believe in the power of tailored support, meeting each person where they are on their unique journey.",
+  "We_foster_a_welcoming":"We foster a welcoming environment where individuals can connect, learn, and grow together in a supportive space.",
+  "our_academy_offers_tools_and_guidance":"Our academy offers tools and guidance to create lasting change, empowering you to live with greater clarity, peace, and purpose."
   }
 }

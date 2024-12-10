@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useTranslations } from "next-intl";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,42 +12,40 @@ import "swiper/css/navigation";
 // Import required Swiper modules
 import { Pagination, Navigation } from "swiper/modules";
 
-// Client Data Array
+export default function OurClients() {
+  const t = useTranslations("OurClient");
+  // Client Data Array
 const clients = [
   {
-    name: "Mike Jonson",
+    name: t("mike_Jonson"),
     country: "USA",
     age: 24,
     image: "/client.png",
-    review:
-      "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum.",
+    review: t("lorem"),
   },
   {
-    name: "Sarah Wilson",
+    name: t("sarah_wilson"),
     country: "UK",
     age: 28,
     image: "/client.png",
-    review:
-      "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum.",
+    review: t("lorem"),
   },
   {
-    name: "John Doe",
+    name: t("john_doe"),
     country: "Canada",
     age: 30,
     image: "/client.png",
-    review:
-      "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum.",
+    review: t("lorem"),
   },
 ];
 
-export default function OurClients() {
   return (
     <section className="bg-SubscriptionPlan-bg lg:pt-10 lg:pb-17 py-10 bg-cover bg-center">
       <div className="2xl:container xl:container lg:container mx-auto px-4">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h5 className="text-info-color 2xl:text-2xl  font-black">REVIEWS</h5>
-          <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold">What Our Clients Say About Us?</h2>
+          <h5 className="text-info-color 2xl:text-2xl  font-black">{t("reviews")}</h5>
+          <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold">{t("what_our_clients_say_about_us")}</h2>
         </div>
 
         {/* Swiper Slider */}
@@ -84,7 +82,7 @@ export default function OurClients() {
                     <div className="mb-5">
                       <h4 className="text-2xl font-medium">{client.name}</h4>
                       <small className="text-info-color text-lg">
-                        {client.country}, {client.age} Years Old
+                        {client.country}, {client.age} {t("years_old")}
                       </small>
                     </div>
                     <p className="text-lg">{client.review}</p>

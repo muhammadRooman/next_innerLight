@@ -1,14 +1,15 @@
 {
   "NavbarLinks": {
-    "home": "الرئيسية", 
+    "landing_page": "الرئيسية", 
     "about": "معلومات عنا",
-    "courses": "الدورات",
+    "contact": "اتصل بنا",
     "benefits": "فوائد",
-    "subscription": "الاشتراك",
+    "events": "الأحداث",
     "blog": "مدونة",
     "JoinNow": "انضم الآن",
     "en": "أون",
-    "ar": "ع"
+    "ar": "ع",
+    "copyright_reserved_Innerlight":"حقوق الطبع والنشر محفوظة إنرلايت"
  
   },
   "HeroBanner": {
@@ -113,4 +114,58 @@
   "Download":{
     "download":"قم بتنزيل التطبيق وغير رحلتك اليوم!"
   }
+    "discoverThe":"اكتشف",
+    "benefitsOfHolisticWellness":"فوائد العافية الشاملة",
+    "personalization":"التخصيص",
+    "get_personalized_attention_along_with":"احصل على اهتمام شخصي بالإضافة إلى توصيات للارتقاء بتجربة الشفاء الخاصة بك.",
+     "community":"مجتمع",
+     "develop_a_connection_with_a_supportive_network":"قم بتطوير اتصال مع شبكة داعمة من الأفراد ذوي التفكير المماثل في رحلات عافية مماثلة.",
+     "accessibility":"إمكانية الوصول",
+     "enjoy_high_quality_content_plus_expert_guidance":"استمتع بمحتوى عالي الجودة بالإضافة إلى إرشادات الخبراء من مساحة المعيشة الخاصة بك.",
+     "flexibility":"المرونة",
+     "select_from_a_diverse_range_of_options":"اختر من بين مجموعة متنوعة من الخيارات المصممة خصيصًا لأهدافك وأسلوب حياتك."
+  },
+  "Blog":{
+    "deepen_your_practice":"قم بتعميق ممارستك",
+    "blogs_and_upcoming_workshops":"المدونات وورش العمل القادمة",
+    "the_mind_body_connection_how_mental_health":"العلاقة بين العقل والجسم: كيف تؤثر الصحة العقلية على الصحة البدنية",
+    "discuss_how_emotional_and_psychological":"ناقش كيف يمكن أن تؤثر الصحة العاطفية والنفسية على الصحة البدنية والتعافي. ناقش كيف يمكن أن تؤثر الصحة العاطفية والنفسية على الصحة البدنية والتعافي."
+  },
+  "SubscribeUs":{
+    "subscribeUs":"اشترك بنا",
+    "enter_email_address":"أدخل عنوان البريد الإلكتروني",
+    "follow_us":"تابعنا"
+  },
+  "UpComingWorkShop":{
+  "discuss_how_support_groups":"ناقش كيف يمكن لمجموعات الدعم والاتصالات المجتمعية أن تعزز عملية الشفاء.",
+  "discover_strategies_to_improve":"اكتشف استراتيجيات لتحسين الصحة العقلية من خلال تقنيات اليقظة الذهنية.",
+  "learn_about_the_benefits_of_active":"تعرف على فوائد الاستماع النشط والتعاطف في بيئات المجتمع.",
+  "upcoming_workshop":"ورشة العمل القادمة"
+
+},
+"BlogCard":{
+  "self_Care_practices_for_daily_healing":"ممارسات الرعاية الذاتية للشفاء اليومي",
+  "share_practical_self_care_routines":"شارك إجراءات الرعاية الذاتية العملية، بما في ذلك كتابة اليوميات والتأمل وتمارين التأريض. شارك إجراءات الرعاية الذاتية العملية."
+},
+"OurClient":{
+  "reviews":"التعليقات",
+  "what_our_clients_say_about_us":"ماذا يقول عملاؤنا عنا؟",
+  "years_old":"سنوات من العمر",
+  "mike_Jonson":"مايك جونسون",
+  "sarah_wilson":"سارة ويلسون",
+  "lorem": "نص مزيف وفقًا لمراجعات محترفي اللغة"
+},
+"FooterBase":{
+"copyright_reserved_Innerlight":"حقوق الطبع والنشر محفوظة إنرلايت "
+},
+
+"Commitments":{
+"innerLight":"الضوء الداخلي",
+"commitment_to_your_spiritual_growth":"الالتزام بنموك الروحي",
+"we_are_dedicated_to_guiding":"نحن ملتزمون بتوجيه الأفراد نحو السلام الداخلي والعافية والنمو الروحي من خلال الممارسات الشاملة.",
+"our_skilled_healers_and_teachers":"يتمتع المعالجون والمعلمون المهرة لدينا بسنوات من الخبرة، ويقدمون التوجيه في طرق مثل الريكي والشفاء الصوتي والمزيد.",
+"we_believe_in_the_power_of_tailored":"نحن نؤمن بقوة الدعم المخصص، حيث نلتقي بكل شخص أينما كان في رحلته الفريدة.",
+ "We_foster_a_welcoming":"نحن نعزز بيئة ترحيبية حيث يمكن للأفراد التواصل والتعلم والنمو معًا في مساحة داعمة.",
+ "our_academy_offers_tools_and_guidance":"تقدم أكاديميتنا الأدوات والإرشادات اللازمة لإحداث تغيير دائم، وتمكينك من العيش بمزيد من الوضوح والسلام والهدف."
+}
 }
