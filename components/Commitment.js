@@ -2,27 +2,29 @@
  
 import Image from 'next/image';
 import Link from "next/link"; 
+import { useTranslations } from "next-intl";
 
 export default function Commitment() { 
+    const t = useTranslations("Commitments");
 
     return (
         <>
            <section className="commitment-wrap bg-gray-light lg:pt-[102px] xl:pb-[110px] lg:pb-[80px] pt-[60px] pb-[60px]">
                 <div className="2xl:container xl:container lg:container mx-auto px-5">
                    <div className='heading-box text-center lg:mb-16 mb-7'>
-                      <h5 className='text-info-color 2xl:text-2xl font-black  '>INNER LIGHT</h5>
-                      <h2 className='xl:text-40 lg:text-[30px]  text-[25px]  font-bold'>Commitment To Your Spiritual Growth</h2>
+                      <h5 className='text-info-color 2xl:text-2xl font-black  '>{t("innerLight")}</h5>
+                      <h2 className='xl:text-40 lg:text-[30px]  text-[25px]  font-bold'>{t("commitment_to_your_spiritual_growth")}</h2>
                    </div>
                    <div class="lg:grid lg:grid-cols-4  items-center ">
                         <div className=' col-span-1  '>
                             <div className='commitment-content text-center lg:mb-36 mb-4 lg:max-w-[395px] max-w-full'>
-                               <p className='xl:text-lg font-normal'>We are dedicated to guiding individuals toward inner peace, wellness, and spiritual growth through holistic practices.</p>
+                               <p className='xl:text-lg font-normal'></p>
                             </div>
                             <div className='commitment-content text-center lg:mb-36 mb-4 lg:max-w-[395px] max-w-full'>
-                               <p className='xl:text-lg font-normal'>Our academy blends meditation, healing, and self-care practices to nurture balance in body, mind, and spirit.</p>
+                               <p className='xl:text-lg font-normal'>{t("we_are_dedicated_to_guiding")}</p>
                             </div>
                             <div className='commitment-content text-center lg:max-w-[395px] max-w-full mb-4'>
-                               <p className='xl:text-lg font-normal'>Our skilled healers and teachers bring years of expertise, offering guidance in modalities such as Reiki, sound healing, and more.</p>
+                               <p className='xl:text-lg font-normal'>{t("our_skilled_healers_and_teachers")}</p>
                             </div>
                         </div> 
                         <div className='col-span-2  '>
@@ -32,13 +34,13 @@ export default function Commitment() {
                         </div>
                        <div className=' col-span-1 '>
                             <div className='commitment-content text-center lg:mb-36 lg:max-w-[395px] max-w-full mb-4'>
-                                <p className='xl:text-lg font-normal'>We believe in the power of tailored support, meeting each person where they are on their unique journey.</p>
+                                <p className='xl:text-lg font-normal'>{t("we_believe_in_the_power_of_tailored")}</p>
                             </div>
                             <div className='commitment-content text-center lg:mb-36 lg:max-w-[395px] max-w-full mb-4'>
-                                <p className='xl:text-lg font-normal'>We foster a welcoming environment where individuals can connect, learn, and grow together in a supportive space.</p>
+                                <p className='xl:text-lg font-normal'>{t("We_foster_a_welcoming")}</p>
                             </div>
                             <div className='commitment-content text-center lg:max-w-[395px] max-w-full mb-4'>
-                                <p className='xl:text-lg font-normal'>Our academy offers tools and guidance to create lasting change, empowering you to live with greater clarity, peace, and purpose.</p>
+                                <p className='xl:text-lg font-normal'>{t("our_academy_offers_tools_and_guidance")}</p>
                             </div>
                         </div>
                     </div> 

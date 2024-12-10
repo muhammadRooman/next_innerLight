@@ -1,29 +1,31 @@
 import Image from 'next/image';
+import { useTranslations } from "next-intl";
 
 export default function UpcomingWorkshop() {
+  const t = useTranslations("UpComingWorkShop");
   // Array of workshop data
   const workshops = [
     {
       id: 1,
       imgSrc: "/MediaImg1.png",
-      description: "Discuss how support groups and community connections can enhance the healing process.",
+      description: t("discuss_how_support_groups"),
     },
     {
       id: 2,
       imgSrc: "/MediaImg2.png",
-      description: "Discover strategies to improve mental wellness through mindfulness techniques.",
+      description: t("discover_strategies_to_improve"),
     },
     {
       id: 3,
       imgSrc: "/MediaImg3.png",
-      description: "Learn about the benefits of active listening and empathy in community settings.",
+      description: t("learn_about_the_benefits_of_active"),
     },
   ];
 
   return (
     <section className="SubscribeUs-wrap mt-6 lg:mb-0 mb-3">
       <div className="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-9 lg:px-8 p-5">
-        <h1 className="2xl:text-2xl text-xl font-bold text-center mb-6">Upcoming Workshop</h1> 
+        <h1 className="2xl:text-2xl text-xl font-bold text-center mb-6">{t("upcoming_workshop")}</h1> 
         {workshops.map((workshop) => (
           <div 
             key={workshop.id} 

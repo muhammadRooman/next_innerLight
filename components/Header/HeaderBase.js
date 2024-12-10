@@ -49,7 +49,7 @@ const Header = ({ locale }) => {
               <Image src="/close.svg" alt="Close" width={30} height={30} />
             </button> 
             {/* Menu Links */}
-              {["home", "about", "courses", "benefits", "subscription", "blog"].map(
+              {["home", "about",  "benefits", "contact", "events"].map(
                 (link, index) => (
                   <Link
                     key={index}
