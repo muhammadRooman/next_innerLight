@@ -1,4 +1,4 @@
-import Header from "@/components/Header/Navbar";
+import Header from "@/components/Header/HeaderBase";
 import Footer from "@/components/Footer/FooterBase";
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";

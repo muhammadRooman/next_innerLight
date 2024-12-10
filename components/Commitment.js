@@ -7,9 +7,9 @@ export default function Commitment() {
 
     return (
         <>
-           <section className="commitment-wrap bg-gray-light lg:pt-[132px] lg:pb-[107px] pt-[60px] pb-[60px]">
+           <section className="commitment-wrap bg-gray-light lg:pt-[102px] xl:pb-[110px] lg:pb-[80px] pt-[60px] pb-[60px]">
                 <div className="2xl:container xl:container lg:container mx-auto px-5">
-                   <div className='heading-box text-center lg:mb-24 mb-7'>
+                   <div className='heading-box text-center lg:mb-16 mb-7'>
                       <h5 className='text-info-color 2xl:text-2xl font-black  '>INNER LIGHT</h5>
                       <h2 className='xl:text-40 lg:text-[30px]  text-[25px]  font-bold'>Commitment To Your Spiritual Growth</h2>
                    </div>
@@ -26,7 +26,7 @@ export default function Commitment() {
                             </div>
                         </div> 
                         <div className='col-span-2  '>
-                            <div className='relative xl:max-w-[566px] lg:max-w-[440px] max-w-full lg:min-h-[615px] min-h-[515px] shadow-shadow-color bg-white p-2.5 mx-auto rounded-10 my-7'>
+                            <div className='relative xl:max-w-[566px] lg:max-w-[440px] max-w-full lg:min-h-[715px] min-h-[450px] shadow-shadow-color bg-white p-2.5 mx-auto rounded-10 my-7'>
                                 <Image src="/CommitmentImg.png" alt="logo white" layout="fill"  className="rounded-30 object-cover p-2.5" />
                             </div> 
                         </div>

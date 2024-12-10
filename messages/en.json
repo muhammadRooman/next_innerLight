@@ -10,13 +10,35 @@
     "en": "En",
     "ar": "AR"
   },
-  "HomePage": {
-    "title": "Landing page"
+  "HeroBanner": {
+    "title": "BEGIN YOUR JOURNEY TO",
+    "wellnessAlt": "Wellness",
+    "description": "Achieve inner harmony through a balanced approach to wellness, blending physical, mental, and spiritual practices. Enhance your meditation and healing techniques with guidance from experienced practitioners.",
+    "facebookAlt": "Facebook",
+    "twitterAlt": "Twitter",
+    "linkedinAlt": "LinkedIn",
+    "playSolidAlt": "Play Button"
+  },
+  "Commitment": {
+    "headingSmall": "INNER LIGHT",
+    "headingLarge": "Commitment To Your Spiritual Growth",
+    "leftContent": "We are dedicated to guiding individuals toward inner peace, wellness, and spiritual growth through holistic practices.",
+    "rightContent":  "We believe in the power of tailored support, meeting each person where they are on their unique journey.",
+    "imageAlt": "Commitment to your spiritual growth image"
+  }, 
+  "DownloadOurApp": {
+    "headingSmall": "INNER LIGHT",
+    "downloadOurApp": "Download Our App",
+    "connectWithExperts": "Connect with compassionate experts dedicated to nurturing your growth and well-being.",
+    "personalizedSupport": "Experience personalized support on your spiritual journey through tailored meditation sessions and one-on-one consultations with skilled practitioners."
   },
   "AboutPage": {
     "title": "About"
   },
   "ProfilePage": {
     "title": "Profile"
+  },
+  "BenefitsOfHolistic":{
+    "discoverThe":"DISCOVER THE"
   }
 }

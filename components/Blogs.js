@@ -6,9 +6,9 @@ import BlogsCard from "@/components/BlogsCard";
 export default function Blogs() {
   return (
     <>
-     <section className='blog-wrap bg-gray-light xl:py-[107px] py-[30px] '>
-        <div className="2xl:container xl:container lg:container px-5 mx-auto   pt-7 pb-0">
-          <div className="heading-box text-left mb-9    ">
+     <section className='blog-wrap bg-gray-light'>
+        <div className="2xl:container xl:container lg:container px-5 mx-auto lg:py-12 py-7">
+          <div className="heading-box lg:text-left text-center mb-9    ">
             <h5 className="text-info-color 2xl:text-2xl font-black">DEEPEN YOUR PRACTICE</h5>
             <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold  ">Blogs And Upcoming Workshops</h2> 
           </div>
