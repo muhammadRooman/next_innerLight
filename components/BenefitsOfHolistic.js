@@ -7,26 +7,26 @@ export default function BenefitsOfHolistic() {
         {
             id: 1,
             image: "/benefitsImg1.png",
-            title:  t("personalization"),
-            description: t("get_personalized_attention_along_with")
+            title: t("personalization"),
+            description:t("para_1")
         },
         {
             id: 2,
             image: "/benefitsImg2.png",
             title: t("community"),
-            description: t("develop_a_connection_with_a_supportive_network")
+            description: t("para_2")
         },
         {
             id: 3,
             image: "/benefitsImg3.png",
-            title: t("accessibility"),
-            description: t("enjoy_high_quality_content_plus_expert_guidance")
+            title: t("community"),
+            description:t("para_3")
         },
         {
             id: 4,
             image: "/benefitsImg4.png",
             title: t("flexibility"),
-            description: t("select_from_a_diverse_range_of_options")
+            description: t("para_4")
         }
     ];
 
@@ -35,7 +35,7 @@ export default function BenefitsOfHolistic() {
             <div className="2xl:container xl:container lg:container mx-auto px-5">
                 <div className="heading-box text-center xl:mb-20 mb-10">
                     <h5 className="text-info-color 2xl:text-2xl font-black">{t("discoverThe")}</h5>
-                    <h2 className="xl:text-40 lg:text-[30px]  text-[25px]  font-bold">{t("benefitsOfHolisticWellness")}</h2>
+                    <h2 className="xl:text-40 lg:text-[30px]  text-[25px]  font-bold">{t("benefits_of_holistic")}</h2>
                 </div>
                 <div className="lg:grid xl:grid-cols-4 lg:grid-cols-2 gap-7">
                     {benefits.map(benefit => (

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import SpiritualCard from '@components/Event/SpiritualCard'
+import SpiritualCard from '@/components/Event/SpiritualCard'
 
 export default function SpiritualEvents(){
 
