@@ -23,9 +23,9 @@
     "headingSmall": "INNER LIGHT",
     "headingLarge": "Commitment To Your Spiritual Growth",
     "leftContent": "We are dedicated to guiding individuals toward inner peace, wellness, and spiritual growth through holistic practices.",
-    "rightContent":  "We believe in the power of tailored support, meeting each person where they are on their unique journey.",
+    "rightContent": "We believe in the power of tailored support, meeting each person where they are on their unique journey.",
     "imageAlt": "Commitment to your spiritual growth image"
-  }, 
+  },
   "DownloadOurApp": {
     "headingSmall": "INNER LIGHT",
     "downloadOurApp": "Download Our App",
@@ -38,7 +38,78 @@
   "ProfilePage": {
     "title": "Profile"
   },
-  "BenefitsOfHolistic":{
-    "discoverThe":"DISCOVER THE"
+  "BenefitsOfHolistic": {
+    "discoverThe": "DISCOVER THE"
+  },
+  "AboutBanner": {
+    "who_we_are": "Who We Are",
+    "nurturing": "Nurturing Your Mind, Body, And Spirit",
+    "through_holistic": "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
+    "download_app": "Download App",
+    "about_us": "ABOUT US",
+    "transforming": "Transforming Lives Through Care",
+    "welcome_ceo": "Welcome Message From Our CEO",
+    "experience_personalized": "Experience personalized support on your spiritual journey through tailored meditation sessions and one-on-one consultations with skilled practitioners.",
+    "our_mission": "Our Mission",
+    "we_believe_that_true": "We believe that true health goes beyond the physical body — it encompasses the mind, soul, and spirit. Our mission is to empower individuals to embrace a holistic approach to health, one that nurtures every aspect of their being. By providing insightful resources, practical tools, and spiritual guidance, we aim to inspire growth, healing, and transformation on your personal spiritual path.",
+    "through_our_teachings": "Through our teachings, courses, and articles, we strive to create a global community that fosters spiritual well-being, encourages self-awareness, and nurtures personal growth.",
+    "we_are_committed": "We are committed to promoting peace, mindfulness, and a deeper sense of fulfillment in all who seek it.",
+    "innelight": "INNERLIGHT",
+    "what_we_offer": "What We Offer",
+    "spiritual_resources": "Spiritual Resources",
+    "personalized_guidance": "Personalized Guidance",
+    "online_courses_and_workshops": "Online Courses And Workshops",
+    "our_values": "OUR VALUES",
+    "commitment_to_your_spiritual_growth": "Commitment To Your Spiritual Growth",
+    "holistic_healing": "Holistic Healing",
+    "we_honor_the_interconnectedness": "We honor the interconnectedness of mind, body, and spirit, believing that true health is achieved through balance and nurturing each aspect of your being.",
+    "empathy_&_compassion": "Empathy & Compassion",
+    "we_listen_with_open": "We listen with open hearts, offering support without judgment, and treating each individual with kindness and respect.",
+    "growth_impowerment": "Growth & Empowerment",
+    "connect_with_compassionate": "Connect with compassionate experts dedicated to nurturing your growth and well-being.",
+    "mindfulness_&_presence": "Mindfulness & Presence"
+  },
+  "BenifitsBanner":{
+    "benefits":"Benefits",
+    "unlock":"Unlock Inner Peace, Purpose, And Balance",
+    "through_holistic":"Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
+    "download_app":"Download App"
+  },
+  "BenefitsOfHolistic": {
+    "discoverThe":"DISCOVER THE",
+    "benefits_of_holistic":"Benefits of Holistic Wellness",
+    "personalization":"Personalization",
+    "para_1":"Get personalized attention along with recommendations for the elevation of your healing experience.",
+    "community":"Community",
+    "para_2":"Develop a connection with a supportive network of like-minded individuals on similar wellness journeys.",
+    "accessibility":"Accessibility",
+    "para_3":"Enjoy high-quality content plus expert guidance from the ease of your living space.",
+    "flexibility":"Flexibility",
+    "para_4":"Select from a diverse range of options tailored to your goals and lifestyle."
+  },
+  "OurStories":{
+    "our_stories":"OUR STORIES",
+    "real_stories":"Real Stories, Real Impact",
+    "see_all":"See All",
+    "journey":"A Journey To Inner Peace",
+    "journey_details":" I was constantly overwhelmed by anxiety, and I felt like I was losing control of my life. Through daily mindfulness meditations and grounding practices shared on this platform, I’ve found a peace I didn’t think was possible. Today, I wake up feeling balanced and optimistic.",
+    "sophia":"Sophia R.",
+    "reconnecting":"Reconnecting With Purpose",
+    "reconnecting_details":"  After my father passed away, I felt completely lost. The grief was suffocating. Attending the spiritual health workshop introduced me to guided journaling and prayerful reflection. Slowly, I found strength in the belief that life’s challenges carry deeper meaning. I’m now living each day with renewed purpose.",
+    "micheal":"Michael L",
+    "healing":"Healing Through Community",
+    "healing_details":"Being part of the meditation circle has been life-changing. I came here seeking answers, and I found a supportive community that helped me heal from years of emotional trauma. I’ve learned to forgive, let go, and truly embrace self-love."
+  },
+  "WeOffer":{
+    "we_offer":"We Offer",
+    "transformative":"Transformative Resources, And Supportive Community",
+    "holistic_healing":"Holistic Healing For Mind, Body, And Spirit:",
+    "holistic_healing_1":"We believe in nurturing the whole person, which is why our resources and guidance focus on aligning your physical, emotional, and spiritual health. By addressing all aspects of your well-being, we help you achieve a more balanced, harmonious life.",
+    "holistic_healing_2":"We understand that everyone’s path is different. That’s why we offer personalized coaching, consultations, and tailored resources to support your specific needs, goals, and challenges. You’ll never feel alone on your journey.",
+    "holistic_healing_3":"Our team consists of skilled spiritual guides, wellness coaches, and practitioners who bring years of experience to support your growth. Their wisdom and compassion create a safe and nurturing environment for your transformation.",
+    "holistic_healing_4":"Join a community of individuals who share your values and goals. Engage with others, share experiences, and find inspiration in a space that promotes empathy, kindness, and collective healing."
+  },
+  "Download":{
+    "download":"Download The App And Transform Your Journey Today!"
   }
 }

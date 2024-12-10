@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 
 
 export default function WeOffer() {
+    const t = useTranslations("WeOffer");
     return (
         <>
             <section>
@@ -12,23 +14,23 @@ export default function WeOffer() {
 
                         <div>
                             <div class="heading-box text-left xl:mb-11 mb-6">
-                                <h5 class="text-info-color 2xl:text-2xl font-black">WHAT WE OFFER</h5>
-                                <h2 class="xl:text-40 lg:text-[30px] text-[20px] font-bold">Transformative Resources, And Supportive Community</h2>
+                                <h5 class="text-info-color 2xl:text-2xl font-black">{t("we_offer")}</h5>
+                                <h2 class="xl:text-40 lg:text-[30px] text-[20px] font-bold">{t("transformative")}</h2>
                             </div>
                             <p class="text-lg xl:mb-7 mb-5">
-                                <span className="text-info-color 2xl:text-2xl font-bold">Holistic Healing For Mind, Body, And Spirit: </span>We believe in nurturing the whole person, which is why our resources and guidance focus on aligning your physical, emotional, and spiritual health. By addressing all aspects of your well-being, we help you achieve a more balanced, harmonious life.
+                                <span className="text-info-color 2xl:text-2xl font-bold">{t("holistic_healing")} </span>{t("holistic_healing_1")}
                             </p>
 
                             <p class="text-lg xl:mb-7 mb-5">
-                                <span className="text-info-color 2xl:text-2xl font-bold">Holistic Healing For Mind, Body, And Spirit: </span>We understand that everyone’s path is different. That’s why we offer personalized coaching, consultations, and tailored resources to support your specific needs, goals, and challenges. You’ll never feel alone on your journey.
+                                <span className="text-info-color 2xl:text-2xl font-bold">{t("holistic_healing")} </span>{t("holistic_healing_2")}
                             </p>
 
                             <p class="text-lg xl:mb-7 mb-5">
-                                <span className="text-info-color 2xl:text-2xl font-bold">Holistic Healing For Mind, Body, And Spirit: </span>Our team consists of skilled spiritual guides, wellness coaches, and practitioners who bring years of experience to support your growth. Their wisdom and compassion create a safe and nurturing environment for your transformation.
+                                <span className="text-info-color 2xl:text-2xl font-bold">{t("holistic_healing")} </span>{t("holistic_healing_3")}
                             </p>
 
                             <p class="text-lg xl:mb-7 mb-5">
-                                <span className="text-info-color 2xl:text-2xl font-bold">Holistic Healing For Mind, Body, And Spirit: </span>Join a community of individuals who share your values and goals. Engage with others, share experiences, and find inspiration in a space that promotes empathy, kindness, and collective healing.
+                                <span className="text-info-color 2xl:text-2xl font-bold">{t("holistic_healing")} </span>{t("holistic_healing_4")}
                             </p>
                         </div>
 

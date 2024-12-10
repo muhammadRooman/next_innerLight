@@ -96,3 +96,8 @@ body {
       height: 217px !important;
   } 
 }
+/* new css */
+
+.rtl .hero-banner-content{
+  text-align: right;
+}
