@@ -2,13 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #F6F7FB;
+  color: #343434;
+  font-size: 15px;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .theme-blue-btn {
+    @apply uppercase rounded-md bg-primary-300 text-white py-4 px-9 self-start
+  }
+  .swiper.servicesSwiper{
+    @apply pb-36 static
+  }
+}
+
  
-.english {
-    /* CSS styles for English text direction */
-    text-align: left;
+ 
+.direction{
+  direction: rtl;
+}
+.wellness-text {
+  font-size: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #76b0e2, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 5px;
+}
+
+
+
+/* WhatWeOffer-card */
+.WhatWeOffer-card .WhatWeOffer-img { 
+  margin: -60px 25px 0;
+  animation: .3s ease-in-out;
+  transition: all 0.3s;
+}
+.WhatWeOffer-card .WhatWeOffer-img img {
+  position: relative !important;
+  width: 100% !important;
+  height: 292px !important;
+}
+.WhatWeOffer-card:hover .WhatWeOffer-img{
+  margin: -60px 0px 0;
+  animation: .3s ease-in;
+} 
+ 
+@media (max-width: 991px) { 
+  .WhatWeOffer-card .WhatWeOffer-img { 
+    margin:  15px 15px 0;
+  } 
+  .WhatWeOffer-card:hover .WhatWeOffer-img{
+    margin: 0;
+    animation: .3s ease-in;
+  } 
+  .our-value-inner,
+  .aboutUs{
+    display: flex;
+    flex-direction: column-reverse;
   }
-  
-  .arabic {
-    /* CSS styles for Arabic text direction */
-    text-align: right;
+  .our-value-inner .nurturing-img{
+    margin-bottom: 25px;
   }
+} 
+@media (max-width: 480px) {
+  .WhatWeOffer-card .WhatWeOffer-img img { 
+      height: 217px !important;
+  } 
+}

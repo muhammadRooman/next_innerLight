@@ -14,12 +14,13 @@ export default function SubscribeUs() {
               </div> 
             </form>
             <div className='follow-us flex items-center justify-between m '>
-              <h5 className='2xl:text-2xl text-xl mb-0 font-bold ml-3'>Follow Us</h5>
+              <h5 className='2xl:text-2xl text-xl mb-0 font-bold  '>Follow Us</h5>
                 <nav className="flex items-center justify-center   ml-auto">
-                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7  rounded-full flex items-center justify-center bg-[#BD081C] bor ease-in-out me-2"><Image src="/facebook.png" width={20} height={20} alt="facebook" className='lg:w-[20px] w-4'/></Link>  
-                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center bg-[#FFFC00] ease-in-out me-2"><Image src="/twitter.png" width={20} height={20} alt="twitter" className='lg:w-[20px] w-4'/></Link> 
-                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center bg-[#1275B1] ease-in-out me-2"><Image src="/linkedin.png" width={20} height={20} alt="linkedin" className='lg:w-[20px] w-4'/></Link> 
-                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center bg-[#3B5998] ease-in-out me-2"><Image src="/playSolid.png" width={20} height={20} alt="playSolid" className='lg:w-[20px] w-4'/></Link> 
+                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7  rounded-full flex items-center justify-center shadow-shadow-color8 bor ease-in-out me-2"><Image src="/assets/images/social-icon/facebook.png" width={17} height={17} alt="facebook" className='lg:w-[17px] w-4'/></Link>  
+                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8  ease-in-out me-2"><Image src="/assets/images/social-icon/linkedin.png" width={17} height={17} alt="linkedin" className='lg:w-[17px] w-4'/></Link> 
+                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8 ease-in-out me-2"><Image src="/assets/images/social-icon/twitter.png" width={17} height={17} alt="twitter" className='lg:w-[17px] w-4'/></Link>  
+                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8 ease-in-out me-2"><Image src="/assets/images/social-icon/pinterest.png" width={17} height={17} alt="pinterest" className='lg:w-[17px] w-4'/></Link> 
+                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8 ease-in-out  "><Image src="/assets/images/social-icon/youtube.png" width={17} height={20} alt="youtube" className='lg:w-[17px] w-4'/></Link> 
                 </nav> 
             </div>
         </div> 

@@ -42,7 +42,7 @@ const clients = [
 
 export default function OurClients() {
   return (
-    <section className="bg-gray-light lg:pt-9 lg:pb-17 p5-10">
+    <section className="bg-SubscriptionPlan-bg lg:pt-10 lg:pb-17 py-10 bg-cover bg-center">
       <div className="2xl:container xl:container lg:container mx-auto px-4">
         {/* Section Heading */}
         <div className="text-center mb-12">
