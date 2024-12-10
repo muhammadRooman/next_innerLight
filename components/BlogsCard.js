@@ -1,28 +1,27 @@
 import Image from 'next/image';
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function BlogsCard() {
+  const t = useTranslations("BlogCard");
   // Card data array
   const blogCards = [
     {
       id: 1,
-      title: "Self-Care Practices for Daily Healing",
-      description:
-        "Share practical self-care routines, including journaling, meditation, and grounding exercises. Share practical self-care routines.",
+      title: t("self_Care_practices_for_daily_healing"),
+      description:t("share_practical_self_care_routines"),
       image: "/BlogsCard2.png",
     },
     {
       id: 2,
-      title: "Self-Care Practices for Daily Healing",
-      description:
-        "Share practical self-care routines, including journaling, meditation, and grounding exercises. Share practical self-care routines.",
+      title: t("self_Care_practices_for_daily_healing"),
+      description:t("share_practical_self_care_routines"),
       image: "/BlogsCard3.png",
     },
     {
       id: 3,
-      title: "Self-Care Practices for Daily Healing",
-      description:
-        "Share practical self-care routines, including journaling, meditation, and grounding exercises. Share practical self-care routines.",
+      title: t("self_Care_practices_for_daily_healing"),
+      description: t("share_practical_self_care_routines"),
       image: "/BlogsCard4.png",
     },
   ];
