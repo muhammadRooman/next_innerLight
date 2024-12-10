@@ -1,16 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    images: {
-        domains: ['localhost'],
-        remotePatterns: [
-            {
-            protocol: 'https',
-            hostname: '**',
-        },
-    ],
-    },
-};
 
-export default nextConfig;
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
+const nextConfig = {};
+
+export default withNextIntl(nextConfig);

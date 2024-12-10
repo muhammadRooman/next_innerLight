@@ -1,43 +1,30 @@
 {
-  "name": "Inner light ",
+  "name": "next15-langs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "type": "module"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@heroicons/react": "^2.1.5",
-    "@mui/icons-material": "^6.1.4",
-    "@svgr/webpack": "^8.1.0",
-    "accept-language": "^3.0.20",
-    "i18next": "^23.16.8",
-    "i18next-browser-languagedetector": "^8.0.0",
-    "i18next-fs-backend": "^2.3.2",
-    "i18next-http-backend": "^2.6.1",
-    "i18next-resources-to-backend": "^1.2.1",
-    "next": "14.2.7",
+    "i18next": "^24.0.2",
+    "next": "15.0.0-rc.0",
     "next-i18next": "^15.4.0",
-    "react": "^18",
-    "react-cookie": "^7.2.0",
-    "react-dom": "^18",
-    "react-i18next": "^15.1.2",
-    "react-slick": "^0.30.2",
-    "remix-i18next": "^6.4.1",
-    "slick-carousel": "^1.8.1",
+    "next-intl": "^3.17.2",
+    "react": "19.0.0-rc-f994737d14-20240522",
+    "react-dom": "19.0.0-rc-f994737d14-20240522",
     "swiper": "^11.1.15"
   },
   "devDependencies": {
-    "@types/node": "22.7.4",
-    "@types/react": "18.3.10",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.7",
+    "eslint-config-next": "15.0.0-rc.0",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }

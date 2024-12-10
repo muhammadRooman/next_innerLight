@@ -1,0 +1,22 @@
+{
+  "NavbarLinks": {
+    "home": "Home",
+    "about": "About us",
+    "courses": "Courses",
+    "benefits": "Benefits",
+    "subscription": "Subscription",
+    "blog": "Blog",
+    "JoinNow": "Join Now",
+    "en": "En",
+    "ar": "AR"
+  },
+  "HomePage": {
+    "title": "Landing page"
+  },
+  "AboutPage": {
+    "title": "About"
+  },
+  "ProfilePage": {
+    "title": "Profile"
+  }
+}

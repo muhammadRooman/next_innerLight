@@ -1,0 +1,23 @@
+{
+  "NavbarLinks": {
+    "home": "الرئيسية", 
+    "about": "معلومات عنا",
+    "courses": "الدورات",
+    "benefits": "فوائد",
+    "subscription": "الاشتراك",
+    "blog": "مدونة",
+    "JoinNow": "انضم الآن",
+    "en": "أون",
+    "ar": "ع"
+ 
+  },
+  "HomePage": {
+    "title": "صفحة الهبوط"
+  },
+  "AboutPage": {
+    "title": "حول"
+  },
+  "ProfilePage": {
+    "title": "الملف الشخصي"
+  }
+}
