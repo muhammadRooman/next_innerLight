@@ -1,37 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function SpiritualCard() {
+  const t = useTranslations("SpiritualCard");
   const events = [
     {
-      date: "12 DEC",
+      date: t("12_DEC"),
       image: "bg-blogImg1-bg",
-      title: "Meditation and Mindfulness Workshops",
-      bage: "In-person/online",
-      heading: "Mindful Mondays: Guided Meditation for Beginners",
+      title: t("meditation_and_mindfulness_workshops"),
+      bage: t("in_person_online"),
+      heading: t("mindful_mondays_guided_meditation"),
       description:
-        "A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace. A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace.",
-      buttonText: "Enroll Now",
+      t("a_weekly_sessions_to_indroduce_mindfulness"),
+      buttonText: t("enroll_now"),
     },
     {
-      date: "20 DEC",
+      date: t("20_DEC"),
       image: "bg-blogImg2-bg",
-      title: "Yoga for Stress Relief and Relaxation",
-      bage: "Outdoor yoga in nature",
-      heading: "Harmony Through Movement: Spiritual Yoga Class",
+      title: t("yoga_for_stress_relief_and_relaxation"),
+      bage: t("outdoor_yoga_in_nature"),
+      heading: t("harmony_through_movement"),
       description:
-        "A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace. A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace.",
-      buttonText: "Enroll Now",
+        t("a_weekly_sessions_to_indroduce_mindfulness"),
+      buttonText: t("enroll_now"),
     },
     {
-      date: "10 JAN",
+      date: t("10_DEC"),
       image: "bg-blogImg3-bg",
-      title: "Spiritual Retreats",
-      bage: "A peaceful countryside setting",
-      heading: "Weekend Retreat: Reconnecting with Your Inner Self",
+      title: t("spiritual_retreats"),
+      bage: t("a_peaceful_countryside_setting"),
+      heading: t("weekend_retreat_reconnecting_with_your_inner_self"),
       description:
-        "A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace. A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace.",
-      buttonText: "Enroll Now",
+      t("a_weekly_sessions_to_indroduce_mindfulness"),
+      buttonText: t("enroll_now"),
     },
   ];
 

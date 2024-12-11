@@ -38,8 +38,12 @@ body {
     @apply pb-36 static
   }
 }
-
  
+.rtl {
+  /* RTL-specific styles */
+  direction: rtl;
+  text-align: right; 
+}
  
 .direction{
   direction: rtl;
@@ -74,6 +78,52 @@ body {
   animation: .3s ease-in;
 } 
  
+
+
+
+
+
+/* direction */
+.rtl .hero-banner-content h5,
+.rtl .hero-banner-content p{
+  text-align: right;
+}
+.rtl .DownloadOurApp .heading-box {
+  text-align: right;
+}
+
+ 
+
+@media (min-width: 1536px) {
+  .rtl .\32xl\:me-\[88px\] {
+      margin-inline-end: 0px;
+      margin-inline-start: 88px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .rtl .xl\:text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .rtl .xl\:me-\[60px\] {
+      margin-inline-start: 60px;
+      margin-inline-end: 0px;
+  }
+}
+@media (min-width: 991px) {
+  .lg\:text-black {
+      --tw-text-opacity: 1;
+      color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+  }
+}
+
+
+
+
 @media (max-width: 991px) { 
   .WhatWeOffer-card .WhatWeOffer-img { 
     margin:  15px 15px 0;
@@ -96,8 +146,28 @@ body {
       height: 217px !important;
   } 
 }
+
 /* new css */
 
-.rtl .hero-banner-content{
+.rtl .hero-banner-content {
+  text-align: right;
+}
+
+.contact-hero {
+  position: relative;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('../public/contactus.png')
+}
+
+html[lang="ar"] .contact-hero::before {
+  transform: scaleX(-1);
+}
+.rtl .text-rtl{
   text-align: right;
 }
