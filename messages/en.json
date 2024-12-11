@@ -7,9 +7,9 @@
     "event": "Events",
     "blog": "Blog",
     "JoinNow": "Join Now",
-    "en": "En",
-    "ar": "AR",
-    "copyright_reserved_Innerlight": "Copyright Reserved Innerlight"
+    "en": "English",
+    "ar": "Arabic",
+    "copyright_reserved_Innerlight":"Copyright Reserved Innerlight"
   },
   "HeroBanner": {
     "title": "BEGIN YOUR JOURNEY TO",

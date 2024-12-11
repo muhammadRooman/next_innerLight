@@ -1,7 +1,7 @@
 "use client";
-
 import Image from "next/image";
-import React from "react";
+import { usePathname } from 'next/navigation';
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslations } from "next-intl";
 // Import Swiper styles
@@ -12,39 +12,29 @@ import "swiper/css/navigation";
 // Import required Swiper modules
 import { Pagination, Navigation } from "swiper/modules";
 
-export default function OurClients() {
+export default function OurClients({ testimonialData }) {
   const t = useTranslations("OurClient");
-  // Client Data Array
-const clients = [
-  {
-    name: t("mike_Jonson"),
-    country: "USA",
-    age: 24,
-    image: "/client.png",
-    review: t("lorem"),
-  },
-  {
-    name: t("sarah_wilson"),
-    country: "UK",
-    age: 28,
-    image: "/client.png",
-    review: t("lorem"),
-  },
-  {
-    name: t("john_doe"),
-    country: "Canada",
-    age: 30,
-    image: "/client.png",
-    review: t("lorem"),
-  },
-];
+  const currentPath = usePathname();
+  const [language, setLanguage] = useState('');
+
+/**
+   * Determine the current language based on the path and set it to state.
+   * Defaults to 'en' if no language is found in the path.
+   * 
+   * Author: Muhammad Rooman
+   * Date: 11 December, 2024
+   */
+  useEffect(() => {
+     const lang = currentPath.split('/')[1] || 'en';  // Default to 'en' if language is missing
+    setLanguage(lang);
+  }, [currentPath]);
 
   return (
     <section className="bg-SubscriptionPlan-bg lg:pt-10 lg:pb-17 py-10 bg-cover bg-center">
       <div className="2xl:container xl:container lg:container mx-auto px-4">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h5 className="text-info-color 2xl:text-2xl  font-black">{t("reviews")}</h5>
+          <h5 className="text-info-color 2xl:text-2xl font-black">{t("reviews")}</h5>
           <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold">{t("what_our_clients_say_about_us")}</h2>
         </div>
 
@@ -64,28 +54,28 @@ const clients = [
           modules={[Pagination, Navigation]}
           className="SwiperSlder relative"
         >
-          {clients.map((client, index) => (
-            <SwiperSlide key={index}>
+          {testimonialData?.map((client, index) => (
+            <SwiperSlide key={client._id}>
               <div className="xl:grid xl:grid-cols-12 gap-6 items-center">
                 <div className="col-span-5">
                   <div className="relative xl:min-h-[350px] min-h-[250px] xl:mb-0 mb-9">
                     <Image
-                      src={client.image}
-                      alt={client.name}
+                       src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${client.image}`}
+                       alt={language === "en" ? client.name_en : client.name_ar }
                       layout="fill"
-                      className="object-cover mx-auto xl:max-w-[390px] max-w-[280px] "
+                      className="object-cover mx-auto xl:max-w-[390px] max-w-[280px]"
                     />
                   </div>
                 </div>
                 <div className="col-span-7">
-                  <div className="slider-content xl:max-w-[640px] max-w-full xl:text-left text-center ">
+                  <div className="slider-content xl:max-w-[640px] max-w-full xl:text-left text-center">
                     <div className="mb-5">
-                      <h4 className="text-2xl font-medium">{client.name}</h4>
+                      <h4 className="text-2xl font-medium">{language === "en" ? client.name_en : client.name_ar }</h4>
                       <small className="text-info-color text-lg">
-                        {client.country}, {client.age} {t("years_old")}
+                      {language === "en" ? client.country_en : client.country_ar } , {language === "en" ? client.age_en : client.age_ar } {t("years_old")}
                       </small>
                     </div>
-                    <p className="text-lg">{client.review}</p>
+                    <p className="text-lg">{language === "en" ? client.review_en : client.review_ar }</p>
                   </div>
                 </div>
               </div>

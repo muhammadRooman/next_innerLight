@@ -50,15 +50,15 @@ const Header = ({ locale }) => {
             </button> 
             {/* Menu Links */}
             {["home", "about", "benefits", "contact", "event"].map((link, index) => (
-  <Link
-    key={index}
-    href={`/${locale}/${link}`}
-    className="lg:text-black text-white py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-xl xl:text-lg lg:text-[15px] hover:text-[#1796D8] font-medium"
-    onClick={() => setIsMenuOpen(false)}
-  >
-    {t(link)}
-  </Link>
-))}
+            <Link
+              key={index}
+              href={`/${locale}/${link}`}
+              className="lg:text-black text-white py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-xl xl:text-lg lg:text-[15px] hover:text-[#1796D8] font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t(link)}
+            </Link>
+          ))}
             </nav>
 
             <div className="flex items-center">
@@ -68,7 +68,7 @@ const Header = ({ locale }) => {
                 onChange={handleLanguageChange}
                 className="rounded-md px-4 py-2 bg-transparent"
               >
-                <option value="en">{t("en")}</option>
+                <option value="en">English</option>
                 <option value="ar">{t("ar")}</option>
               </select>
 
