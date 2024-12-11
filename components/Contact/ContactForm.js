@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 
 
 export default function ContactUs() {
+  const t = useTranslations("ContactUs");
+
     return (
         <>
             <section className="bg-[#F7F7F7] lg:p-24 md:p-12 p-6">

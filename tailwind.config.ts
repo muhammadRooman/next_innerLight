@@ -28,7 +28,7 @@ module.exports = {
         'blogImg3-bg': "url('/assets/images/event/blogImg3.png')",
         'shap-bg': "url('/assets/images/event/shap.svg')",
         'benefits': "url('/benefits.png')",
-        'contact': "url('/contactus.png')",
+        
         'yoga': "url('/formyoga.png')",
       },
       colors: {
