@@ -3,7 +3,7 @@ import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
 import OurStories from "@/components/Benefits/OurStories";
 import WeOffer from "@/components/Benefits/WeOffer";
 import DownloadApp from "@/components/Benefits/DownloadApp";
-import OurClients from "@/components/OurClients"; 
+import Testimonial from "@/components/Testimonial"; 
 
 
 
@@ -20,7 +20,7 @@ export default function Benefits() {
             <OurStories />
             <WeOffer /> 
             <DownloadApp />
-            <OurClients /> 
+            <Testimonial /> 
         </>
     );
 }

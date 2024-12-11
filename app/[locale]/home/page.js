@@ -4,7 +4,7 @@ import Commitment from "@/components/Commitment";
 import DownloadOurApp from "@/components/DownloadOurApp";
 import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
 import Blogs from "@/components/Blogs";
-import OurClients from "@/components/OurClients";
+import Testimonial from "@/components/Testimonial";
 
 export default function LandingPage() {
   return (
@@ -15,7 +15,7 @@ export default function LandingPage() {
       <DownloadOurApp />
       <BenefitsOfHolistic />
       <Blogs />
-      <OurClients />
+      <Testimonial />
     </>
   );
 }

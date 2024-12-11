@@ -3,7 +3,7 @@
 import Banner from "@/components/AboutUs/AboutBanner";  
 import OurMission from "@/components/AboutUs/OurMission";  
 import WhatWeOffer from "@/components/AboutUs/WhatWeOffer";  
-import OurClients from "@/components/OurClients";  
+import Testimonial from "@/components/Testimonial";  
 import Commitment from "@/components/AboutUs/Commitment";  
 
 export default function AboutBanner() {
@@ -13,7 +13,7 @@ export default function AboutBanner() {
         <OurMission />
         <WhatWeOffer />
         <Commitment />
-        <OurClients />
+        <Testimonial />
       </>
     );
   }
