@@ -1,18 +1,19 @@
 
+/**
+ * Fetches testimonial data from the API.
+ * 
+ * Author: Muhammad Rooman
+ * Date: 11 December, 2024
+ */
 export const testimonialAPI = async () => {
-  console.log("API URL:", process.env.NEXT_APP_BASE_API);
-  
-  try {
+ try {
     const response = await fetch(`${process.env.NEXT_APP_BASE_API}/testimonial`, { 
-     
       method: "GET",
       cache: "no-store", // cache option is now correctly placed
     });
-    const todo = await response.json();
-    console.log("testimonial", todo);
-    return todo; 
+    const data = await response.json();
+    return data; 
   } catch (error) {
-    console.log("error", error);
-    return [];
+    return { error: "An error occurred while fetching the testimonials" };
   }
 };
