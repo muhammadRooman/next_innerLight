@@ -7,7 +7,7 @@
  */
 export const testimonialAPI = async () => {
  try {
-    const response = await fetch(`${process.env.NEXT_APP_BASE_API}/testimonial`, { 
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/testimonial`, { 
       method: "GET",
       cache: "no-store", // cache option is now correctly placed
     });

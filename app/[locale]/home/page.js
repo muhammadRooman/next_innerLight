@@ -5,7 +5,7 @@ import DownloadOurApp from "@/components/DownloadOurApp";
 import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
 import Blogs from "@/components/Blogs";
 import Testimonial from "@/components/Testimonial";
-import { CmsWebApi } from "../../../components/api/CmsWebAPI";
+import { CmsWebApi } from "../../../components/api/CmsWebApi";
 
 /**
  * Fetches CmsWebData data from the CmsWebApi.
@@ -15,7 +15,7 @@ import { CmsWebApi } from "../../../components/api/CmsWebAPI";
  * Author: Muhammad Rooman
  * Date: 11 December, 2024
  */
-const CmsWebData = async () => {
+const fetchCmsWebData = async () => {
   try {
     const response = await CmsWebApi();
     console.log("response1111",response);
@@ -25,9 +25,8 @@ const CmsWebData = async () => {
     }
 };
 
-
 const  LandingPage = async ()=> {
-  const cmsWebData = await CmsWebData();
+  const cmsWebData = await fetchCmsWebData();
   const  HeroBannerHeader =  cmsWebData?.header
   const  CommitmentHeader =  cmsWebData?.commitment
   const  cms =  cmsWebData

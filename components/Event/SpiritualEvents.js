@@ -3,7 +3,8 @@ import Link from "next/link";
 import SpiritualCard from '@/components/Event/SpiritualCard'
 import { useTranslations } from "next-intl";
 
-export default function SpiritualEvents(){
+export default function SpiritualEvents({webinarEvenData}){
+    console.log("webinarEvenDataRRRR",webinarEvenData);
     const t = useTranslations("EventBanner");
 
     return(
@@ -14,7 +15,7 @@ export default function SpiritualEvents(){
                     <h5 className="text-info-color 2xl:text-2xl font-black">{t("connect_and_grow")}</h5>
                     <h2 className="xl:text-40 lg:text-[30px] text-[25px]  font-bold">{t("spiritual_events")}</h2>
                 </div>
-                <SpiritualCard />
+                <SpiritualCard webinarEvenData = {webinarEvenData}/>
             </div>
         </section>
         </>

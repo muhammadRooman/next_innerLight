@@ -7,7 +7,7 @@
  */
 export const CmsWebApi = async () => {
     try {
-       const response = await fetch(`${process.env.NEXT_APP_BASE_API}/cmsWeb`, { 
+       const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/cmsWeb`, { 
          method: "GET",
          cache: "no-store", // cache option is now correctly placed
        });
