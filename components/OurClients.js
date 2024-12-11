@@ -54,7 +54,7 @@ export default function OurClients({ testimonialData }) {
           modules={[Pagination, Navigation]}
           className="SwiperSlder relative"
         >
-          {testimonialData.map((client, index) => (
+          {testimonialData?.map((client, index) => (
             <SwiperSlide key={client._id}>
               <div className="xl:grid xl:grid-cols-12 gap-6 items-center">
                 <div className="col-span-5">

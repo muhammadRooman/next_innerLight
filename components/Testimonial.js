@@ -3,7 +3,7 @@ import OurClients from "./OurClients";
 import { testimonialAPI } from "./api/TestimonialApi";
 
 /**
- * Fetches testimonial data from the TestimonialAPI.
+ * Fetches testimonial data from the testimonialAPI.
  *
  * @returns {Array} Array of testimonials from the API response.
  *
