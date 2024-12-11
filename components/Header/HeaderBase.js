@@ -49,18 +49,16 @@ const Header = ({ locale }) => {
               <Image src="/close.svg" alt="Close" width={30} height={30} />
             </button> 
             {/* Menu Links */}
-              {["home", "about",  "benefits", "contact", "events"].map(
-                (link, index) => (
-                  <Link
-                    key={index}
-                    href="#"
-                   className="lg:text-black text-white py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-xl  xl:text-lg lg:text-[15px]  hover:text-[#1796D8] font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {t(link)}
-                  </Link>
-                )
-              )}
+            {["home", "about", "benefits", "contact", "event"].map((link, index) => (
+  <Link
+    key={index}
+    href={`/${locale}/${link}`}
+    className="lg:text-black text-white py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-xl xl:text-lg lg:text-[15px] hover:text-[#1796D8] font-medium"
+    onClick={() => setIsMenuOpen(false)}
+  >
+    {t(link)}
+  </Link>
+))}
             </nav>
 
             <div className="flex items-center">

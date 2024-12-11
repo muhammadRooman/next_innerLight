@@ -18,7 +18,7 @@ export default function Commitment() {
                    <div class="lg:grid lg:grid-cols-4  items-center ">
                         <div className=' col-span-1  '>
                             <div className='commitment-content text-center lg:mb-36 mb-4 lg:max-w-[395px] max-w-full'>
-                               <p className='xl:text-lg font-normal'></p>
+                               <p className='xl:text-lg font-normal'>{t("we_are_dedicated_to_guiding")}</p>
                             </div>
                             <div className='commitment-content text-center lg:mb-36 mb-4 lg:max-w-[395px] max-w-full'>
                                <p className='xl:text-lg font-normal'>{t("we_are_dedicated_to_guiding")}</p>

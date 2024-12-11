@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { getMessages } from "next-intl/server";
 
-import LandingPage from "@/app/[locale]/landing-page/page";   
+import LandingPage from "@/app/[locale]/home/page";   
 export async function generateMetadata({
   params: { locale },
 }: {
