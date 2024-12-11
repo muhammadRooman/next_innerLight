@@ -5,7 +5,7 @@ import DownloadOurApp from "@/components/DownloadOurApp";
 import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
 import Blogs from "@/components/Blogs";
 import Testimonial from "@/components/Testimonial";
-import { CmsWebApi } from "../../../components/api/CmsWebAPI";
+import { CmsWebApi } from "../../../components/api/CmsWebApi";
 
 /**
  * Fetches CmsWebData data from the CmsWebApi.

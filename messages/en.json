@@ -208,6 +208,7 @@
     "contact_no": "Contact No",
     "message": "Message",
     "download": "Download Our App",
-    "submit": "Submit"
+    "submit": "Submit",
+    "alert":"You will be contacted shortly by admin."
   }
 }
