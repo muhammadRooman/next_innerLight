@@ -16,17 +16,21 @@ import { CmsWebApi } from "../../../components/api/CmsWebAPI";
  * Date: 11 December, 2024
  */
 const CmsWebData = async () => {
-  let response = await CmsWebApi();
-  console.log("response123",response);
-  return response;
+  try {
+    const response = await CmsWebApi();
+    console.log("response1111",response);
+    return response.cmsWeb; 
+  } catch (error) {
+      return { error: "An error occurred while fetching the CmsWeb" };
+    }
 };
 
 
-const LandingPage = async () => {
+const  LandingPage = async ()=> {
   const cmsWebData = await CmsWebData();
-  const  HeroBannerHeader =  cmsWebData?.cmsWeb?.header
-  const  CommitmentHeader =  cmsWebData?.cmsWeb?.commitment
-  const  cms =  cmsWebData?.cmsWeb?.commitment
+  const  HeroBannerHeader =  cmsWebData?.header
+  const  CommitmentHeader =  cmsWebData?.commitment
+  const  cms =  cmsWebData
   console.log("HeroBannerHeader",HeroBannerHeader);
   console.log("CommitmentHeader",cmsWebData);
   console.log("cms1212",cms);
@@ -43,5 +47,4 @@ const LandingPage = async () => {
     </>
   );
 }
-
-export default LandingPage;
+export default LandingPage

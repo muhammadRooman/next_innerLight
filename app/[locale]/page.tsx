@@ -22,7 +22,7 @@ export default function Home() {
   const t = useTranslations("HomePage");
   return (
     <>
-      <LandingPage />
+      <LandingPage/>
     </>
   );
 }

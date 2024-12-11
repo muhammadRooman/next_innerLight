@@ -60,8 +60,8 @@ export default function OurClients({ testimonialData }) {
                 <div className="col-span-5">
                   <div className="relative xl:min-h-[350px] min-h-[250px] xl:mb-0 mb-9">
                     <Image
-                       src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${client.image}`}
-                       alt={language === "en" ? client.name_en : client.name_ar }
+                       src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${client?.image}`}
+                       alt={language === "en" ? client?.name_en : client?.name_ar }
                       layout="fill"
                       className="object-cover mx-auto xl:max-w-[390px] max-w-[280px]"
                     />
@@ -70,12 +70,12 @@ export default function OurClients({ testimonialData }) {
                 <div className="col-span-7">
                   <div className="slider-content xl:max-w-[640px] max-w-full xl:text-left text-center">
                     <div className="mb-5">
-                      <h4 className="text-2xl font-medium">{language === "en" ? client.name_en : client.name_ar }</h4>
+                      <h4 className="text-2xl font-medium">{language === "en" ? client?.name_en : client?.name_ar }</h4>
                       <small className="text-info-color text-lg">
-                      {language === "en" ? client.country_en : client.country_ar } , {language === "en" ? client.age_en : client.age_ar } {t("years_old")}
+                      {language === "en" ? client?.country_en : client?.country_ar } , {language === "en" ? client?.age_en : client?.age_ar } {t("years_old")}
                       </small>
                     </div>
-                    <p className="text-lg">{language === "en" ? client.review_en : client.review_ar }</p>
+                    <p className="text-lg">{language === "en" ? client?.review_en : client?.review_ar }</p>
                   </div>
                 </div>
               </div>

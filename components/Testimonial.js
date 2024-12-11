@@ -10,9 +10,18 @@ import { testimonialAPI } from "./api/TestimonialApi";
  * Author: Muhammad Rooman
  * Date: 11 December, 2024
  */
+// const TestimonialData = async () => {
+//   let response = await testimonialAPI();
+//   return response?.testimonials;
+// };
+
 const TestimonialData = async () => {
-  let response = await testimonialAPI();
-  return response.testimonials;
+  try {
+    const response = await testimonialAPI();
+    return response?.testimonials; 
+  } catch (error) {
+      return { error: "An error occurred while fetching the testimonials" };
+    }
 };
 
 /**

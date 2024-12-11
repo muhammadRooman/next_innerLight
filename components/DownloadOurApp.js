@@ -12,7 +12,7 @@ export default function DownloadOurApp() {
           <div class="xl:grid xl:grid-cols-2 flex flex-col-reverse"> 
             <div className='DownloadOurApp-content xl:max-w-[685px] max-w-full lg:pt-20 pt-8 '> 
               <div className='heading-box text-left mb-3.5'>
-                <h5 className='text-info-color 2xl:text-2xl font-black '>{t('headingSmall')}</h5>
+                <h5 className='text-info-color 2xl:text-2xl font-black '>111{t('headingSmall')}</h5>
                 <h2 className='xl:text-40 lg:text-[30px] text-[25px] font-bold'>{t('downloadOurApp')}</h2>
               </div>
               <p className='text-lg xl:text-2xl font-bold text-[#753892]  mb-7'>{t('connectWithExperts')}</p>
