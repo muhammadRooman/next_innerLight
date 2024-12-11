@@ -17,9 +17,10 @@ export default function OurClients({ testimonialData }) {
   const currentPath = usePathname();
   const [language, setLanguage] = useState('');
 
- /**
-   * Handle current language path
-   *
+/**
+   * Determine the current language based on the path and set it to state.
+   * Defaults to 'en' if no language is found in the path.
+   * 
    * Author: Muhammad Rooman
    * Date: 11 December, 2024
    */
