@@ -9,7 +9,7 @@
     "JoinNow": "Join Now",
     "en": "En",
     "ar": "AR",
-    "copyright_reserved_Innerlight":"Copyright Reserved Innerlight"
+    "copyright_reserved_Innerlight": "Copyright Reserved Innerlight"
   },
   "HeroBanner": {
     "title": "BEGIN YOUR JOURNEY TO",
@@ -70,91 +70,134 @@
     "connect_with_compassionate": "Connect with compassionate experts dedicated to nurturing your growth and well-being.",
     "mindfulness_&_presence": "Mindfulness & Presence"
   },
-  "BenifitsBanner":{
-    "benefits":"Benefits",
-    "unlock":"Unlock Inner Peace, Purpose, And Balance",
-    "through_holistic":"Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
-    "download_app":"Download App"
+  "BenifitsBanner": {
+    "benefits": "Benefits",
+    "unlock": "Unlock Inner Peace, Purpose, And Balance",
+    "through_holistic": "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
+    "download_app": "Download App"
   },
   "BenefitsOfHolistic": {
-    "discoverThe":"DISCOVER THE",
-    "benefits_of_holistic":"Benefits of Holistic Wellness",
-    "personalization":"Personalization",
-    "para_1":"Get personalized attention along with recommendations for the elevation of your healing experience.",
-    "community":"Community",
-    "para_2":"Develop a connection with a supportive network of like-minded individuals on similar wellness journeys.",
-    "para_3":"Enjoy high-quality content plus expert guidance from the ease of your living space.",
-    "para_4":"Select from a diverse range of options tailored to your goals and lifestyle.",
-    "benefitsOfHolisticWellness":"Benefits Of Holistic Wellness",
-    "get_personalized_attention_along_with":"Get personalized attention along with recommendations for the elevation of your healing experience.",
-    "develop_a_connection_with_a_supportive_network":"Develop a connection with a supportive network of like-minded individuals on similar wellness journeys.",
-    "accessibility":"Accessibility",
-    "enjoy_high_quality_content_plus_expert_guidance":"Enjoy high-quality content plus expert guidance from the ease of your living space.",
-    "flexibility":"Flexibility",
-    "select_from_a_diverse_range_of_options.":"Select from a diverse range of options tailored to your goals and lifestyle."
+    "discoverThe": "DISCOVER THE",
+    "benefits_of_holistic": "Benefits of Holistic Wellness",
+    "personalization": "Personalization",
+    "para_1": "Get personalized attention along with recommendations for the elevation of your healing experience.",
+    "community": "Community",
+    "para_2": "Develop a connection with a supportive network of like-minded individuals on similar wellness journeys.",
+    "para_3": "Enjoy high-quality content plus expert guidance from the ease of your living space.",
+    "para_4": "Select from a diverse range of options tailored to your goals and lifestyle.",
+    "benefitsOfHolisticWellness": "Benefits Of Holistic Wellness",
+    "get_personalized_attention_along_with": "Get personalized attention along with recommendations for the elevation of your healing experience.",
+    "develop_a_connection_with_a_supportive_network": "Develop a connection with a supportive network of like-minded individuals on similar wellness journeys.",
+    "accessibility": "Accessibility",
+    "enjoy_high_quality_content_plus_expert_guidance": "Enjoy high-quality content plus expert guidance from the ease of your living space.",
+    "flexibility": "Flexibility",
+    "select_from_a_diverse_range_of_options.": "Select from a diverse range of options tailored to your goals and lifestyle."
   },
-  "OurStories":{
-    "our_stories":"OUR STORIES",
-    "real_stories":"Real Stories, Real Impact",
-    "see_all":"See All",
-    "journey":"A Journey To Inner Peace",
-    "journey_details":" I was constantly overwhelmed by anxiety, and I felt like I was losing control of my life. Through daily mindfulness meditations and grounding practices shared on this platform, I’ve found a peace I didn’t think was possible. Today, I wake up feeling balanced and optimistic.",
-    "sophia":"Sophia R.",
-    "reconnecting":"Reconnecting With Purpose",
-    "reconnecting_details":"  After my father passed away, I felt completely lost. The grief was suffocating. Attending the spiritual health workshop introduced me to guided journaling and prayerful reflection. Slowly, I found strength in the belief that life’s challenges carry deeper meaning. I’m now living each day with renewed purpose.",
-    "micheal":"Michael L",
-    "healing":"Healing Through Community",
-    "healing_details":"Being part of the meditation circle has been life-changing. I came here seeking answers, and I found a supportive community that helped me heal from years of emotional trauma. I’ve learned to forgive, let go, and truly embrace self-love."
+  "OurStories": {
+    "our_stories": "OUR STORIES",
+    "real_stories": "Real Stories, Real Impact",
+    "see_all": "See All",
+    "journey": "A Journey To Inner Peace",
+    "journey_details": " I was constantly overwhelmed by anxiety, and I felt like I was losing control of my life. Through daily mindfulness meditations and grounding practices shared on this platform, I’ve found a peace I didn’t think was possible. Today, I wake up feeling balanced and optimistic.",
+    "sophia": "Sophia R.",
+    "reconnecting": "Reconnecting With Purpose",
+    "reconnecting_details": "  After my father passed away, I felt completely lost. The grief was suffocating. Attending the spiritual health workshop introduced me to guided journaling and prayerful reflection. Slowly, I found strength in the belief that life’s challenges carry deeper meaning. I’m now living each day with renewed purpose.",
+    "micheal": "Michael L",
+    "healing": "Healing Through Community",
+    "healing_details": "Being part of the meditation circle has been life-changing. I came here seeking answers, and I found a supportive community that helped me heal from years of emotional trauma. I’ve learned to forgive, let go, and truly embrace self-love."
   },
-  "WeOffer":{
-    "we_offer":"We Offer",
-    "transformative":"Transformative Resources, And Supportive Community",
-    "holistic_healing":"Holistic Healing For Mind, Body, And Spirit:",
-    "holistic_healing_1":"We believe in nurturing the whole person, which is why our resources and guidance focus on aligning your physical, emotional, and spiritual health. By addressing all aspects of your well-being, we help you achieve a more balanced, harmonious life.",
-    "holistic_healing_2":"We understand that everyone’s path is different. That’s why we offer personalized coaching, consultations, and tailored resources to support your specific needs, goals, and challenges. You’ll never feel alone on your journey.",
-    "holistic_healing_3":"Our team consists of skilled spiritual guides, wellness coaches, and practitioners who bring years of experience to support your growth. Their wisdom and compassion create a safe and nurturing environment for your transformation.",
-    "holistic_healing_4":"Join a community of individuals who share your values and goals. Engage with others, share experiences, and find inspiration in a space that promotes empathy, kindness, and collective healing."
+  "WeOffer": {
+    "we_offer": "We Offer",
+    "transformative": "Transformative Resources, And Supportive Community",
+    "holistic_healing": "Holistic Healing For Mind, Body, And Spirit:",
+    "holistic_healing_1": "We believe in nurturing the whole person, which is why our resources and guidance focus on aligning your physical, emotional, and spiritual health. By addressing all aspects of your well-being, we help you achieve a more balanced, harmonious life.",
+    "holistic_healing_2": "We understand that everyone’s path is different. That’s why we offer personalized coaching, consultations, and tailored resources to support your specific needs, goals, and challenges. You’ll never feel alone on your journey.",
+    "holistic_healing_3": "Our team consists of skilled spiritual guides, wellness coaches, and practitioners who bring years of experience to support your growth. Their wisdom and compassion create a safe and nurturing environment for your transformation.",
+    "holistic_healing_4": "Join a community of individuals who share your values and goals. Engage with others, share experiences, and find inspiration in a space that promotes empathy, kindness, and collective healing."
   },
-  "Download":{
-    "download":"Download The App And Transform Your Journey Today!"
+  "Download": {
+    "download": "Download The App And Transform Your Journey Today!"
   },
-  "Blog":{
-    "deepen_your_practice":"DEEPEN YOUR PRACTICE",
-    "blogs_and_upcoming_workshops":"Blogs And Upcoming Workshops",
-    "the_mind_body_connection_how_mental_health":"The Mind-Body Connection: How Mental Health Affects Physical Well-Being",
-    "discuss_how_emotional_and_psychological":"Discuss how emotional and psychological health can impact physical health and recovery. Discuss how emotional and psychological health can impact physical health and recovery."
+  "Blog": {
+    "deepen_your_practice": "DEEPEN YOUR PRACTICE",
+    "blogs_and_upcoming_workshops": "Blogs And Upcoming Workshops",
+    "the_mind_body_connection_how_mental_health": "The Mind-Body Connection: How Mental Health Affects Physical Well-Being",
+    "discuss_how_emotional_and_psychological": "Discuss how emotional and psychological health can impact physical health and recovery. Discuss how emotional and psychological health can impact physical health and recovery."
   },
-  "SubscribeUs":{
-    "subscribeUs":"subscribeUs",
-    "enter_email_address":"Enter Email Address",
-    "follow_us":"Follow Us"
+  "SubscribeUs": {
+    "subscribeUs": "subscribeUs",
+    "enter_email_address": "Enter Email Address",
+    "follow_us": "Follow Us"
   },
-  "UpComingWorkShop":{
-  "discuss_how_support_groups":"Discuss how support groups and community connections can enhance the healing process.",
-  "discover_strategies_to_improve":"Discover strategies to improve mental wellness through mindfulness techniques.",
-  "learn_about_the_benefits_of_active":"Learn about the benefits of active listening and empathy in community settings.",
-  "upcoming_workshop":"Upcoming Workshop"
+  "UpComingWorkShop": {
+    "discuss_how_support_groups": "Discuss how support groups and community connections can enhance the healing process.",
+    "discover_strategies_to_improve": "Discover strategies to improve mental wellness through mindfulness techniques.",
+    "learn_about_the_benefits_of_active": "Learn about the benefits of active listening and empathy in community settings.",
+    "upcoming_workshop": "Upcoming Workshop"
+  },
+  "BlogCard": {
+    "self_Care_practices_for_daily_healing": "Self-Care Practices for Daily Healing",
+    "share_practical_self_care_routines": "Share practical self-care routines, including journaling, meditation, and grounding exercises. Share practical self-care routines."
+  },
+  "OurClient": {
+    "reviews": "REVIEWS",
+    "what_our_clients_say_about_us": "What Our Clients Say About Us?",
+    "years_old": "Years Old",
+    "mike_Jonson": "Mike Jonson",
+    "sarah_wilson": "Sarah Wilson",
+    "john_doe": "John Doe",
+    "lorem": "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum."
+  },
+  "Commitments": {
+    "innerLight": "INNER LIGHT",
+    "commitment_to_your_spiritual_growth": "Commitment To Your Spiritual Growth",
+    "we_are_dedicated_to_guiding": "We are dedicated to guiding individuals toward inner peace, wellness, and spiritual growth through holistic practices.",
+    "our_skilled_healers_and_teachers": "Our skilled healers and teachers bring years of expertise, offering guidance in modalities such as Reiki, sound healing, and more.",
+    "we_believe_in_the_power_of_tailored": "We believe in the power of tailored support, meeting each person where they are on their unique journey.",
+    "We_foster_a_welcoming": "We foster a welcoming environment where individuals can connect, learn, and grow together in a supportive space.",
+    "our_academy_offers_tools_and_guidance": "Our academy offers tools and guidance to create lasting change, empowering you to live with greater clarity, peace, and purpose."
+  },
+  "ContactUs": {
+    "contact_us" : "CONTACT US",
+    "get_in_touch" : "Get In Touch – We're Here To Help You Thrive!",
+    "through_holistic_practices" : "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
+    "download_app" : "Download App",
+    "download_our_app" : "Download Our App"
+  },
+  "EventBanner": {
+    "connect_and_grow": "CONNECT AND GROW",
+    "download_app": "Download App",
+    "events": "EVENTS",
+    "pathway_to_inner_peace": "Pathways To Inner Peace: Events And Workshops",
+    "spiritual_events": "Spiritual Events",
+    "through_holistic_practices": "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self."
 },
-"BlogCard":{
-  "self_Care_practices_for_daily_healing":"Self-Care Practices for Daily Healing",
-  "share_practical_self_care_routines":"Share practical self-care routines, including journaling, meditation, and grounding exercises. Share practical self-care routines."
+"SignUpNow": {
+  "already_have_an_account": "Already have an account?",
+  "confirm_pass": "Confirm Password",
+  "fill_the_form_below_our_representatives_respond_you": "Fill the form below, our representatives respond you with in 24h.",
+  "full_name": "Full Name",
+  "moments_of_serenity": "MOMENTS OF SERENITY",
+  "password": "Password",
+  "phone_number": "Phone Number",
+  "sign_in": "Sign in",
+  "sign_up": "Sign Up",
+  "sign_up_now": "Sign Up Now"
 },
-"OurClient":{
-  "reviews":"REVIEWS",
-  "what_our_clients_say_about_us":"What Our Clients Say About Us?",
-  "years_old":"Years Old",
-  "mike_Jonson":"Mike Jonson",
-  "sarah_wilson":"Sarah Wilson",
-  "john_doe":"John Doe",
-  "lorem": "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum."
-},
-"Commitments":{
-  "innerLight":"INNER LIGHT",
-  "commitment_to_your_spiritual_growth":"Commitment To Your Spiritual Growth",
-  "we_are_dedicated_to_guiding":"We are dedicated to guiding individuals toward inner peace, wellness, and spiritual growth through holistic practices.",
-  "our_skilled_healers_and_teachers":"Our skilled healers and teachers bring years of expertise, offering guidance in modalities such as Reiki, sound healing, and more.",
-  "we_believe_in_the_power_of_tailored":"We believe in the power of tailored support, meeting each person where they are on their unique journey.",
-  "We_foster_a_welcoming":"We foster a welcoming environment where individuals can connect, learn, and grow together in a supportive space.",
-  "our_academy_offers_tools_and_guidance":"Our academy offers tools and guidance to create lasting change, empowering you to live with greater clarity, peace, and purpose."
-  }
+"SpiritualCard": {
+  "10_DEC": "10 DEC",
+  "12_DEC": "12 DEC",
+  "20_DEC": "20 DEC",
+  "a_peaceful_countryside_setting": "A peaceful countryside setting",
+  "a_weekly_sessions_to_indroduce_mindfulness": "A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace. A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace.",
+  "enroll_now": "Enroll Now",
+  "harmony_through_movement": "Harmony Through Movement: Spiritual Yoga Class",
+  "in_person_online": "In-person/online",
+  "meditation_and_mindfulness_workshops": "Meditation and Mindfulness Workshops",
+  "mindful_mondays_guided_meditation": "Mindful Mondays: Guided Meditation for Beginners",
+  "outdoor_yoga_in_nature": "Outdoor yoga in nature",
+  "spiritual_retreats": "Spiritual Retreats",
+  "weekend_retreat_reconnecting_with_your_inner_self": "Weekend Retreat: Reconnecting with Your Inner Self",
+  "yoga_for_stress_relief_and_relaxation": "Yoga for Stress Relief and Relaxation"
+}
 }
