@@ -3,11 +3,11 @@ import Image from 'next/image';
 import Link from "next/link"; 
 import { usePathname } from 'next/navigation';
 import { useTranslations } from "next-intl";
+import { useEffect, useState } from 'react';
 
 export default function Commitment({CommitmentHeader}) { 
     console.log("CommitmentHeader1234567890",CommitmentHeader);
     const t = useTranslations("Commitments");
-
     const currentPath = usePathname();
     const [language, setLanguage] = useState('');
   
@@ -28,19 +28,19 @@ export default function Commitment({CommitmentHeader}) {
            <section className="commitment-wrap bg-gray-light lg:pt-[102px] xl:pb-[110px] lg:pb-[80px] pt-[60px] pb-[60px]">
                 <div className="2xl:container xl:container lg:container mx-auto px-5">
                    <div className='heading-box text-center lg:mb-16 mb-7'>
-                      <h5 className='text-info-color 2xl:text-2xl font-black  '>122121{t("innerLight")}</h5>
-                      <h2 className='xl:text-40 lg:text-[30px]  text-[25px]  font-bold'>{language === "en" ? CommitmentHeader?.heading_en : CommitmentHeader?.heading_en }</h2>
+                      <h5 className='text-info-color 2xl:text-2xl font-black  '>{t("innerLight")}</h5>
+                      <h2 className='xl:text-40 lg:text-[30px]  text-[25px]  font-bold'>{language === "en" ? CommitmentHeader?.heading_en : CommitmentHeader?.heading_ar }</h2>
                    </div>
                    <div class="lg:grid lg:grid-cols-4  items-center ">
                         <div className=' col-span-1  '>
                             <div className='commitment-content text-center lg:mb-36 mb-4 lg:max-w-[395px] max-w-full'>
-                               <p className='xl:text-lg font-normal'>{language === "en" ? CommitmentHeader?.point1_en : CommitmentHeader?.point1_en }</p>
+                               <p className='xl:text-lg font-normal'>{language === "en" ? CommitmentHeader?.point1_en : CommitmentHeader?.point1_ar }</p>
                             </div>
                             <div className='commitment-content text-center lg:mb-36 mb-4 lg:max-w-[395px] max-w-full'>
-                               <p className='xl:text-lg font-normal'>{CommitmentHeader?.point2_en}</p>
+                               <p className='xl:text-lg font-normal'>{language === "en" ? CommitmentHeader?.point2_en : CommitmentHeader?.point2_ar }</p>
                             </div>
                             <div className='commitment-content text-center lg:max-w-[395px] max-w-full mb-4'>
-                               <p className='xl:text-lg font-normal'>{CommitmentHeader?.point3_en}</p>
+                               <p className='xl:text-lg font-normal'>{language === "en" ? CommitmentHeader?.point3_en : CommitmentHeader?.point3_ar }</p>
                             </div>
                         </div> 
                         <div className='col-span-2  '>
@@ -50,13 +50,13 @@ export default function Commitment({CommitmentHeader}) {
                         </div>
                        <div className=' col-span-1 '>
                             <div className='commitment-content text-center lg:mb-36 lg:max-w-[395px] max-w-full mb-4'>
-                                <p className='xl:text-lg font-normal'>{CommitmentHeader?.point4_en}</p>
+                                <p className='xl:text-lg font-normal'>{language === "en" ? CommitmentHeader?.point4_en : CommitmentHeader?.point4_ar }</p>
                             </div>
                             <div className='commitment-content text-center lg:mb-36 lg:max-w-[395px] max-w-full mb-4'>
-                                <p className='xl:text-lg font-normal'>{CommitmentHeader?.point5_en}</p>
+                                <p className='xl:text-lg font-normal'>{language === "en" ? CommitmentHeader?.point5_en : CommitmentHeader?.point5_ar }</p>
                             </div>
                             <div className='commitment-content text-center lg:max-w-[395px] max-w-full mb-4'>
-                                <p className='xl:text-lg font-normal'>{CommitmentHeader?.point6_en}</p>
+                                <p className='xl:text-lg font-normal'>{language === "en" ? CommitmentHeader?.point6_en : CommitmentHeader?.point6_ar }</p>
                             </div>
                         </div>
                     </div> 
