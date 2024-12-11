@@ -158,11 +158,11 @@
     "our_academy_offers_tools_and_guidance": "Our academy offers tools and guidance to create lasting change, empowering you to live with greater clarity, peace, and purpose."
   },
   "ContactUs": {
-    "contact_us" : "CONTACT US",
-    "get_in_touch" : "Get In Touch – We're Here To Help You Thrive!",
-    "through_holistic_practices" : "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
-    "download_app" : "Download App",
-    "download_our_app" : "Download Our App"
+    "contact_us": "CONTACT US",
+    "get_in_touch": "Get In Touch – We're Here To Help You Thrive!",
+    "through_holistic_practices": "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
+    "download_app": "Download App",
+    "download_our_app": "Download Our App"
   },
   "EventBanner": {
     "connect_and_grow": "CONNECT AND GROW",
@@ -171,33 +171,43 @@
     "pathway_to_inner_peace": "Pathways To Inner Peace: Events And Workshops",
     "spiritual_events": "Spiritual Events",
     "through_holistic_practices": "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self."
-},
-"SignUpNow": {
-  "already_have_an_account": "Already have an account?",
-  "confirm_pass": "Confirm Password",
-  "fill_the_form_below_our_representatives_respond_you": "Fill the form below, our representatives respond you with in 24h.",
-  "full_name": "Full Name",
-  "moments_of_serenity": "MOMENTS OF SERENITY",
-  "password": "Password",
-  "phone_number": "Phone Number",
-  "sign_in": "Sign in",
-  "sign_up": "Sign Up",
-  "sign_up_now": "Sign Up Now"
-},
-"SpiritualCard": {
-  "10_DEC": "10 DEC",
-  "12_DEC": "12 DEC",
-  "20_DEC": "20 DEC",
-  "a_peaceful_countryside_setting": "A peaceful countryside setting",
-  "a_weekly_sessions_to_indroduce_mindfulness": "A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace. A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace.",
-  "enroll_now": "Enroll Now",
-  "harmony_through_movement": "Harmony Through Movement: Spiritual Yoga Class",
-  "in_person_online": "In-person/online",
-  "meditation_and_mindfulness_workshops": "Meditation and Mindfulness Workshops",
-  "mindful_mondays_guided_meditation": "Mindful Mondays: Guided Meditation for Beginners",
-  "outdoor_yoga_in_nature": "Outdoor yoga in nature",
-  "spiritual_retreats": "Spiritual Retreats",
-  "weekend_retreat_reconnecting_with_your_inner_self": "Weekend Retreat: Reconnecting with Your Inner Self",
-  "yoga_for_stress_relief_and_relaxation": "Yoga for Stress Relief and Relaxation"
-}
+  },
+  "SignUpNow": {
+    "already_have_an_account": "Already have an account?",
+    "confirm_pass": "Confirm Password",
+    "fill_the_form_below_our_representatives_respond_you": "Fill the form below, our representatives respond you with in 24h.",
+    "full_name": "Full Name",
+    "moments_of_serenity": "MOMENTS OF SERENITY",
+    "password": "Password",
+    "phone_number": "Phone Number",
+    "sign_in": "Sign in",
+    "sign_up": "Sign Up",
+    "sign_up_now": "Sign Up Now"
+  },
+  "SpiritualCard": {
+    "10_DEC": "10 DEC",
+    "12_DEC": "12 DEC",
+    "20_DEC": "20 DEC",
+    "a_peaceful_countryside_setting": "A peaceful countryside setting",
+    "a_weekly_sessions_to_indroduce_mindfulness": "A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace. A weekly session to introduce mindfulness techniques for reducing stress and finding inner peace.",
+    "enroll_now": "Enroll Now",
+    "harmony_through_movement": "Harmony Through Movement: Spiritual Yoga Class",
+    "in_person_online": "In-person/online",
+    "meditation_and_mindfulness_workshops": "Meditation and Mindfulness Workshops",
+    "mindful_mondays_guided_meditation": "Mindful Mondays: Guided Meditation for Beginners",
+    "outdoor_yoga_in_nature": "Outdoor yoga in nature",
+    "spiritual_retreats": "Spiritual Retreats",
+    "weekend_retreat_reconnecting_with_your_inner_self": "Weekend Retreat: Reconnecting with Your Inner Self",
+    "yoga_for_stress_relief_and_relaxation": "Yoga for Stress Relief and Relaxation"
+  },
+  "Contact": {
+    "contact_us": "Contact Us",
+    "form": "Fill the form below, our representatives will respond to you within 24 hours.",
+    "your_name": "Your Name",
+    "email": "Email",
+    "contact_no": "Contact No",
+    "message": "Message",
+    "download": "Download Our App",
+    "submit": "Submit"
+  }
 }

@@ -164,10 +164,22 @@ body {
   z-index: -1;
   background-image: url('../public/contactus.png')
 }
+.event-hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('../public/assets/images/event/event-banner.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
+html[lang="ar"] .event-hero::before,
 html[lang="ar"] .contact-hero::before {
   transform: scaleX(-1);
 }
+
+
 .rtl .text-rtl{
   text-align: right;
 }
