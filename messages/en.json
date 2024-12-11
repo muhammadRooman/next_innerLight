@@ -9,7 +9,7 @@
     "JoinNow": "Join Now",
     "en": "English",
     "ar": "Arabic",
-    "copyright_reserved_Innerlight":"Copyright Reserved Innerlight"
+    "copyright_reserved_Innerlight": "Copyright Reserved Innerlight"
   },
   "HeroBanner": {
     "title": "BEGIN YOUR JOURNEY TO",
@@ -209,5 +209,12 @@
     "message": "Message",
     "download": "Download Our App",
     "submit": "Submit"
+  },
+  "MeditationConsultation": {
+    "meditation_consultation": "Meditation & Consultation",
+    "your_spiritual_journey": "Experience personalized support on your spiritual journey through tailored meditation sessions and one-on-one consultations with skilled practitioners. Whether you're new to meditation or looking to deepen your practice, our consultations provide guidance, clarity, and tools to help you overcome challenges and find inner peace. Connect with compassionate experts dedicated to nurturing your growth and well-being.",
+    "connect_with_compassionate" : "Connect with compassionate experts dedicated to nurturing your growth and well-being.",
+    "book_your_consultation" : "Book Your Consultation",
+    "contact_us" :"CONTACT US"
   }
 }

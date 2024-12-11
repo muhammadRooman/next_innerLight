@@ -1,6 +1,6 @@
 import HeroBanner from "@/components/HeroBanner";
 import Commitment from "@/components/Commitment";
-// import Meditation from "@/components/Meditation";
+import Meditation from "@/components/MeditationConsultation";
 import DownloadOurApp from "@/components/DownloadOurApp";
 import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
 import Blogs from "@/components/Blogs";
@@ -38,8 +38,8 @@ const  LandingPage = async ()=> {
   return (
     <>
       <HeroBanner HeroBannerHeader={HeroBannerHeader} />
-      <Commitment  CommitmentHeader = {CommitmentHeader}/>
-      {/* <Meditation className="arabic" />   */}
+      <Commitment CommitmentHeader = {CommitmentHeader}/>
+      <Meditation />  
       <DownloadOurApp />
       <BenefitsOfHolistic />
       <Blogs />
