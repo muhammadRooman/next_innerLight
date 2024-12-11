@@ -196,7 +196,8 @@
     "outdoor_yoga_in_nature": "اليوغا في الهواء الطلق في الطبيعة",
     "spiritual_retreats": "الخلوات الروحية",
     "weekend_retreat_reconnecting_with_your_inner_self": "عطلة نهاية الأسبوع: إعادة التواصل مع ذاتك الداخلية",
-    "yoga_for_stress_relief_and_relaxation": "اليوغا لتخفيف التوتر والاسترخاء"
+    "yoga_for_stress_relief_and_relaxation": "اليوغا لتخفيف التوتر والاسترخاء",
+    "enrollnow":"سجل الآن"
   },
   "SignUpNow": {
     "moments_of_serenity": "لحظات من الصفاء",
@@ -228,5 +229,7 @@
     "connect_with_compassionate" : "تواصل مع الخبراء المتعاطفين الذين يكرسون جهودهم لرعاية نموك ورفاهيتك.",
     "book_your_consultation" : "احجز استشارتك",
     "contact_us" :"اتصل بنا"
+    "submit": "يُقدِّم",
+    "alert":"سيتم الاتصال بك قريبا من قبل المشرف."
   }
 }
