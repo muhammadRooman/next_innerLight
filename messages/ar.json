@@ -157,45 +157,69 @@
     "our_academy_offers_tools_and_guidance": "تقدم أكاديميتنا الأدوات والإرشادات اللازمة لإحداث تغيير دائم، وتمكينك من العيش بمزيد من الوضوح والسلام والهدف."
   },
   "ContactUs": {
-    "contact_us" : "اتصل بنا",
-    "get_in_touch" : "تواصل معنا – نحن هنا لمساعدتك على تحقيق النجاح!",
-    "through_holistic_practices" : "من خلال الممارسات الشاملة والدعم الشخصي والمجتمع الرحيم، نساعدك على تنمية السلام الداخلي والوضوح والتواصل الأعمق مع نفسك الحقيقية.",
-    "download_app" : "تحميل التطبيق"
+    "contact_us": "اتصل بنا",
+    "get_in_touch": "تواصل معنا – نحن هنا لمساعدتك على تحقيق النجاح!",
+    "through_holistic_practices": "من خلال الممارسات الشاملة والدعم الشخصي والمجتمع الرحيم، نساعدك على تنمية السلام الداخلي والوضوح والتواصل الأعمق مع نفسك الحقيقية.",
+    "download_app": "تحميل التطبيق"
   },
   "EventBanner": {
-        "connect_and_grow": "التواصل والنمو",
-        "download_app": "تحميل التطبيق",
-        "events": "الأحداث",
-        "pathway_to_inner_peace": "مسارات إلى السلام الداخلي: الأحداث وورش العمل",
-        "spiritual_events": "الأحداث الروحية",
-        "through_holistic_practices": "من خلال الممارسات الشاملة والدعم الشخصي والمجتمع الرحيم، نساعدك على تنمية السلام الداخلي والوضوح والتواصل الأعمق مع نفسك الحقيقية."
-    },
-    "SignUpNow": {
-      "already_have_an_account": "هل لديك حساب بالفعل؟",
-      "confirm_pass": "تأكيد كلمة المرور",
-      "fill_the_form_below_our_representatives_respond_you": "املأ النموذج أدناه، وسيقوم ممثلونا بالرد عليك خلال 24 ساعة.",
-      "full_name": "الاسم الكامل",
-      "moments_of_serenity": "لحظات من الصفاء",
-      "password": "كلمة المرور",
-      "phone_number": "رقم التليفون",
-      "sign_in": "تسجيل الدخول",
-      "sign_up": "اشتراك",
-      "sign_up_now": "سجل الآن"
+    "connect_and_grow": "التواصل والنمو",
+    "download_app": "تحميل التطبيق",
+    "events": "الأحداث",
+    "pathway_to_inner_peace": "مسارات إلى السلام الداخلي: الأحداث وورش العمل",
+    "spiritual_events": "الأحداث الروحية",
+    "through_holistic_practices": "من خلال الممارسات الشاملة والدعم الشخصي والمجتمع الرحيم، نساعدك على تنمية السلام الداخلي والوضوح والتواصل الأعمق مع نفسك الحقيقية."
+  },
+  "SignUpNow": {
+    "already_have_an_account": "هل لديك حساب بالفعل؟",
+    "confirm_pass": "تأكيد كلمة المرور",
+    "fill_the_form_below_our_representatives_respond_you": "املأ النموذج أدناه، وسيقوم ممثلونا بالرد عليك خلال 24 ساعة.",
+    "full_name": "الاسم الكامل",
+    "moments_of_serenity": "لحظات من الصفاء",
+    "password": "كلمة المرور",
+    "phone_number": "رقم التليفون",
+    "sign_in": "تسجيل الدخول",
+    "sign_up": "اشتراك",
+    "sign_up_now": "سجل الآن"
   },
   "SpiritualCard": {
-      "10_DEC": "10 ديسمبر",
-      "12_DEC": "12 ديسمبر",
-      "20_DEC": "20 ديسمبر",
-      "a_peaceful_countryside_setting": "بيئة ريفية هادئة",
-      "a_weekly_sessions_to_indroduce_mindfulness": "جلسة أسبوعية للتعريف بتقنيات اليقظة الذهنية لتقليل التوتر وإيجاد السلام الداخلي. جلسة أسبوعية للتعريف بتقنيات اليقظة الذهنية لتقليل التوتر وإيجاد السلام الداخلي.",
-      "enroll_now": "سجل الآن",
-      "harmony_through_movement": "الانسجام من خلال الحركة: دروس اليوغا الروحية",
-      "in_person_online": "شخصيا / عبر الإنترنت",
-      "meditation_and_mindfulness_workshops": "ورش التأمل واليقظة",
-      "mindful_mondays_guided_meditation": "أيام الاثنين الواعية: التأمل الموجه للمبتدئين",
-      "outdoor_yoga_in_nature": "اليوغا في الهواء الطلق في الطبيعة",
-      "spiritual_retreats": "الخلوات الروحية",
-      "weekend_retreat_reconnecting_with_your_inner_self": "عطلة نهاية الأسبوع: إعادة التواصل مع ذاتك الداخلية",
-      "yoga_for_stress_relief_and_relaxation": "اليوغا لتخفيف التوتر والاسترخاء"
+    "10_DEC": "10 ديسمبر",
+    "12_DEC": "12 ديسمبر",
+    "20_DEC": "20 ديسمبر",
+    "a_peaceful_countryside_setting": "بيئة ريفية هادئة",
+    "a_weekly_sessions_to_indroduce_mindfulness": "جلسة أسبوعية للتعريف بتقنيات اليقظة الذهنية لتقليل التوتر وإيجاد السلام الداخلي. جلسة أسبوعية للتعريف بتقنيات اليقظة الذهنية لتقليل التوتر وإيجاد السلام الداخلي.",
+    "enroll_now": "سجل الآن",
+    "harmony_through_movement": "الانسجام من خلال الحركة: دروس اليوغا الروحية",
+    "in_person_online": "شخصيا / عبر الإنترنت",
+    "meditation_and_mindfulness_workshops": "ورش التأمل واليقظة",
+    "mindful_mondays_guided_meditation": "أيام الاثنين الواعية: التأمل الموجه للمبتدئين",
+    "outdoor_yoga_in_nature": "اليوغا في الهواء الطلق في الطبيعة",
+    "spiritual_retreats": "الخلوات الروحية",
+    "weekend_retreat_reconnecting_with_your_inner_self": "عطلة نهاية الأسبوع: إعادة التواصل مع ذاتك الداخلية",
+    "yoga_for_stress_relief_and_relaxation": "اليوغا لتخفيف التوتر والاسترخاء"
+  },
+  "SignUpNow": {
+    "moments_of_serenity": "لحظات من الصفاء",
+    "sign_up_now": "سجل الآن",
+    "fill_the_form_below_our_representatives_respond_you": "املأ النموذج أدناه، وسيقوم ممثلونا بالرد عليك خلال 24 ساعة.",
+    "sign_in": "تسجيل الدخول",
+    "already_have_an_account": "هل لديك حساب بالفعل؟",
+    "sign_up": "اشتراك",
+    "full_name": "الاسم الكامل",
+    "phone_number": "رقم التليفون",
+    "password": "كلمة المرور",
+    "confirm_pass": "تأكيد كلمة المرور",
+    "upload_picture": "تحميل الصورة",
+    "email": "بريد إلكتروني"
+  },
+  "Contact": {
+    "contact_us": "اتصل بنا",
+    "form": "املأ النموذج أدناه، وسيقوم ممثلونا بالرد عليك خلال 24 ساعة.",
+    "your_name": "اسمك",
+    "email": "بريد إلكتروني",
+    "contact_no": "رقم الاتصال",
+    "message": "رسالة",
+    "download": "قم بتنزيل تطبيقنا",
+    "submit": "يُقدِّم"
   }
 }

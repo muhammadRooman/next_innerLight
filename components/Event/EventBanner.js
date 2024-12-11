@@ -6,7 +6,7 @@ export default function EventBanner(){
     const t = useTranslations("EventBanner");
     return(
         <>
-        <section className="hero-banner bg-event-banner bg-cover bg-center  xl:min-h-[800px]  min-h-[450px]  relative flex items-center justify-start pb-10 ">
+        <section className="hero-banner event-hero xl:min-h-[800px] min-h-[450px] relative flex items-center justify-start pb-10">
             <div className="2xl:container xl:container lg:container mx-auto lg:max-0  px-5">
                 <div className="inner-container relative">
                     <div className="hero-banner-content max-w-[600px] ml-0">

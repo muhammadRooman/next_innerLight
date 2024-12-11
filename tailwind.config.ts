@@ -14,7 +14,6 @@ module.exports = {
         'chairman-bg': "url('/assets/images/slogun.png')",
         'hero-banner': "url('/assets/images/hero-banner.png')",
         'about-banner': "url('/assets/images/about/AboutBanner.png')",
-        'event-banner': "url('/assets/images/event/event-banner.png')",
         'meditation-left': "url('/assets/images/Meditation.png')",
         'meditation-bg': "url('/assets/images/Meditation-bg.png')",
         'SubscriptionPlan-bg': "url('/assets/images/SubscriptionPlan-bg.png')",
@@ -28,7 +27,6 @@ module.exports = {
         'blogImg3-bg': "url('/assets/images/event/blogImg3.png')",
         'shap-bg': "url('/assets/images/event/shap.svg')",
         'benefits': "url('/benefits.png')",
-        
         'yoga': "url('/formyoga.png')",
       },
       colors: {
