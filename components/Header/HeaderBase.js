@@ -25,7 +25,7 @@ const Header = ({ locale }) => {
   const handleLanguageChange = (e) => {
     const newLocale = e.target.value;
     const path = pathname.split("/").slice(2).join("/") || "";
-    router.push(`/${newLocale}/${path}`);
+    router.push(`/${newLocale}/${path}`,{ shallow: true });
   };
 
   const toggleMenu = () => {
@@ -55,6 +55,7 @@ const Header = ({ locale }) => {
               href={`/${locale}/${link}`}
               className="lg:text-black text-white py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl  hover:text-[#1796D8] font-medium"
               onClick={() => setIsMenuOpen(false)}
+              prefetch={true}
             >
               {t(link)}
             </Link>

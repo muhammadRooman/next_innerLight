@@ -1,21 +1,21 @@
 "use client"
 import SiteBanner from "@/components/SiteBanner";
+
 import Commitment from "@/components/Commitment";
 // import Meditation from "@/components/Meditation";
 import DownloadOurApp from "@/components/DownloadOurApp";
 import { usePathname } from 'next/navigation';
 import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
-import Blogs from "@/components/Blogs";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import Testimonial from "@/components/Testimonial";
+import OurClients from "@/components/OurClients";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import SubscribeUs from "@/components/SubscribeUs";
-import UpcomingWorkshop from "@/components/UpcomingWorkshop";
 import BlogsCard from "@/components/BlogsCard";
-import axios from "axios";
 import useSWR from 'swr';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 
 // Define fetcher function
 const fetcher = (url) => fetch(url).then((r) => r.json());
@@ -27,39 +27,71 @@ export default function LandingPage() {
   const [cmsWebHeadingData,setCmsWebHeadingData] = useState("")
   const [cmsWebCommitmentData,setCmsWebHCommitmentData] = useState("")
   const [CmsWebHMeditationData,setCmsWebHMeditationData] = useState("")
-  
+  const [CmsWebHEventsData,setCmsWebHEventsData] = useState([])
+  const [testimonialsData,setTestimonialsData] = useState([])
+    {/* State to manage visibility */}
+    const [showAll, setShowAll] = useState(false);
+
+    {/* Data to be displayed */}
+    const displayedEvents = showAll ? CmsWebHEventsData : CmsWebHEventsData.slice(0, 3);
+
   // Fetch cmsWeb data using SWR
   const { data, error, isLoading } = useSWR(
     `${process.env.NEXT_PUBLIC_BASE_API}/cmsWeb`,
     fetcher
   );
+
+  // Fetch Webinar data using SWR
+ const { data: WebinarData, error: WebinarError, isLoading: isWebinarLoading } = useSWR(
+  `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/events`,
+  fetcher
+);
+
+  // Fetch Testimonial data using SWR
+ const { data: testimonialData, error: testimonialError, isLoading: isTestimonialLoading } = useSWR(
+  `${process.env.NEXT_PUBLIC_BASE_API}/testimonial`,
+  fetcher
+);
   
-  // Log the fetched data
+  // fetched cmsWeb
   useEffect(() => {
-    if (data) {
-      setCmsWebHeadingData(data.cmsWeb.header)
-      setCmsWebHCommitmentData(data.cmsWeb.commitment)
-      setCmsWebHMeditationData(data.cmsWeb.meditation)
+    if (data ) {
+      setCmsWebHeadingData(data?.cmsWeb?.header)
+      setCmsWebHCommitmentData(data?.cmsWeb?.commitment)
+      setCmsWebHMeditationData(data?.cmsWeb?.meditation)
       console.log('Data from server:', data);
     }
-
     const lang = currentPath.split('/')[1] || 'en';  // Default to 'en' if language is missing
     setLanguage(lang);
-
   }, [data,currentPath]);
+
+ // fetched Webinar
+  useEffect(() => {
+    if (WebinarData ) {
+      setCmsWebHEventsData(WebinarData?.events)
+      console.log('WebinarData:', WebinarData);
+    }
+  }, [WebinarData]);
+
+ // fetched testimonialData
+  useEffect(() => {
+    if (testimonialData ) {
+      setTestimonialsData(testimonialData?.testimonials)
+      console.log('testimonialData:', testimonialsData);
+    }
+  }, [testimonialData]);
 
   useEffect(() => {
     console.log('cmsWebHeadingData', cmsWebHeadingData);
     console.log('cmsWebCommitmentData123', cmsWebCommitmentData);
     console.log('CmsWebHMeditationData00', CmsWebHMeditationData);
-  }, [cmsWebHeadingData, cmsWebCommitmentData,CmsWebHMeditationData])
+    console.log('CmsWebHEventsData', CmsWebHEventsData);
+    console.log('testimonialData123:', testimonialsData);
+  }, [cmsWebHeadingData, cmsWebCommitmentData,CmsWebHMeditationData,CmsWebHEventsData,testimonialsData])
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
-  // ${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/events
-
- 
   const benefits = [
     {
         id: 1,
@@ -273,23 +305,138 @@ export default function LandingPage() {
             <div className='col-span-8'> 
                  <div className='blog-card shadow-shadow-color rounded-10 xl:mb-0 mb-6'> 
                     <div className='card-img relative xl:min-h-[521px] lg:min-h-[421px] min-h-[300px]'>
-                        <Image src="/BlogCard1.png" alt="BlogCard1 white" layout="fill"  className="rounded-10 object-cover  " />
+                        <Image src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${CmsWebHEventsData[0]?.thumbnailPic}`}  alt="BlogCard1 white" layout="fill"  className="rounded-10 object-cover  " />
                     </div> 
                     <div className='card-content lg:p-7 p-5 lg:pb-10 pb-7 '>
                         <h4 className='2xl:text-2xl text-xl font-bold max-w-[605px] mb-4'>{t("the_mind_body_connection_how_mental_health")}</h4>
-                        <p className='lg:text-lg text-sm'>{t("discuss_how_emotional_and_psychological")}</p>
+                        <p className='lg:text-lg text-sm'>{language === "en" ? CmsWebHEventsData[0]?.shortDescription: CmsWebHEventsData[0]?.shortDescription_ar}</p>
                     </div>
                  </div> 
             </div>
             <div className='col-span-4  '> 
                 <SubscribeUs />
-                <UpcomingWorkshop   />
+                <section className="SubscribeUs-wrap mt-6 lg:mb-0 mb-3">
+          <div className="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-9 lg:px-8 p-5">
+            <h1 className="2xl:text-2xl text-xl font-bold text-center mb-6">
+              {t("upcoming_workshop")}
+            </h1>
+            {displayedEvents?.map((item) => (
+              <div 
+                key={item._id} 
+                className="mediaObject flex justify-start items-center mb-5"
+              >
+                <Image 
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${item.thumbnailPic}`} 
+                  alt="Workshop image" 
+                  width={103} 
+                  height={94} 
+                  className="rounded-10 lg:w-[103px] w-20" 
+                />
+                <div className="mediaContent ml-5 xl:max-w-[307px] max-w-full">
+                  <p className='lg:text-lg text-sm text-left'>
+                    {language === "en" ? item?.shortDescription : item?.shortDescription_ar}
+                  </p>
+                </div>
+              </div>
+            ))}
+
+            {/* Show "More" button only if data is more than 4 */}
+            {CmsWebHEventsData.length > 3 && (
+              <button 
+                className="bg-primary text-black py-2 px-4 rounded mt-4"
+                onClick={() => setShowAll(!showAll)}
+              >
+                {showAll ? t("show_less") : t("show_more")}
+              </button>
+            )}
+          </div>
+          </section>
+
             </div>
           </div>
            <BlogsCard />
         </div>
      </section>
      {/* <Testimonial /> */}
+     <section className="bg-SubscriptionPlan-bg lg:pt-10 lg:pb-17 py-10 bg-cover bg-center">
+      <div className="2xl:container xl:container lg:container mx-auto px-4">
+        {/* Section Heading */}
+        <div className="text-center mb-12">
+          <h5 className="text-info-color 2xl:text-2xl font-black">{t("reviews")}</h5>
+          <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold">{t("what_our_clients_say_about_us")}</h2>
+        </div>
+
+        {/* Swiper Slider */}
+        <Swiper
+          pagination={{
+            el: ".custom-pagination",
+            type: "custom",
+            renderCustom: (swiper, current, total) => {
+              return `<span className="text-lg text-[#343434]">0${current}</span> / <span className="text-lg text-[#343434]">0${total}</span>`;
+            },
+          }}
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
+          modules={[Pagination, Navigation]}
+          className="SwiperSlder relative"
+        >
+          {testimonialsData?.map((client, index) => (
+            <SwiperSlide key={client._id}>
+              <div className="xl:grid xl:grid-cols-12 gap-6 items-center">
+                <div className="col-span-5">
+                  <div className="relative xl:min-h-[350px] min-h-[250px] xl:mb-0 mb-9">
+                    <Image
+                       src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${client?.image}`}
+                       alt={language === "en" ? client?.name_en : client?.name_ar }
+                      layout="fill"
+                      className="object-cover mx-auto xl:max-w-[390px] max-w-[280px]"
+                    />
+                  </div>
+                </div>
+                <div className="col-span-7">
+                  <div className="slider-content xl:max-w-[640px] max-w-full xl:text-left text-center">
+                    <div className="mb-5">
+                      <h4 className="text-2xl font-medium">{language === "en" ? client?.name_en : client?.name_ar }</h4>
+                      <small className="text-info-color text-lg">
+                      {language === "en" ? client?.country_en : client?.country_ar } , {language === "en" ? client?.age_en : client?.age_ar } {t("years_old")}
+                      </small>
+                    </div>
+                    <p className="text-lg">{language === "en" ? client?.review_en : client?.review_ar }</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+
+          {/* Custom Pagination and Navigation */}
+          <div className="flex justify-center items-center xl:mt-0 mt-6">
+            <button
+              className="custom-prev custom-prev-btn absolute top-[44%] translate-y-[-44%] left-0 z-20"
+              aria-label="Previous"
+            >
+              <Image src="/left.svg" alt="left" width={40} height={39} />
+            </button>
+            <div className="center-nav flex">
+              <button className="custom-prev" aria-label="Previous">
+                <Image src="/left.png" alt="left" width={16} height={8} />
+              </button>
+              <div className="custom-pagination text-center"></div>
+              <button className="custom-next custom-next-btn" aria-label="Next">
+                <Image src="/right.png" alt="right" width={16} height={8} />
+              </button>
+            </div>
+            <button
+              className="custom-next custom-next-btn absolute right-0 z-20 top-[44%] translate-y-[-44%]"
+              aria-label="Next"
+            >
+              <Image src="/right.svg" alt="right" width={40} height={39} />
+            </button>
+          </div>
+        </Swiper>
+      </div>
+    </section>
       
       {/* Additional Sections */}
       {/* ...Other sections like DownloadOurApp, BenefitsOfHolistic, etc. */}
