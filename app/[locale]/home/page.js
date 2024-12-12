@@ -27,37 +27,55 @@ export default function LandingPage() {
   const [cmsWebHeadingData,setCmsWebHeadingData] = useState("")
   const [cmsWebCommitmentData,setCmsWebHCommitmentData] = useState("")
   const [CmsWebHMeditationData,setCmsWebHMeditationData] = useState("")
-  
+  const [CmsWebHEventsData,setCmsWebHEventsData] = useState([])
+    {/* State to manage visibility */}
+    const [showAll, setShowAll] = useState(false);
+
+    {/* Data to be displayed */}
+    const displayedEvents = showAll ? CmsWebHEventsData : CmsWebHEventsData.slice(0, 3);
+
   // Fetch cmsWeb data using SWR
   const { data, error, isLoading } = useSWR(
     `${process.env.NEXT_PUBLIC_BASE_API}/cmsWeb`,
     fetcher
   );
+
+  // Fetch Webinar data using SWR
+ const { data: WebinarData, error: WebinarError, isLoading: isWebinarLoading } = useSWR(
+  `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/events`,
+  fetcher
+);
   
-  // Log the fetched data
+  // fetched cmsWeb
   useEffect(() => {
-    if (data) {
+    if (data ) {
       setCmsWebHeadingData(data.cmsWeb.header)
       setCmsWebHCommitmentData(data.cmsWeb.commitment)
       setCmsWebHMeditationData(data.cmsWeb.meditation)
       console.log('Data from server:', data);
     }
-
     const lang = currentPath.split('/')[1] || 'en';  // Default to 'en' if language is missing
     setLanguage(lang);
-
   }, [data,currentPath]);
+
+ // fetched Webinar
+  useEffect(() => {
+    if (WebinarData ) {
+      setCmsWebHEventsData(WebinarData.events)
+      console.log('WebinarData:', WebinarData);
+    }
+  }, [WebinarData]);
 
   useEffect(() => {
     console.log('cmsWebHeadingData', cmsWebHeadingData);
     console.log('cmsWebCommitmentData123', cmsWebCommitmentData);
     console.log('CmsWebHMeditationData00', CmsWebHMeditationData);
-  }, [cmsWebHeadingData, cmsWebCommitmentData,CmsWebHMeditationData])
+    console.log('CmsWebHEventsData', CmsWebHEventsData);
+  }, [cmsWebHeadingData, cmsWebCommitmentData,CmsWebHMeditationData,CmsWebHEventsData])
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
-  // ${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/events
 
  
   const benefits = [
@@ -273,17 +291,53 @@ export default function LandingPage() {
             <div className='col-span-8'> 
                  <div className='blog-card shadow-shadow-color rounded-10 xl:mb-0 mb-6'> 
                     <div className='card-img relative xl:min-h-[521px] lg:min-h-[421px] min-h-[300px]'>
-                        <Image src="/BlogCard1.png" alt="BlogCard1 white" layout="fill"  className="rounded-10 object-cover  " />
+                        <Image src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${CmsWebHEventsData[0]?.thumbnailPic}`}  alt="BlogCard1 white" layout="fill"  className="rounded-10 object-cover  " />
                     </div> 
                     <div className='card-content lg:p-7 p-5 lg:pb-10 pb-7 '>
                         <h4 className='2xl:text-2xl text-xl font-bold max-w-[605px] mb-4'>{t("the_mind_body_connection_how_mental_health")}</h4>
-                        <p className='lg:text-lg text-sm'>{t("discuss_how_emotional_and_psychological")}</p>
+                        <p className='lg:text-lg text-sm'>{language === "en" ? CmsWebHEventsData[0]?.shortDescription: CmsWebHEventsData[0]?.shortDescription_ar}</p>
                     </div>
                  </div> 
             </div>
             <div className='col-span-4  '> 
                 <SubscribeUs />
-                <UpcomingWorkshop   />
+                <section className="SubscribeUs-wrap mt-6 lg:mb-0 mb-3">
+          <div className="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-9 lg:px-8 p-5">
+            <h1 className="2xl:text-2xl text-xl font-bold text-center mb-6">
+              {t("upcoming_workshop")}
+            </h1>
+            {displayedEvents?.map((item) => (
+              <div 
+                key={item._id} 
+                className="mediaObject flex justify-start items-center mb-5"
+              >
+                <Image 
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${item.thumbnailPic}`} 
+                  alt="Workshop image" 
+                  width={103} 
+                  height={94} 
+                  className="rounded-10 lg:w-[103px] w-20" 
+                />
+                <div className="mediaContent ml-5 xl:max-w-[307px] max-w-full">
+                  <p className='lg:text-lg text-sm text-left'>
+                    {language === "en" ? item?.shortDescription : item?.shortDescription_ar}
+                  </p>
+                </div>
+              </div>
+            ))}
+
+            {/* Show "More" button only if data is more than 4 */}
+            {CmsWebHEventsData.length > 3 && (
+              <button 
+                className="bg-primary text-black py-2 px-4 rounded mt-4"
+                onClick={() => setShowAll(!showAll)}
+              >
+                {showAll ? t("show_less") : t("show_more")}
+              </button>
+            )}
+          </div>
+          </section>
+
             </div>
           </div>
            <BlogsCard />

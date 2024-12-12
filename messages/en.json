@@ -56,7 +56,10 @@
     "book_your_consultation" : "Book Your Consultation",
     "contact_us" :"CONTACT US",
     "submit": "Submit",
-    "alert":"You will be contacted shortly by admin."
+    "alert":"You will be contacted shortly by admin.",
+     "upcoming_workshop": "Upcoming Workshop",
+      "show_less":"Show less",
+      "show_more":"Show More . . . "
   },
  
   "AboutPage": {

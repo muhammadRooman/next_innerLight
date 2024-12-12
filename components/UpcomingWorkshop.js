@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import { useTranslations } from "next-intl";
 
-export default function UpcomingWorkshop() {
+export default function UpcomingWorkshop({CmsWebHEventsData}) {
   const t = useTranslations("UpComingWorkShop");
+  console.log("1234567654321",CmsWebHEventsData);
   // Array of workshop data
   const workshops = [
     {
