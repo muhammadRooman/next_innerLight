@@ -33,7 +33,7 @@ export default async function Event() {
       <>
         <EventBanner /> 
         <SpiritualEvents webinarEvenData={webinarEvenData} />
-        <SignUpNow />
+        {/* <SignUpNow /> */}
         <Testimonial />
       </>
     );
