@@ -25,7 +25,7 @@ const Header = ({ locale }) => {
   const handleLanguageChange = (e) => {
     const newLocale = e.target.value;
     const path = pathname.split("/").slice(2).join("/") || "";
-    router.push(`/${newLocale}/${path}`);
+    router.push(`/${newLocale}/${path}`,{ shallow: true });
   };
 
   const toggleMenu = () => {
@@ -53,8 +53,9 @@ const Header = ({ locale }) => {
             <Link
               key={index}
               href={`/${locale}/${link}`}
-              className="lg:text-black text-white py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-xl xl:text-lg lg:text-[15px] hover:text-[#1796D8] font-medium"
+              className="lg:text-black text-white py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl  hover:text-[#1796D8] font-medium"
               onClick={() => setIsMenuOpen(false)}
+              prefetch={true}
             >
               {t(link)}
             </Link>
@@ -66,8 +67,9 @@ const Header = ({ locale }) => {
               <select
                 value={locale}
                 onChange={handleLanguageChange}
-                className="rounded-md px-4 py-2 bg-transparent"
+                className="rounded-md px-4 py-2 bg-transparent lg:text[15px] lg:text-black font-medium xl:text-xl"
               >
+
                 <option value="en">English</option>
                 <option value="ar">{t("ar")}</option>
               </select>
@@ -77,7 +79,7 @@ const Header = ({ locale }) => {
                 href="#"
                 className="py-2 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4"
               >
-                {t("JoinNow")}
+                {t("download_app")}
               </Link>
  
               {/* Hamburger Menu for Mobile */}

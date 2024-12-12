@@ -6,9 +6,9 @@ export default function BenefitsBanner() {
     const t = useTranslations("BenifitsBanner");
     return (
         <>
-           <section className="bg-benefits bg-cover  xl:min-h-[800px]  min-h-[450px] flex items-center pb-10 lg:bg-center bg-center">
-                <div className="xl:container lg:container mx-auto lg:max-0  px-5">
-                <div className="hero-banner-content max-w-[582px] ml-0"> 
+           <section className="site-banner benefits-banner relative bg-cover xl:min-h-[800px] min-h-[450px] flex items-center pb-10 lg:bg-center bg-center">
+                <div className="xl:container lg:container mx-auto lg:max-0 px-5">
+                <div className="site-banner-content max-w-[582px] ml-0"> 
                     <h1 className="xl:text-40 lg:text-[30px] text-[22px] text-info-color font-bold text-left">{t("benefits")}</h1>
                     <p className="xl:text-50 lg:text-[40px] text-[30px] text-white font-bold text-left xl:leading-[63px] lg:leading-[46px] mb-4">{t("unlock")}</p>
                     <p className="text-left text-white 2xl:text-2xl lg:text-xl">{t("through_holistic")}</p>
@@ -17,7 +17,6 @@ export default function BenefitsBanner() {
                     </div>
                  </div>  
                 </div>  
-
            </section>
         </>
     );

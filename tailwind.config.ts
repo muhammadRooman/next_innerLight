@@ -12,8 +12,7 @@ module.exports = {
       },
       backgroundImage: {
         'chairman-bg': "url('/assets/images/slogun.png')",
-        'hero-banner': "url('/assets/images/hero-banner.png')",
-        'about-banner': "url('/assets/images/about/AboutBanner.png')",
+        'site-banner': "url('/assets/images/site-banner.png')",
         'meditation-left': "url('/assets/images/Meditation.png')",
         'meditation-bg': "url('/assets/images/Meditation-bg.png')",
         'SubscriptionPlan-bg': "url('/assets/images/SubscriptionPlan-bg.png')",
@@ -26,7 +25,6 @@ module.exports = {
         'blogImg2-bg': "url('/assets/images/event/blogImg2.png')",
         'blogImg3-bg': "url('/assets/images/event/blogImg3.png')",
         'shap-bg': "url('/assets/images/event/shap.svg')",
-        'benefits': "url('/benefits.png')",
         'yoga': "url('/formyoga.png')",
       },
       colors: {
@@ -61,8 +59,9 @@ module.exports = {
        
       },
       screens: {
-        'tabBook': '991px',
-        'lg': '991px', // Alias for consistency
+        'xl': '1367px',
+        'lg': '1280px',
+        'md': '991px',
       },
     },
   },
