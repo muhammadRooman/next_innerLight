@@ -1,5 +1,5 @@
 "use client"
-import HeroBanner from "@/components/HeroBanner";
+import SiteBanner from "@/components/SiteBanner";
 import Commitment from "@/components/Commitment";
 // import Meditation from "@/components/Meditation";
 import DownloadOurApp from "@/components/DownloadOurApp";
@@ -23,7 +23,7 @@ const fetcher = (url) => fetch(url).then((r) => r.json());
 export default function LandingPage() {
   const currentPath = usePathname();
   const [language, setLanguage] = useState('')
-  const t = useTranslations("HeroBanner");
+  const t = useTranslations("SiteBanner");
   const [cmsWebHeadingData,setCmsWebHeadingData] = useState("")
   const [cmsWebCommitmentData,setCmsWebHCommitmentData] = useState("")
   const [CmsWebHMeditationData,setCmsWebHMeditationData] = useState("")
@@ -90,10 +90,10 @@ export default function LandingPage() {
   return (
     <>
       {/* Hero Banner Section */}
-      <section className="hero-banner bg-hero-banner bg-cover 2xl:min-h-[997px] min-h-[697px] relative flex items-end justify-center pb-10 lg:bg-center bg-center">
+      <section className="site-banner bg-site-banner bg-cover 2xl:min-h-[997px] min-h-[697px] relative flex items-end justify-center pb-10 lg:bg-center bg-center">
         <div className="2xl:container xl:container lg:container mx-auto px-5">
           <div className="inner-container relative">
-            <div className="hero-banner-content max-w-[929px] mx-auto">
+            <div className="site-banner-content max-w-[929px] mx-auto">
               <h5 className="xl:text-40 lg:text-[30px] text-[22px] text-white font-bold text-center">{language === "en" ? cmsWebHeadingData?.heading_en: cmsWebHeadingData?.heading_ar} </h5>
               <div className="relative banner-img 2xl:min-h-[148px] sm:min-h-[120px] min-h-[60px] max-w-full">
                 <Image src="/wellness.png" alt={t("wellnessAlt")} layout="fill" className="max-w-full" />

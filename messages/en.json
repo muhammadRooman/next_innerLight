@@ -1,18 +1,18 @@
 {
   "NavbarLinks": {
     "home": "Home",
-    "about": "About us",
-    "contact": "Contact US",
+    "about": "About Us",
+    "contact": "Contact Us",
     "benefits": "Benefits",
     "event": "Events",
     "events": "Events",
     "blog": "Blog",
-    "JoinNow": "Join Now",
+    "download_app": "Download App",
     "en": "English",
     "ar": "Arabic",
     "copyright_reserved_Innerlight": "Copyright Reserved Innerlight"
   },
-  "HeroBanner": {
+  "SiteBanner": {
     "title": "BEGIN YOUR JOURNEY TO",
     "wellnessAlt": "Wellness",
     "description": "Achieve inner harmony through a balanced approach to wellness, blending physical, mental, and spiritual practices. Enhance your meditation and healing techniques with guidance from experienced practitioners.",
@@ -56,7 +56,10 @@
     "book_your_consultation" : "Book Your Consultation",
     "contact_us" :"CONTACT US",
     "submit": "Submit",
-    "alert":"You will be contacted shortly by admin."
+    "alert":"You will be contacted shortly by admin.",
+     "upcoming_workshop": "Upcoming Workshop",
+      "show_less":"Show less",
+      "show_more":"Show More . . . "
   },
  
   "AboutPage": {
@@ -151,7 +154,7 @@
     "lorem": "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum."
   },
   "ContactUs": {
-    "contact_us": "CONTACT US",
+    "contact_us": "Contact Us",
     "get_in_touch": "Get In Touch – We're Here To Help You Thrive!",
     "through_holistic_practices": "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
     "download_app": "Download App",

@@ -84,13 +84,13 @@ body {
 
 
 /* direction */
-.rtl .hero-banner-content h5,
-.rtl .hero-banner-content p{
+/* .rtl .wellness-banner-content h5,
+.rtl .wellness-banner-content p{
   text-align: right;
 }
 .rtl .DownloadOurApp .heading-box {
   text-align: right;
-}
+} */
 
  
 
@@ -149,37 +149,51 @@ body {
 
 /* new css */
 
-.rtl .hero-banner-content {
-  text-align: right;
-}
 
 .contact-hero {
   position: relative;
 }
 
-.contact-hero::before {
+.contact-banner::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: url('../public/contactus.png')
+  background-image: url('../public/contactus.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.event-hero::before{
+.event-banner::before{
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   background-image: url('../public/assets/images/event/event-banner.png');
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-banner::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('../public/assets/images/about/AboutBanner.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.benefits-banner::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('../public/benefits.png');
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-html[lang="ar"] .event-hero::before,
-html[lang="ar"] .contact-hero::before {
+html[lang="ar"] .event-banner::before,
+html[lang="ar"] .contact-banner::before,
+html[lang="ar"] .about-banner::before,
+html[lang="ar"] .benefits-banner::before {
   transform: scaleX(-1);
-}
-
-
-.rtl .text-rtl{
-  text-align: right;
 }

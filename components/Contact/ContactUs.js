@@ -3,16 +3,14 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 
-
-
 export default function ContactUs() {
   const t = useTranslations("ContactUs");
 
     return (
         <>
-            <section className="contact-hero xl:min-h-[800px] min-h-[450px] bg-cover flex items-center pb-10 lg:bg-center">
+            <section className="site-banner contact-banner relative xl:min-h-[800px] min-h-[450px] bg-cover flex items-center pb-10 lg:bg-center">
                 <div className="2xl:container xl:container lg:container mx-auto lg:max-0  px-5">
-                <div className="hero-banner-content max-w-[590px] ml-0"> 
+                <div className="site-banner-content max-w-[590px] ml-0"> 
                         <h5 className="xl:text-40 lg:text-[30px] text-[22px] text-info-color font-bold text-left ">{t("contact_us")}</h5>  
                         <h5 className="xl:text-50 lg:text-[40px] text-[30px] text-white font-bold text-left xl:leading-[63px] lg:leading-[46px] mb-4">{t("get_in_touch")}</h5>  
                         <p className="text-left text-white 2xl:text-2xl lg:text-xl">{t("through_holistic_practices")}</p>

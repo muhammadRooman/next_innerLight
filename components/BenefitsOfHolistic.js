@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useTranslations } from "next-intl";
 export default function BenefitsOfHolistic() {
-    const t = useTranslations("HeroBanner");
+    const t = useTranslations("SiteBanner");
     const benefits = [
         {
             id: 1,
