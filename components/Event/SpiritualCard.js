@@ -34,7 +34,7 @@ export default function SpiritualCard({webinarEvenData}) {
                 className={`bg-center blog-image lg:w-[375px] lg:h-[400px] h-[280px] w-full flex justify-center items-end rounded-10 overflow-hidden p-5 ${event.image} bg-cover relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-b before:from-[#FFFFFF00] before:via-[#00000019] before:to-[#000000C6] before:opacity-100 before:content-['']`}
               >
                  <Image
-                       src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${event?.bannerPic}`}
+                       src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${event?.thumbnailPic}`}
                        alt={language === "en" ? event?.name : event?.name_ar }
                       layout="fill"
                       className="object-cover mx-auto xl:max-w-[390px] max-w-[280px]"
