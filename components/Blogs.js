@@ -12,7 +12,7 @@ export default function Blogs() {
         <div className="2xl:container xl:container lg:container px-5 mx-auto lg:py-12 py-7">
           <div className="heading-box lg:text-left text-center mb-9    ">
             <h5 className="text-info-color 2xl:text-2xl font-black">{t("deepen_your_practice")}</h5>
-            <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold  ">{t("blogs_and_upcoming_workshops")}</h2> 
+            <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold">{t("blogs_and_upcoming_workshops")}</h2> 
           </div>
           <div class="xl:grid xl:grid-cols-12 gap-6">
             <div className='col-span-8'> 

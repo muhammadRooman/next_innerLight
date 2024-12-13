@@ -6,10 +6,9 @@
     "benefits": "Benefits",
     "event": "Events",
     "events": "Events",
-    "blog": "Blog",
     "download_app": "Download App",
     "en": "English",
-    "ar": "Arabic",
+    "ar": "عربي",
     "copyright_reserved_Innerlight": "Copyright Reserved Innerlight"
   },
   "SiteBanner": {
@@ -137,14 +136,14 @@
   },
  
   "SubscribeUs": {
-    "subscribeUs": "subscribeUs",
+    "subscribeUs": "Subscribe Us",
     "enter_email_address": "Enter Email Address",
     "follow_us": "Follow Us"
   },
   "UpComingWorkShop": {
     "discuss_how_support_groups": "Discuss how support groups and community connections can enhance the healing process.",
-    "discover_strategies_to_improve": "Discover strategies to improve mental wellness through mindfulness techniques.",
-    "learn_about_the_benefits_of_active": "Learn about the benefits of active listening and empathy in community settings.",
+    "discover_strategies_to_improve": "Offer tips for designing a calming and restorative environment that promotes healing.",
+    "learn_about_the_benefits_of_active": "Explain how positive affirmations can shift mindset and support the healing journey.",
     "upcoming_workshop": "Upcoming Workshop"
   },
   "BlogCard": {

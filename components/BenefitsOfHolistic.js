@@ -19,7 +19,7 @@ export default function BenefitsOfHolistic() {
         {
             id: 3,
             image: "/benefitsImg3.png",
-            title: t("community"),
+            title: t("accessibility"),
             description:t("para_3")
         },
         {

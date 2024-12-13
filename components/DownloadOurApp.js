@@ -7,7 +7,7 @@ export default function DownloadOurApp() {
 
   return (
     <>
-      <section className="DownloadOurApp bg-gray-light lg:pt-9 lg:pb-10 py-8 ">
+      <section className="DownloadOurApp bg-gray-light lg:pt-9">
         <div className="2xl:container xl:container lg:container mx-auto px-5"> 
           <div class="xl:grid xl:grid-cols-2 flex flex-col-reverse"> 
             <div className='DownloadOurApp-content xl:max-w-[685px] max-w-full lg:pt-20 pt-8 '> 
