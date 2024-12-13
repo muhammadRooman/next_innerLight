@@ -1,25 +1,16 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 export default function SpiritualCard({webinarEvenData}) {
-  console.log("webinarEvenDataROOOMAN",webinarEvenData);
   const t = useTranslations("SpiritualCard");
   const currentPath = usePathname();
   const [language, setLanguage] = useState('');
 
-  /**
-   * Determine the current language based on the path and set it to state.
-   * Defaults to 'en' if no language is found in the path.
-   * 
-   * Author: Muhammad Rooman
-   * Date: 11 December, 2024
-   */
   useEffect(() => {
-    const lang = currentPath.split('/')[1] || 'en';  // Default to 'en' if language is missing
+    const lang = currentPath.split('/')[1] || 'en';  
    setLanguage(lang);
  }, [currentPath]);
  
@@ -60,7 +51,7 @@ export default function SpiritualCard({webinarEvenData}) {
               </div>
               {/* Content Card */}
               <div className="blog-card-content flex-1 xl:max-w-[calc(100%-541px)] lg:max-w-[calc(100%-400px)]  max-w-[100%] shadow-color bg-white rounded-10  py-8 xl:px-12 p-6">
-                {/* <h4 className="xl:text-32  text-[24px]  font-bold">{event.heading}</h4> */}
+                <h4 className="xl:text-32  text-[24px]  font-bold">{language === "en" ? event?.name : event?.name_ar }</h4>
                 <div className="shap bg-shap-bg max-w-[262.97px] bg-no-repeat  min-h-[42px] text-center flex items-center justify-start xl:my-7 my-5">
                   <p className="mt-0 text-white md:text-lg  px-2">{event.type}</p>
                 </div>

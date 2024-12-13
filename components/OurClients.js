@@ -17,15 +17,8 @@ export default function OurClients({ testimonialData }) {
   const currentPath = usePathname();
   const [language, setLanguage] = useState('');
 
-/**
-   * Determine the current language based on the path and set it to state.
-   * Defaults to 'en' if no language is found in the path.
-   * 
-   * Author: Muhammad Rooman
-   * Date: 11 December, 2024
-   */
   useEffect(() => {
-     const lang = currentPath.split('/')[1] || 'en';  // Default to 'en' if language is missing
+     const lang = currentPath.split('/')[1] || 'en'; 
     setLanguage(lang);
   }, [currentPath]);
 
@@ -81,7 +74,6 @@ export default function OurClients({ testimonialData }) {
               </div>
             </SwiperSlide>
           ))}
-
           {/* Custom Pagination and Navigation */}
           <div className="flex justify-center items-center xl:mt-0 mt-6">
             <button

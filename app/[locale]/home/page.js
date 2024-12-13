@@ -1,14 +1,14 @@
 "use client"
-import SiteBanner from "@/components/SiteBanner";
+// import SiteBanner from "@/components/SiteBanner";
 
-import Commitment from "@/components/Commitment";
+// import Commitment from "@/components/Commitment";
 // import Meditation from "@/components/Meditation";
-import DownloadOurApp from "@/components/DownloadOurApp";
+// import DownloadOurApp from "@/components/DownloadOurApp";
 import { usePathname } from 'next/navigation';
-import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
+// import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import OurClients from "@/components/OurClients";
+// import OurClients from "@/components/OurClients";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import SubscribeUs from "@/components/SubscribeUs";
@@ -21,9 +21,35 @@ import { Pagination, Navigation } from "swiper/modules";
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function LandingPage() {
+  const t = useTranslations("SiteBanner");
+  const benefits = [
+    {
+        id: 1,
+        image: "/benefitsImg1.png",
+        title: t("personalization"),
+        description: t("para_1")
+    },
+    {
+        id: 2,
+        image: "/benefitsImg2.png",
+        title: t("community"),
+        description: t("para_2")
+    },
+    {
+        id: 3,
+        image: "/benefitsImg3.png",
+        title: t("community"),
+        description: t("para_3")
+    },
+    {
+        id: 4,
+        image: "/benefitsImg4.png",
+        title: t("flexibility"),
+        description: t("para_4")
+    }
+  ];
   const currentPath = usePathname();
   const [language, setLanguage] = useState('')
-  const t = useTranslations("SiteBanner");
   const [cmsWebHeadingData,setCmsWebHeadingData] = useState("")
   const [cmsWebCommitmentData,setCmsWebHCommitmentData] = useState("")
   const [CmsWebHMeditationData,setCmsWebHMeditationData] = useState("")
@@ -59,9 +85,8 @@ export default function LandingPage() {
       setCmsWebHeadingData(data?.cmsWeb?.header)
       setCmsWebHCommitmentData(data?.cmsWeb?.commitment)
       setCmsWebHMeditationData(data?.cmsWeb?.meditation)
-      console.log('Data from server:', data);
     }
-    const lang = currentPath.split('/')[1] || 'en';  // Default to 'en' if language is missing
+    const lang = currentPath.split('/')[1] || 'en';
     setLanguage(lang);
   }, [data,currentPath]);
 
@@ -69,7 +94,6 @@ export default function LandingPage() {
   useEffect(() => {
     if (WebinarData ) {
       setCmsWebHEventsData(WebinarData?.events)
-      console.log('WebinarData:', WebinarData);
     }
   }, [WebinarData]);
 
@@ -77,17 +101,8 @@ export default function LandingPage() {
   useEffect(() => {
     if (testimonialData ) {
       setTestimonialsData(testimonialData?.testimonials)
-      console.log('testimonialData:', testimonialsData);
     }
   }, [testimonialData]);
-
-  useEffect(() => {
-    console.log('cmsWebHeadingData', cmsWebHeadingData);
-    console.log('cmsWebCommitmentData123', cmsWebCommitmentData);
-    console.log('CmsWebHMeditationData00', CmsWebHMeditationData);
-    console.log('CmsWebHEventsData', CmsWebHEventsData);
-    console.log('testimonialData123:', testimonialsData);
-  }, [cmsWebHeadingData, cmsWebCommitmentData,CmsWebHMeditationData,CmsWebHEventsData,testimonialsData])
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -118,7 +133,7 @@ export default function LandingPage() {
         description: t("para_4")
     }
   ];
-  
+
   return (
     <>
       {/* Hero Banner Section */}
