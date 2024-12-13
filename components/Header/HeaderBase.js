@@ -104,7 +104,8 @@ const Header = ({ locale }) => {
 
               {/* Join Now */}
               <Link
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.arhamsoft.innerlight.innerlights&hl=en"
+                target="_blank"
                 className="py-2 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4"
               >
                 {t("download_app")}
