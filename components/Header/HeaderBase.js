@@ -46,7 +46,7 @@ const Header = ({ locale }) => {
           <div className="header-inner flex justify-between items-center xl:px-5 px-3 xl:py-2 lg:py-2">
             {/* Logo */}
             <div className="logo">
-              <Link href="#">
+              <Link href={`/${locale}/home`}>
                 <Image
                   src="/logo.png"
                   width={108}
