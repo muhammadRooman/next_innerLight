@@ -81,32 +81,32 @@ export default function LandingPage() {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
-  // const benefits = [
-  //   {
-  //       id: 1,
-  //       image: "/benefitsImg1.png",
-  //       title: t("personalization"),
-  //       description: t("para_1")
-  //   },
-  //   {
-  //       id: 2,
-  //       image: "/benefitsImg2.png",
-  //       title: t("community"),
-  //       description: t("para_2")
-  //   },
-  //   {
-  //       id: 3,
-  //       image: "/benefitsImg3.png",
-  //       title: t("accessibility"),
-  //       description: t("para_3")
-  //   },
-  //   {
-  //       id: 4,
-  //       image: "/benefitsImg4.png",
-  //       title: t("flexibility"),
-  //       description: t("para_4")
-  //   }
-  // ];
+  const benefits = [
+    {
+        id: 1,
+        image: "/benefitsImg1.png",
+        title: t("personalization"),
+        description: t("para_1")
+    },
+    {
+        id: 2,
+        image: "/benefitsImg2.png",
+        title: t("community"),
+        description: t("para_2")
+    },
+    {
+        id: 3,
+        image: "/benefitsImg3.png",
+        title: t("accessibility"),
+        description: t("para_3")
+    },
+    {
+        id: 4,
+        image: "/benefitsImg4.png",
+        title: t("flexibility"),
+        description: t("para_4")
+    }
+  ];
 
   return (
     <>
@@ -302,7 +302,6 @@ export default function LandingPage() {
                     </div>
                  </div> 
             </div>
-             {console.log(cmsWebHeadingData,"cmsWebHeadingData")}
             <div className='col-span-4  '> 
                 <SubscribeUs cmsWeb={cmsWebHeadingData}/>
                 <section className="SubscribeUs-wrap mt-6 lg:mb-0 mb-3">
