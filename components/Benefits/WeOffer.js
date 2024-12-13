@@ -38,7 +38,7 @@ export default function WeOffer() {
                             {/* <div className="yoga_image_wrap w-[566px] h-[715px]">
                                 <img src="/yoga.png" alt="Yoga Image" class="rounded-lg shadow-md w-full" />
                             </div> */}
-                            <div className='relative lg:max-w-[566px] lg:min-h-[715px]  min-h-[450px] w-full  shadow-shadow-color bg-white p-2.5 ml-auto rounded-10 my-7'>
+                            <div className='relative lg:w-full lg:min-h-[715px]  min-h-[450px] w-full shadow-shadow-color bg-white p-2.5 ml-auto rounded-10 my-7'>
                                 <Image src="/yoga.png" alt="logo white" layout="fill" className="rounded-30 object-cover p-2.5" />
                             </div>
                         </div>

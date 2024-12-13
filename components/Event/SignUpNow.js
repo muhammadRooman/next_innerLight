@@ -13,7 +13,7 @@ export default function SignUpNow() {
                 <div className="2xl:container xl:container lg:container mx-auto lg:max-0  px-5">
                     <div className="heading-box text-center xl:mb-11 mb-8">
                         <h5 className="text-info-color 2xl:text-2xl font-black">{t("moments_of_serenity")}</h5>
-                        <h2 className="xl:text-40 lg:text-[30px] text-[25px]  font-bold">{t("sign_up_now")}</h2>
+                        <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("sign_up_now")}</h2>
                         <p className="2xl:text-2xl text-xl font-normal">{t("fill_the_form_below_our_representatives_respond_you")}</p>
                     </div>
                     <div>

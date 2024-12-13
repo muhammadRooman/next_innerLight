@@ -76,7 +76,7 @@
   },
  
   "AboutBanner": {
-    "who_we_are": "Who We Are",
+    "who_we_are": "Who We Are:",
     "nurturing": "Nurturing Your Mind, Body, And Spirit",
     "through_holistic": "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
     "download_app": "Download App",
@@ -104,7 +104,7 @@
     "mindfulness_&_presence": "Mindfulness & Presence"
   },
   "BenifitsBanner": {
-    "benefits": "Benefits",
+    "benefits": "BENEFITS",
     "unlock": "Unlock Inner Peace, Purpose, And Balance",
     "through_holistic": "Through holistic practices, personalized support, and a compassionate community, we help you cultivate inner peace, clarity, and a deeper connection with your true self.",
     "download_app": "Download App"
@@ -123,9 +123,9 @@
     "healing_details": "Being part of the meditation circle has been life-changing. I came here seeking answers, and I found a supportive community that helped me heal from years of emotional trauma. I’ve learned to forgive, let go, and truly embrace self-love."
   },
   "WeOffer": {
-    "we_offer": "We Offer",
+    "we_offer": "What We Offer",
     "transformative": "Transformative Resources, And Supportive Community",
-    "holistic_healing": "Holistic Healing For Mind, Body, And Spirit:",
+    "holistic_healing": "Personalized Support For Your Unique Journey:",
     "holistic_healing_1": "We believe in nurturing the whole person, which is why our resources and guidance focus on aligning your physical, emotional, and spiritual health. By addressing all aspects of your well-being, we help you achieve a more balanced, harmonious life.",
     "holistic_healing_2": "We understand that everyone’s path is different. That’s why we offer personalized coaching, consultations, and tailored resources to support your specific needs, goals, and challenges. You’ll never feel alone on your journey.",
     "holistic_healing_3": "Our team consists of skilled spiritual guides, wellness coaches, and practitioners who bring years of experience to support your growth. Their wisdom and compassion create a safe and nurturing environment for your transformation.",
@@ -206,9 +206,9 @@
   "Contact": {
     "contact_us": "Contact Us",
     "form": "Fill the form below, our representatives will respond to you within 24 hours.",
-    "your_name": "Your Name",
-    "email": "Email",
-    "contact_no": "Contact No",
+    "your_name": "Your name",
+    "email": "Your email",
+    "contact_no": "Contact no.",
     "message": "Message",
     "download": "Download Our App",
     "submit": "Submit"

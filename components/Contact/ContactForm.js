@@ -63,10 +63,10 @@ export default function ContactUs() {
                         </div>
                     </div>
                     <div className="bg-white shadow-lg rounded-lg p-8 xl:w-1/2 lg:w-1/2 w-full">
-                        <h2 className="xl:text-40 lg:text-[30px] text-[25px]  font-bold  text-[#0A448F] lg:text-left text-center">
+                        <h2 className="xl:text-40 lg:text-[30px] text-[25px]  font-bold rtl:2xl:text-[72px] rtl:lg:text-right rtl:xl:text-[50px] rtl:text-[40px]  text-[#0A448F] lg:text-left text-center">
                             {t("contact_us")}
                         </h2>
-                        <p className="mb-6 text-[#000000] text text-[18px] font-normal lg:text-left text-center">
+                        <p className="mb-6 text-[#000000] text text-[18px] font-normal lg:text-left text-center rtl:lg:text-right">
                             {t("form")}
                         </p>
 
@@ -102,7 +102,7 @@ export default function ContactUs() {
                                 placeholder={t("message")}
                                 className="placeholder:text-[#11171F] w-full p-4 border border-[#DEDEDE] focus:outline-none rounded-lg min-h-[180px] text-[18px] resize-none"
                             ></textarea>
-                            <div className="btn-wrap text-right lg:mt-14 mt-10">
+                            <div className="btn-wrap text-right rtl:text-left lg:mt-14 mt-10">
                                 <button
                                     type="submit"
                                     className="py-2.5 px-11 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:text-lg"

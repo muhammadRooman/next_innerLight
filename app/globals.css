@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Agha Resheeq';
+  src: url('/fonts/agha-resheeq.woff2') format('woff2'),
+       url('/fonts/agha-resheeq.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-agha {
+  font-family: 'Agha Resheeq', sans-serif;
+}
+
+@font-face {
+  font-family: 'BrittanySignature';
+  src: url('/fonts/BrittanySignatureRegular.woff') format('truetype'),
+       url('/fonts/BrittanySignatureRegular.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

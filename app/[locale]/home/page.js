@@ -22,32 +22,32 @@ const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function LandingPage() {
   const t = useTranslations("SiteBanner");
-  const benefits = [
-    {
-        id: 1,
-        image: "/benefitsImg1.png",
-        title: t("personalization"),
-        description: t("para_1")
-    },
-    {
-        id: 2,
-        image: "/benefitsImg2.png",
-        title: t("community"),
-        description: t("para_2")
-    },
-    {
-        id: 3,
-        image: "/benefitsImg3.png",
-        title: t("community"),
-        description: t("para_3")
-    },
-    {
-        id: 4,
-        image: "/benefitsImg4.png",
-        title: t("flexibility"),
-        description: t("para_4")
-    }
-  ];
+  // const benefits = [
+  //   {
+  //       id: 1,
+  //       image: "/benefitsImg1.png",
+  //       title: t("personalization"),
+  //       description: t("para_1")
+  //   },
+  //   {
+  //       id: 2,
+  //       image: "/benefitsImg2.png",
+  //       title: t("community"),
+  //       description: t("para_2")
+  //   },
+  //   {
+  //       id: 3,
+  //       image: "/benefitsImg3.png",
+  //       title: t("community"),
+  //       description: t("para_3")
+  //   },
+  //   {
+  //       id: 4,
+  //       image: "/benefitsImg4.png",
+  //       title: t("flexibility"),
+  //       description: t("para_4")
+  //   }
+  // ];
   const currentPath = usePathname();
   const [language, setLanguage] = useState('')
   const [cmsWebHeadingData,setCmsWebHeadingData] = useState("")
@@ -137,7 +137,7 @@ export default function LandingPage() {
   return (
     <>
       {/* Hero Banner Section */}
-      <section className="site-banner bg-site-banner bg-cover 2xl:min-h-[997px] min-h-[697px] relative flex items-end justify-center pb-10 lg:bg-center bg-center">
+      <section className="site-banner bg-site-banner bg-cover 2xl:min-h-[calc(997px-100px)] min-h-[calc(697px-71px)] relative flex items-end justify-center pb-10 lg:bg-center bg-center">
         <div className="2xl:container xl:container lg:container mx-auto px-5">
           <div className="inner-container relative">
             <div className="site-banner-content max-w-[929px] mx-auto">
@@ -179,8 +179,8 @@ export default function LandingPage() {
       <section className="commitment-wrap bg-gray-light lg:pt-[102px] xl:pb-[110px] lg:pb-[80px] pt-[60px] pb-[60px]">
         <div className="2xl:container xl:container lg:container mx-auto px-5">
           <div className='heading-box text-center lg:mb-16 mb-7'>
-            <h5 className='text-info-color 2xl:text-2xl font-black  '>{t("innerLight")}</h5>
-            <h2 className='xl:text-40 lg:text-[30px] text-[25px]  font-bold'>{language === "en" ? cmsWebCommitmentData?.heading_en: cmsWebCommitmentData?.heading_ar}</h2>
+            <h5 className='text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]'>{t("innerLight")}</h5>
+            <h2 className='xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]'>{language === "en" ? cmsWebCommitmentData?.heading_en: cmsWebCommitmentData?.heading_ar}</h2>
           </div>
           <div className="lg:grid lg:grid-cols-4 items-center">
             <div className='col-span-1'>
@@ -216,12 +216,12 @@ export default function LandingPage() {
       <section className="MeditationConsultation-wrap "> 
                <div className='MeditationConsultation-innner flex lg:min-h-[997px]  min-h-[860px]'>
                     <div className='Meditation-left-img bg-meditation-left w-full bg-cover lg:max-w-[calc(100%-70%)] max-w-full min-h-full lg:block hidden'></div>
-                    <div className='Meditation-content bg-meditation-bg w-full bg-cover pt-12 lg:pl-16 rtl:lg:pr-16  2xl:pr-[200px] rtl:2xl:pl-[200px] xl:pr-[140px] rtl:xl:pl-[140px] lg:pr-[45px] rtl:lg:pl-[45px] rtl:px-4 lg:max-w-[calc(100%-30%)] max-w-full min-h-full'>
+                    <div className='Meditation-content bg-meditation-bg w-full bg-cover pt-12 lg:pl-16 rtl:lg:pr-16  2xl:pr-[260px] rtl:2xl:pl-[260px] xl:pr-[140px] rtl:xl:pl-[140px] lg:pr-[45px] rtl:lg:pl-[45px] rtl:px-4 lg:max-w-[calc(100%-30%)] max-w-full min-h-full px-5'>
                       <div className='Meditation-content-inner  pb-8'>
                       <div className='max-w-[887px]'>
                       <div className='heading-box xl:mb-9 mb-4'>
-                            <h5 className='text-info-color 2xl:text-2xl font-black'>{t("innerLight")}</h5>
-                            <h2 className='xl:text-40 lg:text-[30px]  text-[25px] font-bold'>{language === "en" ? CmsWebHMeditationData?.heading_en: CmsWebHMeditationData?.heading_ar}</h2>
+                            <h5 className='text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]'>{t("innerLight")}</h5>
+                            <h2 className='xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]'>{language === "en" ? CmsWebHMeditationData?.heading_en: CmsWebHMeditationData?.heading_ar}</h2>
                         </div>
                         <p className='text-lg xl:text-2xl font-normal mb-4'>{language === "en" ? CmsWebHMeditationData?.description_en: CmsWebHMeditationData?.description_ar}</p>
                         <p className='text-lg xl:text-2xl font-bold text-[#753892]'>{t("connect_with_compassionate")}</p>
@@ -257,9 +257,9 @@ export default function LandingPage() {
         <div className="2xl:container xl:container lg:container mx-auto px-5"> 
           <div class="xl:grid xl:grid-cols-2 flex flex-col-reverse"> 
             <div className='DownloadOurApp-content xl:max-w-[685px] max-w-full lg:pt-20 pt-8 '> 
-              <div className='heading-box text-left mb-3.5'>
-                <h5 className='text-info-color 2xl:text-2xl font-black '>{t('headingSmall')}</h5>
-                <h2 className='xl:text-40 lg:text-[30px] text-[25px] font-bold'>{t('downloadOurApp')}</h2>
+              <div className='heading-box text-left mb-3.5 rtl:text-right'>
+                <h5 className='text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]'>{t('headingSmall')}</h5>
+                <h2 className='xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]'>{t('downloadOurApp')}</h2>
               </div>
               <p className='text-lg xl:text-2xl font-bold text-[#753892]  mb-7'>{t('connectWithExperts')}</p>
               <p className='text-lg xl:text-2xl '>{t('personalizedSupport')}</p>
@@ -284,8 +284,8 @@ export default function LandingPage() {
       <section className="benefits-holistic bg-gray-light lg:pt-0 pt-8   pb-[40px]">
             <div className="2xl:container xl:container lg:container mx-auto px-5">
                 <div className="heading-box text-center xl:mb-20 mb-10">
-                    <h5 className="text-info-color 2xl:text-2xl font-black">{t("discoverThe")}</h5>
-                    <h2 className="xl:text-40 lg:text-[30px]  text-[25px]  font-bold">{t("benefits_of_holistic")}</h2>
+                    <h5 className="text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]">{t("discoverThe")}</h5>
+                    <h2 className="xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("benefits_of_holistic")}</h2>
                 </div>
                 <div className="lg:grid xl:grid-cols-4 lg:grid-cols-2 gap-7">
                     {benefits.map(benefit => (
@@ -312,9 +312,9 @@ export default function LandingPage() {
         {/* blog */}
         <section className='blog-wrap bg-gray-light'>
         <div className="2xl:container xl:container lg:container px-5 mx-auto lg:py-12 py-7">
-          <div className="heading-box lg:text-left text-center mb-9    ">
-            <h5 className="text-info-color 2xl:text-2xl font-black">{t("deepen_your_practice")}</h5>
-            <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold  ">{t("blogs_and_upcoming_workshops")}</h2> 
+          <div className="heading-box lg:text-left rtl:text-right text-center mb-9    ">
+            <h5 className="text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]">{t("deepen_your_practice")}</h5>
+            <h2 className="xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("blogs_and_upcoming_workshops")}</h2> 
           </div>
           <div class="xl:grid xl:grid-cols-12 gap-6">
             <div className='col-span-8'> 
@@ -348,7 +348,7 @@ export default function LandingPage() {
                   className="rounded-10 lg:w-[103px] w-20" 
                 />
                 <div className="mediaContent ml-5 xl:max-w-[307px] max-w-full">
-                  <p className='lg:text-lg text-sm text-left'>
+                  <p className='lg:text-lg text-sm text-left rtl:text-right rtl:mr-3'>
                     {language === "en" ? item?.shortDescription : item?.shortDescription_ar}
                   </p>
                 </div>
@@ -377,8 +377,8 @@ export default function LandingPage() {
       <div className="2xl:container xl:container lg:container mx-auto px-4">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h5 className="text-info-color 2xl:text-2xl font-black">{t("reviews")}</h5>
-          <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold">{t("what_our_clients_say_about_us")}</h2>
+          <h5 className="text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]">{t("reviews")}</h5>
+          <h2 className="xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("what_our_clients_say_about_us")}</h2>
         </div>
 
         {/* Swiper Slider */}
@@ -411,7 +411,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <div className="col-span-7">
-                  <div className="slider-content xl:max-w-[640px] max-w-full xl:text-left text-center">
+                  <div className="slider-content xl:max-w-[740px] max-w-full xl:text-left text-center rtl:xl:text-right">
                     <div className="mb-5">
                       <h4 className="text-2xl font-medium">{language === "en" ? client?.name_en : client?.name_ar }</h4>
                       <small className="text-info-color text-lg">

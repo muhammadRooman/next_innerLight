@@ -29,9 +29,9 @@ export default function WhatWeOffer() {
     <section className="WhatWeOffer xl:pt-[107px] pb-12 pt-[50px] bg-SubscriptionPlan-bg bg-cover">
       <div className="2xl:container xl:container lg:container mx-auto lg:max-0 px-5">
         <div className="heading-box text-center lg:mb-20 mb-10 max-w-[1087px] ms-auto me-auto">
-          <h5 className="text-info-color 2xl:text-2xl font-black">{t("innelight")}</h5>
-          <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold mb-4">{t("what_we_offer")}</h2>
-          <p className="2xl:text-2xl text-xl font-normal">{t("experience_personalized")}</p>
+          <h5 className="text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]">{t("innelight")}</h5>
+          <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold mb-4 rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("what_we_offer")}</h2>
+          <p className="2xl:text-2xl text-xl font-normal text-[40px]">{t("experience_personalized")}</p>
         </div>
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-7 lg:mt-28 min-h-[430px]">
           {offerings.map((offering, index) => (
@@ -48,7 +48,7 @@ export default function WhatWeOffer() {
                 />
               </div>
               <div className="WhatWeOffer-content lg:p-6 p-5">
-                <h5 className="text-info-color 2xl:text-2xl font-bold text-left">{offering.title}</h5>
+                <h5 className="text-info-color 2xl:text-2xl font-bold text-left rtl:text-right">{offering.title}</h5>
                 <div className="hide-content max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out group-hover:max-h-40">
                   <p className="text-lg mt-3">{offering.description}</p>
                 </div>

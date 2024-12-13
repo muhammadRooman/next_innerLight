@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Notosans: ["var(--font-Notosans)"],
+        brittany: ['BrittanySignature', 'sans-serif'],
       },
       backgroundImage: {
         'chairman-bg': "url('/assets/images/slogun.png')",

@@ -52,7 +52,7 @@ const Header = ({ locale }) => {
                   width={108}
                   height={86}
                   alt="logo white"
-                  className="brand-logo md:w-[108px] w-[90px]"
+                  className="brand-logo md:w-[108px] w-[90px] rtl:ml-10"
                 />
               </Link>
             </div>
@@ -96,7 +96,7 @@ const Header = ({ locale }) => {
               <select
                 value={locale}
                 onChange={handleLanguageChange}
-                className="rounded-md px-4 py-2 bg-transparent lg:text[15px] lg:text-black font-medium xl:text-xl"
+                className="rounded-md px-4 py-2 bg-transparent lg:text[15px] lg:text-black font-medium xl:text-xl rtl:ml-5 cursor-pointer"
               >
                 <option value="en">English</option>
                 <option value="ar">{t("ar")}</option>
@@ -105,14 +105,14 @@ const Header = ({ locale }) => {
               {/* Join Now */}
               <Link
                 href="#"
-                className="py-2 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4"
+                className="py-2 lg:px-6 px-3 text-white rounded-3xl font-medium xl:text-xl text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]"
               >
                 {t("download_app")}
               </Link>
 
               {/* Hamburger Menu for Mobile */}
               <button
-                className="ml-4 lg:hidden text-black focus:outline-none"
+                className="ml-4 lg:hidden text-black focus:outline-none xl:mr-0 mr-3"
                 aria-label="Toggle Menu"
                 onClick={toggleMenu}
               >

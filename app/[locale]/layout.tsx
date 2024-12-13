@@ -11,6 +11,12 @@ const outfit = Outfit({
   display: "swap",
   subsets: ["latin"],
 });
+const aghaRasheeq = {
+  className: "font-agha-rasheeq",
+  variable: "--font-agha-rasheeq",
+};
+
+
 export default async function RootLayout({
   children,
   params: { locale },
@@ -19,16 +25,21 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   const messages = await getMessages();
-  
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-     <body className={`${locale === 'ar' ? 'rtl' : ''} ${outfit.className}`}>
+    <html
+      lang={locale}
+      dir={locale === "ar" ? "rtl" : "ltr"}
+      className={locale === "ar" ? "arabic" : "english"}
+    >
+      <body
+        className={`${locale === "ar" ? aghaRasheeq.className : outfit.className}`}
+      >
         <NextIntlClientProvider messages={messages}>
           <div>
             <Header locale={locale} />
             {children}
-            <Footer/>
+            <Footer />
           </div>
         </NextIntlClientProvider>
       </body>

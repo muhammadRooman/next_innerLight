@@ -37,12 +37,12 @@ export default function SpiritualCard({webinarEvenData}) {
                        src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${event?.bannerPic}`}
                        alt={language === "en" ? event?.name : event?.name_ar }
                       layout="fill"
-                      className="object-cover mx-auto xl:max-w-[390px] max-w-[280px]"
+                      className="object-cover mx-auto w-full"
                     />
                 {/* <h1 className="text-white relative z-10 2xl:text-2xl font-bold text-center">
                   {event.title}
                 </h1> */}
-                <div className="date-wrap w-[70px] h-[70px] bg-white rounded-10 flex justify-center items-center shadow-shadow-color3 xl:hidden lg:flex absolute top-3 left-3">
+                <div className="date-wrap w-[100px] h-[100px] bg-white rounded-10 flex justify-center items-center shadow-shadow-color3 xl:hidden lg:flex absolute top-3 left-3">
                 <h1 className="xl:text-40 lg:text-[20px] text-[18px] font-bold lg:leading-[25px] leading-6  text-center text-[#0C0101]">
                   {event.date.split(" ")[0]}
                   <span className="block">{event.date.split(" ")[1]}</span>
@@ -52,8 +52,8 @@ export default function SpiritualCard({webinarEvenData}) {
               {/* Content Card */}
               <div className="blog-card-content flex-1 xl:max-w-[calc(100%-541px)] lg:max-w-[calc(100%-400px)]  max-w-[100%] shadow-color bg-white rounded-10  py-8 xl:px-12 p-6">
                 <h4 className="xl:text-32  text-[24px]  font-bold">{language === "en" ? event?.name : event?.name_ar }</h4>
-                <div className="shap bg-shap-bg max-w-[262.97px] bg-no-repeat  min-h-[42px] text-center flex items-center justify-start xl:my-7 my-5">
-                  <p className="mt-0 text-white md:text-lg  px-2">{event.type}</p>
+                <div className="shap bg-shap-bg max-w-[262.97px] bg-no-repeat rtl:rotate-[180deg] min-h-[42px] text-center flex items-center justify-center xl:my-7 my-5">
+                  <p className="mt-0 text-white md:text-lg rtl:rotate-[180deg] px-2">{event.type}</p>
                 </div>
                 <p className="text-lg">{language === "en" ? event?.shortDescription : event?.shortDescription_ar }</p>
                 <div className="btn-wrap mt-10">

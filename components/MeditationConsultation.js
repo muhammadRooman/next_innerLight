@@ -14,7 +14,7 @@ export default function MeditationConsultation() {
            <section className="MeditationConsultation-wrap "> 
                <div className='MeditationConsultation-innner flex lg:min-h-[997px]  min-h-[860px]'>
                     <div className='Meditation-left-img bg-meditation-left w-full bg-cover lg:max-w-[calc(100%-70%)] max-w-full min-h-full lg:block hidden'></div>
-                    <div className='Meditation-content bg-meditation-bg w-full bg-cover pt-12 lg:pl-16 rtl:lg:pr-16  2xl:pr-[200px] rtl:2xl:pl-[200px] xl:pr-[140px] rtl:xl:pl-[140px] lg:pr-[45px] rtl:lg:pl-[45px] rtl:px-4 lg:max-w-[calc(100%-30%)] max-w-full min-h-full'>
+                    <div className='Meditation-content bg-meditation-bg w-full bg-cover pt-12 lg:pl-16 rtl:lg:pr-16  2xl:pr-[240px] rtl:2xl:pl-[240px] xl:pr-[140px] rtl:xl:pl-[140px] lg:pr-[45px] rtl:lg:pl-[45px] rtl:px-4 lg:max-w-[calc(100%-30%)] max-w-full min-h-full'>
                       <div className='Meditation-content-inner  pb-8'>
                       <div className='max-w-[887px]'>
                       <div className='heading-box xl:mb-9 mb-4'>
@@ -43,8 +43,8 @@ export default function MeditationConsultation() {
                                 </div> 
                             </div>
                         </div>  
-                        <div className='book-you-button sm:flex sm:justify-between items-center mt-8 justify-center text-center  '>
-                           <h5 className='text-black xl:text-40 lg:text-[30px]  text-[25px]  font-bold mb-3'>{t("book_your_consultation")}</h5> 
+                        <div className='book-you-button sm:flex sm:justify-between items-center mt-8 justify-center text-center lg:mx-10'>
+                           <h5 className='text-black xl:text-40 lg:text-[30px] text-[25px] font-bold mb-3'>{t("book_your_consultation")}</h5> 
                            <Link href="#" className="py-2 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover xl:mr-0 lg:w-[181px]   lg:text-lg block">{t("contact_us")}</Link>
                         </div>
                       </div>

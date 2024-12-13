@@ -12,8 +12,8 @@ export default function DownloadApp() {
                         <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold text-white max-w-[750px]">{t("download")}</h2>
                     </div>
                     <div className='btn-download flex lg:mt-0 mt-4'>
-                        <Link href="#" className="mr-3"><Image src="/AppStore.png" width={180} height={55} alt="AppStore" className='' /></Link>
-                        <Link href="#" className=" block"><Image src="/GooglePlay.png" width={180} height={55} alt="AppStore" className='' /></Link>
+                        <Link href="#" className="mr-10 rtl:mr-5"><Image src="/AppStore.png" width={227} height={72} alt="AppStore"/></Link>
+                        <Link href="#" className=" block"><Image src="/GooglePlay.png" width={227} height={72} alt="AppStore"/></Link>
                     </div>
                 </div>
             </section>
