@@ -1,10 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import SpiritualCard from '@/components/Event/SpiritualCard'
 import { useTranslations } from "next-intl";
 
 export default function SpiritualEvents({webinarEvenData}){
-    console.log("webinarEvenDataRRRR",webinarEvenData);
     const t = useTranslations("EventBanner");
 
     return(

@@ -2,7 +2,6 @@ import React from "react";
 import OurClients from "./OurClients";
 import { testimonialAPI } from "./api/TestimonialApi";
 
-
 const TestimonialData = async () => {
   try {
     const response = await testimonialAPI();
