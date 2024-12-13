@@ -39,7 +39,7 @@ export default function UpcomingWorkshop() {
               className="rounded-10 lg:w-[103px] w-20" 
             />
             <div className="mediaContent ml-5 xl:max-w-[307px] max-w-full">
-              <p className='lg:text-lg text-sm text-left'>{workshop.description}</p>
+              <p className='lg:text-lg text-sm text-left rtl:text-right'>{workshop.description}</p>
             </div>
           </div>
         ))}

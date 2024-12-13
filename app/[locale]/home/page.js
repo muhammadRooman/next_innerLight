@@ -107,6 +107,33 @@ export default function LandingPage() {
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
+  const benefits = [
+    {
+        id: 1,
+        image: "/benefitsImg1.png",
+        title: t("personalization"),
+        description: t("para_1")
+    },
+    {
+        id: 2,
+        image: "/benefitsImg2.png",
+        title: t("community"),
+        description: t("para_2")
+    },
+    {
+        id: 3,
+        image: "/benefitsImg3.png",
+        title: t("accessibility"),
+        description: t("para_3")
+    },
+    {
+        id: 4,
+        image: "/benefitsImg4.png",
+        title: t("flexibility"),
+        description: t("para_4")
+    }
+  ];
+
   return (
     <>
       {/* Hero Banner Section */}
@@ -226,7 +253,7 @@ export default function LandingPage() {
                     </div>
                 </div>       
             </section>
-            <section className="DownloadOurApp bg-gray-light lg:pt-9 lg:pb-10 py-8 ">
+            <section className="DownloadOurApp bg-gray-light lg:pt-9">
         <div className="2xl:container xl:container lg:container mx-auto px-5"> 
           <div class="xl:grid xl:grid-cols-2 flex flex-col-reverse"> 
             <div className='DownloadOurApp-content xl:max-w-[685px] max-w-full lg:pt-20 pt-8 '> 
