@@ -202,7 +202,9 @@
     "spiritual_retreats": "الخلوات الروحية",
     "weekend_retreat_reconnecting_with_your_inner_self": "عطلة نهاية الأسبوع: إعادة التواصل مع ذاتك الداخلية",
     "yoga_for_stress_relief_and_relaxation": "اليوغا لتخفيف التوتر والاسترخاء",
-    "enrollnow":"سجل الآن"
+    "enrollnow":"سجل الآن",
+    "show_less":"تظهر أقل",
+    "show_more":". . . أظهر المزيد"
   },
   "SignUpNow": {
     "moments_of_serenity": "لحظات من الصفاء",
@@ -216,7 +218,10 @@
     "password": "كلمة المرور",
     "confirm_pass": "تأكيد كلمة المرور",
     "upload_picture": "تحميل الصورة",
-    "email": "بريد إلكتروني"
+    "email": "بريد إلكتروني",
+    "last_name":"اسم العائلة",
+    "send_OTP":"إرسال كلمة مرور لمرة واحدة",
+    "verify":"يؤكد"
   },
   "Contact": {
     "contact_us": "اتصل بنا",

@@ -16,6 +16,8 @@ import BlogsCard from "@/components/BlogsCard";
 import useSWR from 'swr';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
+import FullPageLoader from '@/components/fullPageLoader.js/FullPageLoader';  
+
 
 // Define fetcher function
 const fetcher = (url) => fetch(url).then((r) => r.json());
@@ -78,7 +80,7 @@ export default function LandingPage() {
     }
   }, [testimonialData]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div> <FullPageLoader/></div>;
   if (error) return <div>Error: {error.message}</div>;
 
   const benefits = [

@@ -1,24 +1,63 @@
 "use client";
 import Image from "next/image";
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import FullPageLoader from "@/components/fullPageLoader.js/FullPageLoader";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
-export default function SpiritualCard({webinarEvenData}) {
+export default function SpiritualCard({ webinarEvenData }) {
   const t = useTranslations("SpiritualCard");
   const currentPath = usePathname();
-  const [language, setLanguage] = useState('');
+  const router = useRouter(); 
+  const [language, setLanguage] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [showAll, setShowAll] = useState(false); // State to toggle all data
+  const token = localStorage.getItem("authToken");
+  // Dynamically sliced data based on `showAll` state
+  const displayedData = showAll ? webinarEvenData : webinarEvenData.slice(0, 3);
 
   useEffect(() => {
-    const lang = currentPath.split('/')[1] || 'en';  
-   setLanguage(lang);
- }, [currentPath]);
+    const lang = currentPath.split("/")[1] || "en";
+    setLanguage(lang);
+    setLoading(true);
+    const loaderTimeout = setTimeout(() => setLoading(false), 500); // Simulate loader delay
+    return () => clearTimeout(loaderTimeout); 
+  }, [currentPath]);
+
+  if (loading) {
+    return <FullPageLoader />;
+  }
+
+  const handleSubmit = async (id) => {
+   try {
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/join-webinar/${id}`,
+      {}, 
+      {
+        headers: {
+          "Authorization": `Bearer ${token}` 
+        }
+      }
+    );
+    if(response.data.success === 1){
+      router.push(`/${language}/thankyou`);
+      toast.success(language === "en" ? "webinar join successfully" : "الانضمام إلى الندوة عبر الإنترنت بنجاح");
+    }
+    else{
+      toast.error(language === "en" ? response.data.message : " لم يتم العثور على الرمز المميز");
+    }
+  } catch (error) {
+  }
+};
  
   return (
     <>
       <section className="bg-[#EFEFEF] relative flex items-center justify-start lg:pt-4 lg:pb-14 ">
         <div className="2xl:container xl:container lg:container mx-auto lg:max-0  ">
-          {webinarEvenData?.map((event, index) => (
+          {displayedData?.map((event, index) => (
             <div
               key={index}
               className="blog-wrap flex flex-wrap gap-5 pt-10 pb-10 border-b-2 border-[#D0D0D0] last:border-0 first:pt-0"  >
@@ -57,15 +96,31 @@ export default function SpiritualCard({webinarEvenData}) {
                 </div>
                 <p className="text-lg">{language === "en" ? event?.shortDescription : event?.shortDescription_ar }</p>
                 <div className="btn-wrap mt-10">
-                  <a  className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"  href="#">
+                <button
+                  onClick={()=>handleSubmit(event._id)}
+                    className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"
+                    href="#"
+                  >
                     {t("enrollnow")}
-                  </a>
+                    </button>
                 </div>
               </div>
             </div>
           ))}
+              {/* Show "More" button only if data is more than 3 */}
+              {webinarEvenData.length > 3 && (
+          <div className="flex justify-center mt-4">
+            <button
+              className="bg-primary text-black py-2 px-4 rounded text-center"
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? t("show_less") : t("show_more")}
+            </button>
+          </div>
+        )}
         </div>
       </section>
+      <ToastContainer />
     </>
   );
 }
