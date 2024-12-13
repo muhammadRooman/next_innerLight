@@ -22,32 +22,6 @@ const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function LandingPage() {
   const t = useTranslations("SiteBanner");
-  const benefits = [
-    {
-        id: 1,
-        image: "/benefitsImg1.png",
-        title: t("personalization"),
-        description: t("para_1")
-    },
-    {
-        id: 2,
-        image: "/benefitsImg2.png",
-        title: t("community"),
-        description: t("para_2")
-    },
-    {
-        id: 3,
-        image: "/benefitsImg3.png",
-        title: t("community"),
-        description: t("para_3")
-    },
-    {
-        id: 4,
-        image: "/benefitsImg4.png",
-        title: t("flexibility"),
-        description: t("para_4")
-    }
-  ];
   const currentPath = usePathname();
   const [language, setLanguage] = useState('')
   const [cmsWebHeadingData,setCmsWebHeadingData] = useState("")
