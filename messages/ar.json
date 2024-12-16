@@ -131,6 +131,10 @@
   },
   "WeOffer": {
     "we_offer": "نحن نقدم",
+    "main_holistic_healing1": "العلاج الشامل للعقل والجسد والروح:",
+    "main_holistic_healing2": "دعم شخصي لرحلتك الفريدة:",
+    "main_holistic_healing3": "إرشادات الخبراء من المعالجين ذوي الخبرة:",
+    "main_holistic_healing4": "مجتمع داعم ومتشابه في التفكير",
     "transformative": "الموارد التحويلية والمجتمع الداعم",
     "holistic_healing": "العلاج الشامل للعقل والجسد والروح:",
     "holistic_healing_1": "نحن نؤمن بأهمية رعاية الشخص ككل، ولهذا السبب تركز مواردنا وإرشاداتنا على مواءمة صحتك الجسدية والعاطفية والروحية. من خلال معالجة جميع جوانب رفاهيتك، نساعدك على تحقيق حياة أكثر توازنًا وانسجامًا.",
@@ -182,18 +186,7 @@
     "spiritual_events": "الأحداث الروحية",
     "through_holistic_practices": "من خلال الممارسات الشاملة والدعم الشخصي والمجتمع الرحيم، نساعدك على تنمية السلام الداخلي والوضوح والتواصل الأعمق مع نفسك الحقيقية."
   },
-  "SignUpNow": {
-    "already_have_an_account": "هل لديك حساب بالفعل؟",
-    "confirm_pass": "تأكيد كلمة المرور",
-    "fill_the_form_below_our_representatives_respond_you": "املأ النموذج أدناه، وسيقوم ممثلونا بالرد عليك خلال 24 ساعة.",
-    "full_name": "الاسم الكامل",
-    "moments_of_serenity": "لحظات من الصفاء",
-    "password": "كلمة المرور",
-    "phone_number": "رقم التليفون",
-    "sign_in": "تسجيل الدخول",
-    "sign_up": "اشتراك",
-    "sign_up_now": "سجل الآن"
-  },
+
   "SpiritualCard": {
     "10_DEC": "10 ديسمبر",
     "12_DEC": "12 ديسمبر",
@@ -209,7 +202,9 @@
     "spiritual_retreats": "الخلوات الروحية",
     "weekend_retreat_reconnecting_with_your_inner_self": "عطلة نهاية الأسبوع: إعادة التواصل مع ذاتك الداخلية",
     "yoga_for_stress_relief_and_relaxation": "اليوغا لتخفيف التوتر والاسترخاء",
-    "enrollnow":"سجل الآن"
+    "enrollnow":"سجل الآن",
+    "show_less":"تظهر أقل",
+    "show_more":". . . أظهر المزيد"
   },
   "SignUpNow": {
     "moments_of_serenity": "لحظات من الصفاء",
@@ -223,7 +218,20 @@
     "password": "كلمة المرور",
     "confirm_pass": "تأكيد كلمة المرور",
     "upload_picture": "تحميل الصورة",
-    "email": "بريد إلكتروني"
+    "email": "بريد إلكتروني",
+    "last_name":"اسم العائلة",
+    "send_OTP":"يرسلOTP",
+    "verify":"يؤكد",
+    "phone_number_is_required":"رقم الهاتف مطلوب.",
+    "please_upload_your_profile_picture":"يرجى تحميل صورة الملف الشخصي",
+    "please_upload_your_profile_picture":"صورة الملف الشخصي مطلوبة",
+    "email_is_required":"البريد الإلكتروني مطلوب",
+    "last_name_is_required":"الاسم الأخير مطلوب",
+    "full_name_is_required":"الاسم الكامل مطلوب",
+    "please_upload_a_valid_image_file":"يرجى تحميل ملف صورة صالح (JPG، PNG).",
+    "file_size_exceeds_5MB":"حجم الملف يتجاوز 5 ميغابايت. يرجى تحميل صورة أصغر.",
+    "failed_to_Verify_OTP":"فشل التحقق من OTP. يرجى المحاولة مرة أخرى.",
+    "OTP_is_required":"مطلوب مكتب المدعي العام"
   },
   "Contact": {
     "contact_us": "اتصل بنا",
@@ -233,6 +241,7 @@
     "contact_no": "رقم الاتصال",
     "message": "رسالة",
     "download": "قم بتنزيل تطبيقنا",
-    "submit": "يُقدِّم"
+    "submit": "يُقدِّم",
+    "alert":"سيتم التواصل معك قريبا من قبل المشرف."
   }
 }

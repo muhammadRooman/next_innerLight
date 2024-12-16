@@ -132,6 +132,10 @@
     "we_offer": "What We Offer",
     "transformative": "Transformative Resources, And Supportive Community",
     "holistic_healing": "Personalized Support For Your Unique Journey:",
+    "main_holistic_healing1": "Holistic Healing For Mind, Body, And Spirit:",
+    "main_holistic_healing2": "Personalized Support For Your Unique Journey:",
+    "main_holistic_healing3": "Expert Guidance From Experienced Healers:",
+    "main_holistic_healing4": "A Supportive, Like-Minded Community",
     "holistic_healing_1": "We believe in nurturing the whole person, which is why our resources and guidance focus on aligning your physical, emotional, and spiritual health. By addressing all aspects of your well-being, we help you achieve a more balanced, harmonious life.",
     "holistic_healing_2": "We understand that everyone’s path is different. That’s why we offer personalized coaching, consultations, and tailored resources to support your specific needs, goals, and challenges. You’ll never feel alone on your journey.",
     "holistic_healing_3": "Our team consists of skilled spiritual guides, wellness coaches, and practitioners who bring years of experience to support your growth. Their wisdom and compassion create a safe and nurturing environment for your transformation.",
@@ -190,7 +194,22 @@
     "phone_number": "Phone Number",
     "sign_in": "Sign in",
     "sign_up": "Sign Up",
-    "sign_up_now": "Sign Up Now"
+    "sign_up_now": "Sign Up Now",
+    "last_name":"Last Name",
+    "upload_picture":"Upload Picture",
+    "email":"Email",
+    "send_OTP":"Send OTP",
+    "verify":"Verify",
+    "please_upload_your_profile_picture": "Please upload your profile picture",
+    "phone_number_is_required": "Phone number is required",
+    "profile_image_is_required": "Profile image is required",
+    "email_is_required": "Email is required",
+    "last_name_is_required": "Last name is required",
+    "full_name_is_required": "Full name is required",
+    "please_upload_a_valid_image_file": "Please upload a valid image file",
+    "file_size_exceeds_5MB": "File size exceeds 5MB",
+    "failed_to_Verify_OTP": "Failed to verify OTP",
+    "OTP_is_required": "OTP is required" 
   },
   "SpiritualCard": {
     "10_DEC": "10 DEC",
@@ -207,7 +226,9 @@
     "spiritual_retreats": "Spiritual Retreats",
     "weekend_retreat_reconnecting_with_your_inner_self": "Weekend Retreat: Reconnecting with Your Inner Self",
     "yoga_for_stress_relief_and_relaxation": "Yoga for Stress Relief and Relaxation",
-   "enrollnow":"Enroll Now"
+   "enrollnow":"Enroll Now",
+   "show_less":"Show less",
+    "show_more":"Show More . . . "
   },
   "Contact": {
     "contact_us": "Contact Us",
@@ -217,6 +238,7 @@
     "contact_no": "Contact no.",
     "message": "Message",
     "download": "Download Our App",
-    "submit": "Submit"
+    "submit": "Submit",
+    "alert":"You will be contacted shortly by admin."
   }
 }

@@ -18,19 +18,19 @@ export default function WeOffer() {
                                 <h2 class="xl:text-40 lg:text-[30px] text-[20px] font-bold">{t("transformative")}</h2>
                             </div>
                             <p class="text-lg xl:mb-7 mb-5">
-                                <span className="text-info-color 2xl:text-2xl font-bold">{t("holistic_healing")} </span>{t("holistic_healing_1")}
+                                <span className="text-info-color 2xl:text-2xl font-bold">{t("main_holistic_healing1")} </span>{t("holistic_healing_1")}
                             </p>
 
                             <p class="text-lg xl:mb-7 mb-5">
-                                <span className="text-info-color 2xl:text-2xl font-bold">{t("holistic_healing")} </span>{t("holistic_healing_2")}
+                                <span className="text-info-color 2xl:text-2xl font-bold">{t("main_holistic_healing2")} </span>{t("holistic_healing_2")}
                             </p>
 
                             <p class="text-lg xl:mb-7 mb-5">
-                                <span className="text-info-color 2xl:text-2xl font-bold">{t("holistic_healing")} </span>{t("holistic_healing_3")}
+                                <span className="text-info-color 2xl:text-2xl font-bold">{t("main_holistic_healing3")} </span>{t("holistic_healing_3")}
                             </p>
 
                             <p class="text-lg xl:mb-7 mb-5">
-                                <span className="text-info-color 2xl:text-2xl font-bold">{t("holistic_healing")} </span>{t("holistic_healing_4")}
+                                <span className="text-info-color 2xl:text-2xl font-bold">{t("main_holistic_healing4")} </span>{t("holistic_healing_4")}
                             </p>
                         </div>
 

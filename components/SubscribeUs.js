@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from "next/link"; 
 import { useTranslations } from "next-intl";
 
-export default function SubscribeUs() {
+export default function SubscribeUs(props) {
   const t = useTranslations("SubscribeUs");
   return (
     <>
@@ -18,12 +18,12 @@ export default function SubscribeUs() {
             </form>
             <div className='follow-us flex items-center justify-between'>
               <h5 className='2xl:text-2xl text-xl mb-0 font-bold rtl:ml-4'>{t("follow_us")}</h5>
-                <nav className="flex items-center justify-center   ml-auto rtl:ml-0">
-                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7  rounded-full flex items-center justify-center shadow-shadow-color8 bor ease-in-out me-2"><Image src="/assets/images/social-icon/facebook.png" width={17} height={17} alt="facebook" className='lg:w-[17px] w-4'/></Link>  
-                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8  ease-in-out me-2"><Image src="/assets/images/social-icon/linkedin.png" width={17} height={17} alt="linkedin" className='lg:w-[17px] w-4'/></Link> 
-                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8 ease-in-out me-2"><Image src="/assets/images/social-icon/twitter.png" width={17} height={17} alt="twitter" className='lg:w-[17px] w-4'/></Link>  
+                <nav className="flex items-center justify-center ml-auto rtl:ml-0">
+                  <Link href={`${props.cmsWeb.facebook}`} target='_blank' className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7  rounded-full flex items-center justify-center shadow-shadow-color8 bor ease-in-out me-2"><Image src="/assets/images/social-icon/facebook.png" width={17} height={17} alt="facebook" className='lg:w-[17px] w-4'/></Link>  
+                  <Link href={`${props.cmsWeb.linkedin}`} target='_blank' className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8  ease-in-out me-2"><Image src="/assets/images/social-icon/linkedin.png" width={17} height={17} alt="linkedin" className='lg:w-[17px] w-4'/></Link> 
+                  <Link href={`${props.cmsWeb.twitter}`} target='_blank' className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8 ease-in-out me-2"><Image src="/assets/images/social-icon/twitter.png" width={17} height={17} alt="twitter" className='lg:w-[17px] w-4'/></Link>  
                   <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8 ease-in-out me-2"><Image src="/assets/images/social-icon/pinterest.png" width={17} height={17} alt="pinterest" className='lg:w-[17px] w-4'/></Link> 
-                  <Link href="#" className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8 ease-in-out  "><Image src="/assets/images/social-icon/youtube.png" width={17} height={20} alt="youtube" className='lg:w-[17px] w-4'/></Link> 
+                  <Link href={`${props.cmsWeb.youtube}`} target='_blank' className="lg:min-w-9 lg:min-h-9 min-w-7 min-h-7 rounded-full flex items-center justify-center shadow-shadow-color8 ease-in-out  "><Image src="/assets/images/social-icon/youtube.png" width={17} height={20} alt="youtube" className='lg:w-[17px] w-4'/></Link> 
                 </nav> 
             </div>
         </div> 

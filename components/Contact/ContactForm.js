@@ -12,7 +12,6 @@ export default function ContactUs() {
         phone: "",
         message: "",
     });
-    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -21,7 +20,6 @@ export default function ContactUs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true);
         try {
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/contact`, {
                 method: "POST",
@@ -50,16 +48,21 @@ export default function ContactUs() {
                         <div className="box-overlay shadow-shadow-color2 rounded-10 bg-[#F9F9F9] xl:px-24 xl:py-11 px-6 py-6 flex items-center flex-col justify-center">
                             <img src="/mobileimg.png" alt="mobile img" />
                             <h3 className="text-[32px] text-[#343434] font-bold">{t("download")}</h3>
+                            <Link href="https://apps.apple.com/au/app/innerlight-academy/id6670317150" target="_blank">
                             <img
                                 src="/AppStore.png"
                                 alt="app store img"
                                 className="w-[222px] mt-8"
                             />
+                            </Link>
+                            <Link href="https://play.google.com/store/apps/details?id=com.arhamsoft.innerlight.innerlights&hl=en" target="_blank">
                             <img
                                 src="/GooglePlay.png"
                                 alt="google img"
                                 className="w-[222px] mt-8"
                             />
+                            </Link>
+                           
                         </div>
                     </div>
                     <div className="bg-white shadow-lg rounded-lg p-8 xl:w-1/2 lg:w-1/2 w-full">
@@ -106,7 +109,6 @@ export default function ContactUs() {
                                 <button
                                     type="submit"
                                     className="py-2.5 px-11 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:text-lg"
-                                    disabled={loading}
                                 >
                                     {t("submit")}
                                 </button>

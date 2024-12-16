@@ -19,11 +19,13 @@ const Header = ({ locale }) => {
   }, []);
 
   const t = useTranslations("NavbarLinks");
+  const pathname = usePathname();
   const router = useRouter();
+  const activeNavbarName = pathname.split("/").slice(2).join("/") || "";
 
   const handleLanguageChange = (e) => {
     const newLocale = e.target.value;
-    const path = activeLink; // Stay on the same page after language change
+    const path = pathname.split("/").slice(2).join("/") || "";
     router.push(`/${newLocale}/${path}`, { shallow: true });
   };
 
@@ -46,7 +48,7 @@ const Header = ({ locale }) => {
           <div className="header-inner flex justify-between items-center xl:px-5 px-3 xl:py-2 lg:py-2">
             {/* Logo */}
             <div className="logo">
-              <Link href="#">
+              <Link href={`/${locale}/home`}>
                 <Image
                   src="/logo.png"
                   width={108}
@@ -74,16 +76,13 @@ const Header = ({ locale }) => {
               </button>
               {/* Menu Links */}
               {["home", "about", "benefits", "contact", "event"].map((link, index) => (
-                <Link
-                  key={index}
-                  href={`/${locale}/${link}`}
-                  className={`py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:2xl:me-[99px] rtl:xl:me-[88px] font-medium ${activeLink === link
-                      ? "text-[#1796D8]" 
-                      : "lg:text-black text-white hover:text-[#1796D8]"
-                    }`}
-                  onClick={() => handleLinkClick(link)}
-                  prefetch={true}
-                >
+               <Link
+               key={index}
+               href={`/${locale}/${link}`}
+               className={`${activeNavbarName === link ? 'active text-[#1796D8]' : 'lg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl hover:text-[#1796D8] font-medium`}
+               onClick={() => setIsMenuOpen(false)}
+               prefetch={true}
+             >
                   {t(link)}
                 </Link>
               ))}
@@ -104,7 +103,8 @@ const Header = ({ locale }) => {
 
               {/* Join Now */}
               <Link
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.arhamsoft.innerlight.innerlights&hl=en"
+                target="_blank"
                 className="py-2 lg:px-6 px-3 text-white rounded-3xl font-medium xl:text-xl text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]"
               >
                 {t("download_app")}

@@ -16,7 +16,7 @@ export default function AboutBanner(){
                         <h5 className="xl:text-50 lg:text-[40px] text-[30px] text-white font-bold text-left rtl:text-right xl:leading-[63px] lg:leading-[46px] mb-4">{t("nurturing")}</h5>  
                         <p className="text-left text-white 2xl:text-2xl  rtl:text-right lg:text-xl mt-5">{t("through_holistic")}</p>
                         <div className="btn-wrap mt-12">
-                           <Link href="#" className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg">{t("download_app")}</Link>
+                        <Link href="https://play.google.com/store/apps/details?id=com.arhamsoft.innerlight.innerlights&hl=en" className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg">{t("download_app")}</Link>
                         </div>
                     </div>   
                 </div>

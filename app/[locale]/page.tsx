@@ -1,7 +1,8 @@
 import { useTranslations } from "next-intl";
 import { getMessages } from "next-intl/server";
-
-import LandingPage from "@/app/[locale]/home/page";   
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import LandingPage from "@/app/[locale]/home/page"; 
 export async function generateMetadata({
   params: { locale },
 }: {
@@ -23,6 +24,7 @@ export default function Home() {
   return (
     <>
       <LandingPage/>
+      <ToastContainer />
     </>
   );
 }

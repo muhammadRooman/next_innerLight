@@ -16,6 +16,8 @@ import BlogsCard from "@/components/BlogsCard";
 import useSWR from 'swr';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
+import FullPageLoader from '@/components/fullPageLoader.js/FullPageLoader';  
+
 
 // Define fetcher function
 const fetcher = (url) => fetch(url).then((r) => r.json());
@@ -104,7 +106,7 @@ export default function LandingPage() {
     }
   }, [testimonialData]);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div> <FullPageLoader/></div>;
   if (error) return <div>Error: {error.message}</div>;
 
   const benefits = [
@@ -247,7 +249,7 @@ export default function LandingPage() {
               </div>
               <div className='book-you-button sm:flex sm:justify-between items-center mt-8 justify-center text-center  '>
                 <h5 className='text-black xl:text-40 lg:text-[30px]  text-[25px]  font-bold mb-3'>{t("book_your_consultation")}</h5>
-                <Link href="#" className="py-2 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover xl:mr-0 lg:w-[181px]   lg:text-lg block">{t("contact_us")}</Link>
+                <Link  href={`/${language}/contact`} className="py-2 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover xl:mr-0 lg:w-[181px] lg:text-lg block">{t("contact_us")}</Link>
               </div>
             </div>
           </div>
@@ -265,6 +267,8 @@ export default function LandingPage() {
               <p className='text-lg xl:text-2xl mt-10'>{t('personalizedSupport')}</p>
               <div className='QR-box mt-9 flex justify-between items-center max-w-[420px]'>
                 <div className='btn-download'>
+                  <Link href="https://apps.apple.com/au/app/innerlight-academy/id6670317150" target='_blank' className=""><Image src="/AppStore.png" width={180} height={55} alt="AppStore" className=''/></Link> 
+                  <Link href="https://play.google.com/store/apps/details?id=com.arhamsoft.innerlight.innerlights&hl=en" target='_blank' className="mt-9 block"><Image src="/GooglePlay.png" width={180} height={55} alt="AppStore" className=''/></Link> 
                   <Link href="#" className=""><Image src="/AppStore.png" width={180} height={55} alt="AppStore" className='' /></Link>
                   <Link href="#" className="mt-9 block"><Image src="/GooglePlay.png" width={180} height={55} alt="AppStore" className='' /></Link>
                 </div>
@@ -329,7 +333,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className='col-span-4  '>
-              <SubscribeUs />
+               <SubscribeUs cmsWeb={cmsWebHeadingData}/>
               <section className="SubscribeUs-wrap mt-6 lg:mb-0 mb-3">
                 <div className="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-9 lg:px-8 p-5">
                   <h1 className="2xl:text-2xl text-xl font-bold text-center mb-6">
