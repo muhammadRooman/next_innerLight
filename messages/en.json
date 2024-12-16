@@ -189,7 +189,17 @@
     "upload_picture":"Upload Picture",
     "email":"Email",
     "send_OTP":"Send OTP",
-    "verify":"Verify"
+    "verify":"Verify",
+    "please_upload_your_profile_picture": "Please upload your profile picture",
+    "phone_number_is_required": "Phone number is required",
+    "profile_image_is_required": "Profile image is required",
+    "email_is_required": "Email is required",
+    "last_name_is_required": "Last name is required",
+    "full_name_is_required": "Full name is required",
+    "please_upload_a_valid_image_file": "Please upload a valid image file",
+    "file_size_exceeds_5MB": "File size exceeds 5MB",
+    "failed_to_Verify_OTP": "Failed to verify OTP",
+    "OTP_is_required": "OTP is required" 
   },
   "SpiritualCard": {
     "10_DEC": "10 DEC",

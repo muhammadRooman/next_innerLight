@@ -5,6 +5,7 @@ import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
+
 const outfit = Outfit({
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal"],
@@ -32,6 +33,7 @@ export default async function RootLayout({
           </div>
         </NextIntlClientProvider>
       </body>
+   
     </html>
   );
 }

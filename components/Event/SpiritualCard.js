@@ -43,8 +43,8 @@ export default function SpiritualCard({ webinarEvenData }) {
       }
     );
     if(response.data.success === 1){
-      router.push(`/${language}/thankyou`);
-      toast.success(language === "en" ? "webinar join successfully" : "الانضمام إلى الندوة عبر الإنترنت بنجاح");
+      router.push(`/${language}/thank-you`);
+      // toast.success(language === "en" ? "webinar join successfully" : "الانضمام إلى الندوة عبر الإنترنت بنجاح");
     }
     else{
       toast.error(language === "en" ? response.data.message : " لم يتم العثور على الرمز المميز");
