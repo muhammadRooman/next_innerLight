@@ -52,6 +52,12 @@ export default function SpiritualCard({ webinarEvenData }) {
   } catch (error) {
   }
 };
+
+const truncateText = (text) => {
+  if (!text) return '';
+  const words = text.split(' ');
+  return words.length > 50 ? words.slice(0, 50).join(' ') + '...' : text;
+};
  
   return (
     <>
@@ -63,10 +69,10 @@ export default function SpiritualCard({ webinarEvenData }) {
               className="blog-wrap flex flex-wrap gap-5 pt-10 pb-10 border-b-2 border-[#D0D0D0] last:border-0 first:pt-0"  >
               {/* Date Card */}
               <div className="date-wrap w-[161px] h-[188px] bg-white rounded-10 flex justify-center items-center shadow-shadow-color3 xl:flex hidden">
-                <h1 className="xl:text-40 lg:text-[30px] text-[25px] font-bold leading-[46px] text-center text-[#0C0101]">
-                {new Date(event.date).getDate()}{" "}
-                 <span className="block"> {new Date(event.date).toLocaleString("en-US", { month: "short" }).toUpperCase()}</span>
-                </h1>
+              <h1 className="xl:text-40 lg:text-[30px] text-[25px] font-bold leading-[46px] text-center text-[#0C0101]">
+            {new Date(event.date).getDate()}
+            <span className="block"> {new Date(event.date).toLocaleString(language === "en" ? "en-US" : "ar", { month: "short" }).toUpperCase()}</span>
+          </h1>
               </div>
               {/* Image Card */}
               <div
@@ -94,7 +100,8 @@ export default function SpiritualCard({ webinarEvenData }) {
                 <div className="shap bg-shap-bg max-w-[262.97px] bg-no-repeat  min-h-[42px] text-center flex items-center justify-start xl:my-7 my-5">
                   <p className="mt-0 text-white md:text-lg  px-2">{event.type}</p>
                 </div>
-                <p className="text-lg">{language === "en" ? event?.shortDescription : event?.shortDescription_ar }</p>
+                <p className="text-lg"> {language === "en"  ? truncateText(event?.shortDescription) : truncateText(event?.shortDescription_ar)  }
+                </p>
                 <div className="btn-wrap mt-10">
                 <button
                   onClick={()=>handleSubmit(event._id)}
