@@ -66,8 +66,14 @@
     "sarah_wilson": "Sarah Wilson",
     "john_doe": "John Doe",
     "lorem": "Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat. At Vero Eos Et Accusam Et Justo Duo Dolores Et Ea Rebum."
-
   },
+
+  "ThankYou":{
+    "downloadOurApp": "Download Our App",
+    "connectWithExperts": "Connect with compassionate experts dedicated to nurturing your growth and well-being.",
+    "personalizedSupport": "Experience personalized support on your spiritual journey through tailored meditation sessions and one-on-one consultations with skilled practitioners."
+  },
+
   "AboutPage": {
     "title": "About"
   },
