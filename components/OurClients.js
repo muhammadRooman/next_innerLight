@@ -7,20 +7,38 @@ import { useTranslations } from "next-intl";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import useSWR from 'swr';
+
 import "swiper/css/navigation";
 
 // Import required Swiper modules
 import { Pagination, Navigation } from "swiper/modules";
-
-export default function OurClients({ testimonialData }) {
+// Define fetcher function
+const fetcher = (url) => fetch(url).then((r) => r.json());
+export default function OurClients() {
   const t = useTranslations("OurClient");
   const currentPath = usePathname();
   const [language, setLanguage] = useState('');
+  const [testimonialData, settTestimonialData] = useState([]);
 
+
+   // Fetch cmsWeb data using SWR
+   const { data, error, isLoading } = useSWR(
+    `${process.env.NEXT_PUBLIC_BASE_API}/testimonial`,
+    fetcher
+  );
+
+  console.log("data123",data)
   useEffect(() => {
+    if (data ) {
+      console.log("data",data.testimonials)
+      settTestimonialData(data?.testimonials)
+    
+    }
+    console.log("testimonialData",testimonialData)
      const lang = currentPath.split('/')[1] || 'en'; 
     setLanguage(lang);
-  }, [currentPath]);
+  }, [currentPath,data]);
 
   return (
     <section className="bg-SubscriptionPlan-bg lg:pt-10 lg:pb-17 py-10 bg-cover bg-center">

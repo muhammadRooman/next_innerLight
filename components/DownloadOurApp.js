@@ -11,9 +11,9 @@ export default function DownloadOurApp() {
         <div className="2xl:container xl:container lg:container mx-auto px-5"> 
           <div class="md:grid md:grid-cols-2 flex flex-col-reverse"> 
             <div className='DownloadOurApp-content xl:max-w-[685px] max-w-full lg:pt-20 pt-8 '> 
-              <div className='heading-box text-left mb-3.5'>
-                <h5 className='text-info-color 2xl:text-2xl font-black'>{t('headingSmall')}</h5>
-                <h2 className='xl:text-40 lg:text-[30px] text-[25px] font-bold'>{t('downloadOurApp')}</h2>
+              <div className='heading-box text-left mb-3.5 rtl:text-right'>
+                <h5 className='text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]'>{t('headingSmall')}</h5>
+                <h2 className='xl:text-40 lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]'>{t('downloadOurApp')}</h2>
               </div>
               <p className='text-lg xl:text-2xl font-bold text-[#753892] mb-7'>{t('connectWithExperts')}</p>
               <p className='text-lg xl:text-2xl mt-10'>{t('personalizedSupport')}</p>
