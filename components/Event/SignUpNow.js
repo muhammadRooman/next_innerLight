@@ -82,7 +82,7 @@ export default function SignUpNow() {
           otpCode, // Add userExist here as part of the request body
         }
       );
-         // OTP Verified successfully
+      // OTP Verified successfully
       if (response?.data?.success) {
         toast.success(response.data.message);
         setErrorVerifyMessage("");
@@ -154,7 +154,7 @@ export default function SignUpNow() {
       formData.append("lastName", signUpData?.lastName);
       formData.append("phoneNumber", phoneNumber);
       formData.append("email", signUpData?.email);
-      formData.append("profileImage", profileImage || ""); 
+      formData.append("profileImage", profileImage || "");
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/auth/signup`,
         formData,
@@ -172,6 +172,11 @@ export default function SignUpNow() {
       toast.error(error.message || "An error occurred");
     }
   };
+  const signin = ()=>{
+    console.log("yesss")
+    // router.push(`/${language}/signin`)
+    router.push(`/${language}/signin`);
+  }
 
   return (
     <>
@@ -221,30 +226,30 @@ export default function SignUpNow() {
                 )}
               </div>
               <div className="form-group lg:mb-0 mb-4">
-            <div className="btn-icon relative">
-                <PhoneInput
-                international
-                defaultCountry="US" // Default country code
-                value={phoneNumber}
-                onChange={setPhoneNumber}
-                disabled={disabledPhoneOTP || OtpMessage}
-                className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white  border-solid border-2 border-[#DEDEDE]   outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg  text-[#11171F]   focus:outline-none sm:text-sm/6"
-                placeholder={t("phone_number")}
-                />
-                <button
-                disabled={disabledPhoneOTP || OtpMessage}
-                onClick={handleSendOTP}
-                className="px-4 py-2 font-semibold lg:text-lg rounded-[3px] bg-[#1796D8] text-white absolute lg:w-[149px] w-[100px] lg:top-2 top-[2px] lg:right-2 right-[2px] lg:min-h-[calc(100%-16px)] min-h-[calc(100%-4px)] shadow-shadow-color"
-                >
-                {t("send_OTP")}
-                </button>
-            </div>
-            {errorMessage && (
-                <span className="text-red-500 text-sm mt-2">
-                {errorMessage}
-                </span>
-            )}
-            </div>
+                <div className="btn-icon relative">
+                  <PhoneInput
+                    international
+                    defaultCountry="US" // Default country code
+                    value={phoneNumber}
+                    onChange={setPhoneNumber}
+                    disabled={disabledPhoneOTP || OtpMessage}
+                    className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white  border-solid border-2 border-[#DEDEDE]   outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg  text-[#11171F]   focus:outline-none sm:text-sm/6"
+                    placeholder={t("phone_number")}
+                  />
+                  <button
+                    disabled={disabledPhoneOTP || OtpMessage}
+                    onClick={handleSendOTP}
+                    className="px-4 py-2 font-semibold lg:text-lg rounded-[3px] bg-[#1796D8] text-white absolute lg:w-[149px] w-[100px] lg:top-2 top-[2px] lg:right-2 right-[2px] lg:min-h-[calc(100%-16px)] min-h-[calc(100%-4px)] shadow-shadow-color"
+                  >
+                    {t("send_OTP")}
+                  </button>
+                </div>
+                {errorMessage && (
+                  <span className="text-red-500 text-sm mt-2">
+                    {errorMessage}
+                  </span>
+                )}
+              </div>
               {otpGenerated && (
                 <div class="form-group lg:mb-0 mb-4">
                   <div className="btn-icon relative">
@@ -266,10 +271,10 @@ export default function SignUpNow() {
                     </button>
                   </div>
                   {errorVerifyMessage && (
-                      <span className="text-red-500 text-sm mt-2">
-                        {errorVerifyMessage}
-                      </span>
-                    )}
+                    <span className="text-red-500 text-sm mt-2">
+                      {errorVerifyMessage}
+                    </span>
+                  )}
                 </div>
               )}
               <div class="form-group lg:mb-0 mb-4">
@@ -348,9 +353,12 @@ export default function SignUpNow() {
           <div className="book-you-button flex-wrap  flex lg:justify-between items-center mt-10 justify-center text-center ">
             <p className="text-black lg:order-none order-2  text-lg mb-3 lg:mt-0 mt-2 ">
               {t("already_have_an_account")}{" "}
-              <Link href="#" className="text-info-color font-bold ">
+              <button
+               onClick={signin}
+               className="py-2.5 px-6 text-[#1796D8] font-medium xl:text-xl text-sm lg:mr-3 lg:text-lg">
                 {t("sign_in")}
-              </Link>
+              </button>
+
             </p>
             <button
               // disabled={!disabledPhoneOTP}

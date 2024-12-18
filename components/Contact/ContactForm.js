@@ -82,6 +82,7 @@ export default function ContactUs() {
                                 value={formData.name}
                                 onChange={handleChange}
                                 placeholder={t("your_name")}
+                                required
                                 className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none sm:text-sm/6 mb-5"
                             />
                             <input
@@ -90,6 +91,7 @@ export default function ContactUs() {
                                 value={formData.email}
                                 onChange={handleChange}
                                 placeholder={t("email")}
+                                required
                                 className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none sm:text-sm/6 mb-5"
                             />
                             <input
@@ -97,13 +99,16 @@ export default function ContactUs() {
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
+                                required
                                 placeholder={t("contact_no")}
                                 className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none sm:text-sm/6 mb-5"
                             />
                             <textarea
+                                maxlength="1000"
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
+                                required
                                 placeholder={t("message")}
                                 className="placeholder:text-[#11171F] w-full p-4 border border-[#DEDEDE] focus:outline-none rounded-lg min-h-[180px] text-[18px] resize-none"
                             ></textarea>
