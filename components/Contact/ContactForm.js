@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactUs() {
     const t = useTranslations("Contact");
@@ -31,7 +33,7 @@ export default function ContactUs() {
 
             const data = await res.json();
             if (res.ok) {
-                alert(t("alert"))
+                toast.success(t("alert"))
                 setFormData({ name: "", email: "", phone: "", message: "" });
             } else {
                 alert("Something went wrong.PLease try again")
@@ -117,6 +119,7 @@ export default function ContactUs() {
                     </div>
                 </div>
             </section>
+            <ToastContainer/>
         </>
     );
 }
