@@ -5,8 +5,6 @@ import { useTranslations } from "next-intl";
 export default function ThankYou() {
   const t = useTranslations("ThankYou");
 
-  
-
   return (
     <>
       <div className="thankYou-wrap bg-gray-light ">

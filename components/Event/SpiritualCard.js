@@ -4,9 +4,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import FullPageLoader from "@/components/fullPageLoader.js/FullPageLoader";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import axios from "axios";
 
 export default function SpiritualCard({ webinarEvenData }) {
   const t = useTranslations("SpiritualCard");
@@ -30,28 +28,6 @@ export default function SpiritualCard({ webinarEvenData }) {
   if (loading) {
     return <FullPageLoader />;
   }
-
-  const handleSubmit = async (id) => {
-   try {
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/join-webinar/${id}`,
-      {}, 
-      {
-        headers: {
-          "Authorization": `Bearer ${token}` 
-        }
-      }
-    );
-    if(response.data.success === 1){
-      router.push(`/${language}/thank-you`);
-      // toast.success(language === "en" ? "webinar join successfully" : "الانضمام إلى الندوة عبر الإنترنت بنجاح");
-    }
-    else{
-      toast.error(language === "en" ? response.data.message : " لم يتم العثور على الرمز المميز");
-    }
-  } catch (error) {
-  }
-};
 
 const truncateText = (text) => {
   if (!text) return '';
@@ -103,15 +79,7 @@ const truncateText = (text) => {
                 <p className="text-lg"> {language === "en"  ? truncateText(event?.shortDescription) : truncateText(event?.shortDescription_ar)  }
                 </p>
                 <div className="btn-wrap mt-10">
-                {/* <button
-                  onClick={()=>handleSubmit(event._id)}
-                    className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"
-                    href="#"
-                  >
-                    {t("enrollnow")}
-                    </button> */}
-
-                    <button
+                <button
                   onClick={() => router.push(`/${language}/event/${event._id}`)}
                     className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"
                     href="#"
@@ -135,7 +103,6 @@ const truncateText = (text) => {
         )}
         </div>
       </section>
-      <ToastContainer />
     </>
   );
 }

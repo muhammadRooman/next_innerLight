@@ -202,6 +202,10 @@
     "OTP_is_required": "OTP is required"
   },
   "SpiritualCard": {
+    "price":"Price",
+    "date":"Date",
+    "time":"Time",
+    "outline":"Outline",
     "10_DEC": "10 DEC",
     "12_DEC": "12 DEC",
     "20_DEC": "20 DEC",
