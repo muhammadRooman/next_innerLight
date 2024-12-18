@@ -103,12 +103,20 @@ const truncateText = (text) => {
                 <p className="text-lg"> {language === "en"  ? truncateText(event?.shortDescription) : truncateText(event?.shortDescription_ar)  }
                 </p>
                 <div className="btn-wrap mt-10">
-                <button
+                {/* <button
                   onClick={()=>handleSubmit(event._id)}
                     className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"
                     href="#"
                   >
                     {t("enrollnow")}
+                    </button> */}
+
+                    <button
+                  onClick={() => router.push(`/${language}/event/${event._id}`)}
+                    className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"
+                    href="#"
+                  >
+                  Detail
                     </button>
                 </div>
               </div>
