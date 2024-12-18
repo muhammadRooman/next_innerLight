@@ -355,7 +355,7 @@ export default function SignUpNow() {
               {t("already_have_an_account")}{" "}
               <button
                onClick={signin}
-               className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg">
+               className="py-2.5 px-6 text-[#1796D8] font-medium xl:text-xl text-sm lg:mr-3 lg:text-lg">
                 {t("sign_in")}
               </button>
 
