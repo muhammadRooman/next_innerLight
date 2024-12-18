@@ -43,24 +43,59 @@ if (error) return <div>Error: {error.message}</div>;
 
 const handleSubmit = async (id) => {
   try {
-   const response = await axios.post(
-     `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/join-webinar/${id}`,
-     {}, 
-     {
-       headers: {
-         "Authorization": `Bearer ${token}` 
-       }
-     }
-   );
-   if(response.data.success == 1){
-     router.push(`/${language}/thank-you`);
-     toast.success(language === "en" ? "webinar join successfully" : "الانضمام إلى الندوة عبر الإنترنت بنجاح");
-   }
-   else{
-     toast.error(language === "en" ? response.data.message : " لم يتم العثور على الرمز المميز");
-   }
- } catch (error) {
- }
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/join-webinar/${id}`,
+      {},
+      {
+        headers: {
+          "Authorization": `Bearer ${token}`,
+        },
+      }
+    );
+
+   if (response.data.success === 1) {
+      toast.success(
+        language === "en"
+          ? "Webinar joined successfully"
+          : "الانضمام إلى الندوة عبر الإنترنت بنجاح"
+      );
+      router.push(`/${language}/thank-you`);
+    } else if (response.data.status === 0) {
+      // Token expired or invalid
+      toast.error(
+        language === "en"
+          ? "Your session has expired. Please sign up again."
+          : "انتهت صلاحية الجلسة. الرجاء التسجيل مرة أخرى."
+      );
+      setTimeout(() => {
+        router.push(`/${language}/signup`);
+      }, 4000); 
+    } else {
+      toast.error(
+        language === "en"
+          ? response.data.message
+          : "لم يتم العثور على الرمز المميز"
+      );
+    }
+  } catch (error) {
+    console.error("Error in joining webinar:", error);
+
+    // Handle token expiry or other errors
+    if (error.response?.status === 401 || error.response?.status === 403) {
+      toast.error(
+        language === "en"
+          ? "Your session has expired. Please sign up again."
+          : "انتهت صلاحية الجلسة. الرجاء التسجيل مرة أخرى."
+      );
+      router.push(`/${language}/signup`);
+    } else {
+      toast.error(
+        language === "en"
+          ? "An unexpected error occurred. Please try again."
+          : "حدث خطأ غير متوقع. حاول مرة اخرى."
+      );
+    }
+  }
 };
 
     return (
@@ -125,7 +160,7 @@ const handleSubmit = async (id) => {
                 dangerouslySetInnerHTML={{ __html: webinarDetailPage?.description }}
               />
             </div>
-                 <button
+               <button
                   onClick={()=>handleSubmit(webinarDetailPage._id)}
                     className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"
                   >
