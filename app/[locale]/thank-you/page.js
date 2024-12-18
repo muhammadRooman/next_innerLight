@@ -1,6 +1,6 @@
 import DownloadOurApp from "@/components/DownloadOurApp";
 import { useTranslations } from "next-intl"; 
-
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ThankYou() {
   const t = useTranslations("ThankYou");
