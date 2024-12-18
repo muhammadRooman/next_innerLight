@@ -176,6 +176,7 @@
   },
   "SignUpNow": {
     "already_have_an_account": "Already have an account?",
+    "dont_have_account": "Don't have an account?",
     "confirm_pass": "Confirm Password",
     "fill_the_form_below_our_representatives_respond_you": "Fill the form below, our representatives respond you with in 24h.",
     "full_name": "Full Name",
@@ -183,8 +184,10 @@
     "password": "Password",
     "phone_number": "Phone Number",
     "sign_in": "Sign in",
+    "register": "Register Account",
     "sign_up": "Sign Up",
     "sign_up_now": "Sign Up Now",
+    "sign_in_now": "Sign In Now",
     "last_name": "Last Name",
     "upload_picture": "Upload Picture",
     "email": "Email",
