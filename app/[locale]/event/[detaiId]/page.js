@@ -1,11 +1,11 @@
 import React from 'react'
-import WebInarDeatilPage from "@/components/Event/WebInarDeatilPage"
+import WebInarDetailPage from "@/components/Event/WebInarDetailPage"
 
 
 const page = () => {
     return (
         <div>
-         <WebInarDeatilPage/>
+         <WebInarDetailPage/>
         </div>
       );
 }
