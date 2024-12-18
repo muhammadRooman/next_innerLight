@@ -1,16 +1,74 @@
+"use client"
 import Image from 'next/image';
-import React from 'react'
+import { usePathname, useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
 import { useTranslations } from "next-intl";
+import useSWR from 'swr';
+import { useParams } from 'next/navigation';
+import FullPageLoader from '../fullPageLoader.js/FullPageLoader';
+import axios from 'axios';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer,toast } from 'react-toastify';
 
+const fetcher = (url) => fetch(url).then((r) => r.json());
 
 const WebInarDeatilPage = () => {
-    const t = useTranslations("SpiritualCard");
+  const router = useRouter();
+  const t = useTranslations("SpiritualCard");
+  const params = useParams(); // Use useParams here to access the dynamic id
+  const { detaiId } = params; // Get id from params
+  const currentPath = usePathname();
+  const [language, setLanguage] = useState('')
+  const [webinarDetailPage, setWebinarDetailPage] = useState(null)
+  const token = localStorage.getItem("authToken");
+
+  // Fetch WebInarDetailPage data using SWR
+  const { data, error, isLoading } = useSWR(
+    `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/event/${detaiId}`,
+    fetcher
+  );
+
+
+useEffect(() => {
+  if (data) {
+    setWebinarDetailPage(data?.event);
+  }
+  const lang = currentPath.split('/')[1] || 'en';
+  setLanguage(lang);
+}, [data, currentPath]);
+
+// Handle Loading and Error States
+if (isLoading) return <FullPageLoader />;
+if (error) return <div>Error: {error.message}</div>;
+
+const handleSubmit = async (id) => {
+  try {
+   const response = await axios.post(
+     `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/join-webinar/${id}`,
+     {}, 
+     {
+       headers: {
+         "Authorization": `Bearer ${token}` 
+       }
+     }
+   );
+   if(response.data.success == 1){
+     router.push(`/${language}/thank-you`);
+     toast.success(language === "en" ? "webinar join successfully" : "الانضمام إلى الندوة عبر الإنترنت بنجاح");
+   }
+   else{
+     toast.error(language === "en" ? response.data.message : " لم يتم العثور على الرمز المميز");
+   }
+ } catch (error) {
+ }
+};
+
     return (
         <div>
           {/* Section 1: Banner Image */}
           <section className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
             <Image
-              src="/banner.jpg" // Replace with your image path
+             src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${webinarDetailPage?.bannerPic}`}
               alt="Banner"
               layout="fill"
               objectFit="cover"
@@ -27,7 +85,7 @@ const WebInarDeatilPage = () => {
               {/* Product Image */}
               <div className="flex justify-center">
                 <Image
-                  src="/product.jpg" // Replace with your product image
+                   src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${webinarDetailPage?.thumbnailPic}`}
                   alt="Product"
                   width={400}
                   height={400}
@@ -37,30 +95,47 @@ const WebInarDeatilPage = () => {
     
               {/* Product Info */}
               <div>
-                <h2 className="text-3xl font-bold mb-4">Product Name</h2>
+                <h2 className="text-3xl font-bold mb-4"> {language === "en" ? webinarDetailPage?.name : webinarDetailPage?.name_ar}</h2>
                 <p className="text-gray-600 mb-4">
-                  This is a detailed description of the product. It provides all
-                  necessary information about the product including features and
-                  specifications.
+                {/* {webinarDetailPage?.shortDescription} */}
+                {language === "en" ? webinarDetailPage?.shortDescription : webinarDetailPage?.shortDescription_ar}
                 </p>
                 <div className="mb-6">
-                  <span className="text-xl font-semibold">Price:</span>{" "}
+                  <span className="text-xl font-semibold">{t("price")}:</span>{" "}
                   <span className="text-xl text-green-600">$199.99</span>
                 </div>
                 <div className="mb-6">
-                  <span className="text-xl font-semibold">Date & Time:</span>{" "}
-                  <span className="text-xl text-green-600">12/18/2024 , 5:24px</span>
+                  <span className="text-xl font-semibold">{t("date")}</span>{" "}
+                  <span className="text-xl text-green-600">
+                {new Date(webinarDetailPage?.date).toLocaleDateString(language, {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </span>
                 </div>
                 <div className="mb-6">
-                  <span className="text-xl font-semibold">Outline</span>{" "}
-                  <span className="text-xl text-green-600">this test heading</span>
+                  <span className="text-xl font-semibold">Time</span>{" "}
+                  <span className="text-xl text-green-600">{webinarDetailPage?.time}</span>
                 </div>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition">
-                {t("enroll_now")}
-                </button>
+                <div className="mb-6">
+              <span className="text-xl font-semibold">Outline:</span>
+              <div
+                className="text-xl text-green-600"
+                dangerouslySetInnerHTML={{ __html: webinarDetailPage?.description }}
+              />
+            </div>
+                 <button
+                  onClick={()=>handleSubmit(webinarDetailPage._id)}
+                    className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"
+                  >
+                    {t("enrollnow")}
+                    </button>
               </div>
             </div>
           </section>
+      <ToastContainer />
+
         </div>
       );
 }
