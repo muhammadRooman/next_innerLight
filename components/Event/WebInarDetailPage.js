@@ -52,7 +52,6 @@ const handleSubmit = async (id) => {
        }
      }
    );
-   console.log("response,response",response.data.success);
    if(response.data.success == 1){
      router.push(`/${language}/thank-you`);
      toast.success(language === "en" ? "webinar join successfully" : "الانضمام إلى الندوة عبر الإنترنت بنجاح");
