@@ -1,5 +1,5 @@
 "use client"
-import { usePathname } from 'next/navigation';
+import { usePathname,useRouter } from 'next/navigation';
 // import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -20,6 +20,7 @@ const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function LandingPage() {
   const t = useTranslations("SiteBanner");
+  const router = useRouter();
   const currentPath = usePathname();
   const [language, setLanguage] = useState('')
   const [cmsWebHeadingData, setCmsWebHeadingData] = useState("")
@@ -75,6 +76,13 @@ export default function LandingPage() {
       setTestimonialsData(testimonialData?.testimonials)
     }
   }, [testimonialData]);
+
+  const truncateText = (text) => {
+    if (!text) return '';
+    const words = text.split(' ');
+    return words.length > 15 ? words.slice(0, 15).join(' ') + '...' : text;
+  };
+
 
   if (isLoading) return <div> <FullPageLoader/></div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -296,12 +304,21 @@ export default function LandingPage() {
           <div class="xl:grid xl:grid-cols-12 gap-6">
             <div className='col-span-8'>
               <div className='blog-card shadow-shadow-color rounded-10 xl:mb-0 mb-6'>
-                <div className='card-img relative xl:min-h-[521px] lg:min-h-[421px] min-h-[300px]'>
-                  <Image src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${CmsWebHEventsData[0]?.thumbnailPic}`} alt="BlogCard1 white" layout="fill" className="rounded-10 object-cover  " />
-                </div>
+              <Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}> <div className="card-img relative xl:min-h-[521px] lg:min-h-[421px] min-h-[300px] overflow-hidden group">
+                  <Image
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${CmsWebHEventsData[0]?.thumbnailPic}`}
+                  alt="BlogCard1 white"
+                  layout="fill"
+                  className="rounded-10 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                />
+              </div>
+             </Link>
                 <div className='card-content lg:p-7 p-5 lg:pb-10 pb-7 '>
-                  <h4 className='2xl:text-2xl text-xl font-bold max-w-[605px] mb-4'>{t("the_mind_body_connection_how_mental_health")}</h4>
-                  <p className='lg:text-lg text-sm'>{language === "en" ? CmsWebHEventsData[0]?.shortDescription : CmsWebHEventsData[0]?.shortDescription_ar}</p>
+                <h4 className="2xl:text-2xl text-xl font-bold max-w-[605px] hover:text-blue-500 mb-4"><Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}>{t("the_mind_body_connection_how_mental_health")}</Link></h4>
+                <p className="lg:text-lg text-sm hover:text-blue-500 mb-4"> <Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}> {language === "en"? truncateText(CmsWebHEventsData[0]?.shortDescription || "No description available")
+               : truncateText(CmsWebHEventsData[0]?.shortDescription_ar || "تفصیل موجود نہیں")}
+              </Link>
+              </p>
                 </div>
               </div>
             </div>
@@ -312,35 +329,40 @@ export default function LandingPage() {
                   <h1 className="2xl:text-2xl text-xl font-bold text-center mb-6">
                     {t("upcoming_workshop")}
                   </h1>
+            
                   {displayedEvents?.map((item) => (
-                    <div
-                      key={item._id}
-                      className="mediaObject flex justify-start items-center mb-5"
-                    >
+                   <Link href={`/${language}/event/${item._id}`} key={item._id}>
+                    <div className="mediaObject flex justify-start items-center mb-5 hover:text-blue-500 overflow-hidden group">
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${item.thumbnailPic}`}
+                        src={
+                          item.thumbnailPic
+                            ? `${process.env.NEXT_PUBLIC_IMAGE_API}/${item.thumbnailPic}`
+                            : '/default-thumbnail.jpg' // Fallback image
+                        }
                         alt="Workshop image"
                         width={103}
                         height={94}
-                        className="rounded-10 lg:w-[103px] w-20"
+                       className="rounded-10 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
                       />
                       <div className="mediaContent ml-5 xl:max-w-[307px] max-w-full">
-                        <p className='lg:text-lg text-sm text-left rtl:text-right rtl:mr-3'>
-                          {language === "en" ? item?.shortDescription : item?.shortDescription_ar}
+                        <p className="lg:text-lg text-sm text-left rtl:text-right rtl:mr-3">
+                          {language === 'en' ? truncateText(item?.shortDescription || 'No description available'): truncateText(item?.shortDescription_ar || 'تفصیل موجود نہیں')}
                         </p>
                       </div>
                     </div>
+                  </Link>
                   ))}
-
-                  {/* Show "More" button only if data is more than 4 */}
-                  {CmsWebHEventsData.length > 3 && (
-                    <button
-                      className="bg-primary text-black py-2 px-4 rounded mt-4"
-                      onClick={() => setShowAll(!showAll)}
+                    {
+                    CmsWebHEventsData.length > 3 && (
+                       <button
+                      className="bg-primary text-black py-2 px-4 rounded mt-4 hover:text-blue-500"
+                      onClick={() => router.push(`/${language}/event`)}
                     >
-                      {showAll ? t("show_less") : t("show_more")}
+                      {t("show_more")}
                     </button>
-                  )}
+                    )
+
+                  }
                 </div>
               </section>
 
