@@ -173,9 +173,7 @@ export default function SignUpNow() {
     }
   };
   const signin = ()=>{
-    console.log("yesss")
-    // router.push(`/${language}/signin`)
-    router.push(`/${language}/signin`);
+   router.push(`/${language}/signin`);
   }
 
   return (
