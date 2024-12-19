@@ -100,9 +100,10 @@ export default function SignIn() {
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
+      
       if (response?.data?.status === 1) {
+        window.localStorage.setItem('accessToken', response.data.data.accessToken);
         router.push(`/${language}/thank-you`);
-        localStorage.setItem("authToken", response.data.token);
       } else {
         toast.error(
           language === "en" ? response.data.message : response.data.message_ar
