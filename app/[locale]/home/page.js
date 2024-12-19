@@ -114,12 +114,12 @@ export default function LandingPage() {
       <section className="site-banner bg-site-banner bg-cover 2xl:min-h-[calc(997px-100px)] min-h-[calc(697px-71px)] relative flex items-end justify-center pb-10 lg:bg-center bg-center">
         <div className="2xl:container xl:container lg:container mx-auto px-5">
           <div className="inner-container relative">
-            <div className="site-banner-content max-w-[929px] mx-auto">
-              <h5 className="xl:text-40 lg:text-[30px] text-[22px] text-white font-bold text-center">{language === "en" ? cmsWebHeadingData?.heading_en : cmsWebHeadingData?.heading_ar} </h5>
+            <div className="site-banner-content max-w-[965px] mx-auto">
+              <h5 className="xl:text-40 rtl:xl:text-[100px] lg:text-[30px] text-[22px] text-white font-bold text-center">{language === "en" ? cmsWebHeadingData?.heading_en : cmsWebHeadingData?.heading_ar} </h5>
               <div className="relative banner-img 2xl:min-h-[148px] sm:min-h-[120px] min-h-[60px] max-w-full">
                 <Image src="/wellness.png" alt={t("wellnessAlt")} layout="fill" className="max-w-full" />
               </div>
-              <p className="text-center text-white 2xl:text-2xl lg:text-xl">{language === "en" ? cmsWebHeadingData?.description_en : cmsWebHeadingData?.description_ar}</p>
+              <p className="text-center text-white 2xl:text-2xl 2xl:leading-10 rtl:2xl:text-[40px] lg:text-xl">{language === "en" ? cmsWebHeadingData?.description_en : cmsWebHeadingData?.description_ar}</p>
             </div>
             <div className="social-icon">
               <nav className="flex items-center justify-center mt-6">
@@ -153,19 +153,19 @@ export default function LandingPage() {
       <section className="commitment-wrap bg-gray-light lg:pt-[102px] xl:pb-[110px] lg:pb-[80px] pt-[60px] pb-[60px]">
         <div className="2xl:container xl:container lg:container mx-auto px-5">
           <div className='heading-box text-center lg:mb-16 mb-7'>
-            <h5 className='text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]'>{t("innerLight")}</h5>
-            <h2 className='xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]'>{language === "en" ? cmsWebCommitmentData?.heading_en : cmsWebCommitmentData?.heading_ar}</h2>
+            <h5 className='text-info-color 2xl:text-2xl 2xl:leading-[69px] font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]'>{t("innerLight")}</h5>
+            <h2 className='xl:text-[40px] lg:text-[30px] 2xl:leading-[88px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]'>{language === "en" ? cmsWebCommitmentData?.heading_en : cmsWebCommitmentData?.heading_ar}</h2>
           </div>
           <div className="lg:grid lg:grid-cols-4 items-center">
             <div className='col-span-1'>
               <div className='commitment-content text-center lg:mb-36 mb-4 lg:max-w-[395px] max-w-full'>
-                <p className='xl:text-lg font-normal'>{language === "en" ? cmsWebCommitmentData?.point1_en : cmsWebCommitmentData?.point1_ar}</p>
+                <p className='xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal'>{language === "en" ? cmsWebCommitmentData?.point1_en : cmsWebCommitmentData?.point1_ar}</p>
               </div>
               <div className='commitment-content text-center lg:mb-36 mb-4 lg:max-w-[395px] max-w-full'>
-                <p className='xl:text-lg font-normal'>{language === "en" ? cmsWebCommitmentData?.point2_en : cmsWebCommitmentData?.point2_ar}</p>
+                <p className='xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal'>{language === "en" ? cmsWebCommitmentData?.point2_en : cmsWebCommitmentData?.point2_ar}</p>
               </div>
               <div className='commitment-content text-center lg:max-w-[395px] max-w-full mb-4'>
-                <p className='xl:text-lg font-normal'>{language === "en" ? cmsWebCommitmentData?.point3_en : cmsWebCommitmentData?.point3_ar}</p>
+                <p className='xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal'>{language === "en" ? cmsWebCommitmentData?.point3_en : cmsWebCommitmentData?.point3_ar}</p>
               </div>
             </div>
             <div className='col-span-2'>
@@ -175,18 +175,19 @@ export default function LandingPage() {
             </div>
             <div className='col-span-1'>
               <div className='commitment-content text-center lg:mb-36 lg:max-w-[395px] max-w-full mb-4'>
-                <p className='xl:text-lg font-normal'>{language === "en" ? cmsWebCommitmentData?.point4_en : cmsWebCommitmentData?.point4_ar}</p>
+                <p className='xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal'>{language === "en" ? cmsWebCommitmentData?.point4_en : cmsWebCommitmentData?.point4_ar}</p>
               </div>
               <div className='commitment-content text-center lg:mb-36 lg:max-w-[395px] max-w-full mb-4'>
-                <p className='xl:text-lg font-normal'>{language === "en" ? cmsWebCommitmentData?.point5_en : cmsWebCommitmentData?.point5_ar}</p>
+                <p className='xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal'>{language === "en" ? cmsWebCommitmentData?.point5_en : cmsWebCommitmentData?.point5_ar}</p>
               </div>
               <div className='commitment-content text-center lg:max-w-[395px] max-w-full mb-4'>
-                <p className='xl:text-lg font-normal'>{language === "en" ? cmsWebCommitmentData?.point6_en : cmsWebCommitmentData?.point6_ar}</p>
+                <p className='xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal'>{language === "en" ? cmsWebCommitmentData?.point6_en : cmsWebCommitmentData?.point6_ar}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section className="MeditationConsultation-wrap ">
         <div className='MeditationConsultation-innner flex lg:min-h-[997px]  min-h-[860px]'>
           <div className='Meditation-left-img bg-meditation-left w-full bg-cover lg:max-w-[calc(100%-70%)] max-w-full min-h-full lg:block hidden'></div>
@@ -197,8 +198,8 @@ export default function LandingPage() {
                   <h5 className='text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]'>{t("innerLight")}</h5>
                   <h2 className='xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]'>{language === "en" ? CmsWebHMeditationData?.heading_en : CmsWebHMeditationData?.heading_ar}</h2>
                 </div>
-                <p className='text-lg xl:text-2xl font-normal mb-4'>{language === "en" ? CmsWebHMeditationData?.description_en : CmsWebHMeditationData?.description_ar}</p>
-                <p className='text-lg xl:text-2xl font-bold text-[#753892]'>{t("connect_with_compassionate")}</p>
+                <p className='text-lg xl:text-2xl rtl:xl:text-[40px] rtl:max-w-[926px] rtl:xl:leading-10 font-normal mb-4'>{language === "en" ? CmsWebHMeditationData?.description_en : CmsWebHMeditationData?.description_ar}</p>
+                <p className='text-lg xl:text-2xl rtl:xl:text-[48px] md:mb-24 mb-6 font-bold text-[#753892]'>{t("connect_with_compassionate")}</p>
               </div>
               <div className='static-img relative lg:left-[-166px] rtl:lg:right-[-166px] mt-8 lg:w-[calc(100%+166px)] w-full '>
                 <div class="md:grid md:grid-cols-3 items-center">
@@ -220,23 +221,24 @@ export default function LandingPage() {
                 </div>
               </div>
               <div className='book-you-button sm:flex sm:justify-between items-center mt-8 justify-center text-center  '>
-                <h5 className='text-black xl:text-40 lg:text-[30px]  text-[25px]  font-bold mb-3'>{t("book_your_consultation")}</h5>
-                <Link  href={`/${language}/contact`} className="py-2 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover xl:mr-0 lg:w-[181px] lg:text-lg block">{t("contact_us")}</Link>
+                <h5 className='text-black xl:text-40 rtl:xl:text-[70px] lg:text-[30px] text-[25px] font-bold mb-3'>{t("book_your_consultation")}</h5>
+                <Link  href={`/${language}/contact`} className="py-2 px-6 text-white rounded-3xl font-medium xl:text-xl rtl:xl:text-[30px] text-sm bg-btn-gradient hover:bg-btn-gradient-hover xl:mr-0 lg:w-[181px] lg:text-lg block">{t("contact_us")}</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <section className="DownloadOurApp bg-gray-light lg:pt-9">
         <div className="2xl:container xl:container lg:container mx-auto px-5">
           <div class="md:grid md:grid-cols-2 flex flex-col-reverse">
             <div className='DownloadOurApp-content xl:max-w-[685px] max-w-full lg:pt-20 pt-8 '>
               <div className='heading-box text-left mb-3.5 rtl:text-right'>
-                <h5 className='text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]'>{t('headingSmall')}</h5>
-                <h2 className='xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]'>{t('downloadOurApp')}</h2>
+                <h5 className='text-info-color 2xl:text-2xl 2xl:leading-[69px] font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]'>{t('headingSmall')}</h5>
+                <h2 className='xl:text-[40px] lg:text-[30px] 2xl:leading-[88px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]'>{t('downloadOurApp')}</h2>
               </div>
-              <p className='text-lg xl:text-2xl font-bold text-[#753892] mb-7'>{t('connectWithExperts')}</p>
-              <p className='text-lg xl:text-2xl mt-10'>{t('personalizedSupport')}</p>
+              <p className='text-lg xl:text-2xl xl:leading-[48px] rtl:xl:text-[48px] mb-2 font-bold text-[#753892]'>{t('connectWithExperts')}</p>
+              <p className='text-lg xl:text-2xl rtl:xl:text-[40px] rtl:max-w-[786px] xl:leading-10 font-normal mb-4'>{t('personalizedSupport')}</p>
               <div className='QR-box mt-9 flex justify-between items-center max-w-[420px]'>
                 <div className='btn-download'>
                   <Link href="https://apps.apple.com/au/app/innerlight-academy/id6670317150" target='_blank' className=""><Image src="/AppStore.png" width={180} height={55} alt="AppStore" className=''/></Link> 
@@ -255,6 +257,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
       <section className="benefits-holistic bg-gray-light lg:pt-0 pt-8   pb-[40px]">
         <div className="2xl:container xl:container lg:container mx-auto px-5">
           <div className="heading-box text-center xl:mb-20 mb-10">
