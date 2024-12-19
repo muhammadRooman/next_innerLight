@@ -21,6 +21,7 @@ const WebInarDeatilPage = () => {
   const [language, setLanguage] = useState('')
   const [webinarDetailPage, setWebinarDetailPage] = useState(null)
   const token = localStorage.getItem("authToken");
+  const [isImageLoading, setIsImageLoading] = useState(true);
 
   // Fetch WebInarDetailPage data using SWR
   const { data, error, isLoading } = useSWR(
@@ -37,7 +38,6 @@ useEffect(() => {
   setLanguage(lang);
 }, [data, currentPath]);
 
-// Handle Loading and Error States
 if (isLoading) return <FullPageLoader />;
 if (error) return <div>Error: {error.message}</div>;
 
@@ -98,10 +98,15 @@ const handleSubmit = async (id) => {
   }
 };
 
+// Function to handle when image loading is complete
+const handleImageLoadingComplete = () => {
+  setIsImageLoading(false);
+};
     return (
         <div>
           {/* Section 1: Banner Image */}
           <section className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
+          {isImageLoading && <FullPageLoader />}
             <Image
              src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${webinarDetailPage?.bannerPic}`}
               alt="Banner"
@@ -109,6 +114,7 @@ const handleSubmit = async (id) => {
               objectFit="cover"
               priority
               className="w-full"
+              onLoadingComplete={handleImageLoadingComplete}
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
             </div>
@@ -119,12 +125,14 @@ const handleSubmit = async (id) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               {/* Product Image */}
               <div className="flex justify-center">
+          {isImageLoading && <FullPageLoader />}
                 <Image
                    src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${webinarDetailPage?.thumbnailPic}`}
                   alt="Product"
                   width={400}
                   height={400}
                   className="rounded-lg shadow-lg"
+                  onLoadingComplete={handleImageLoadingComplete}
                 />
               </div>
     
