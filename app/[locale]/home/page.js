@@ -1,19 +1,15 @@
 "use client"
 import { usePathname,useRouter } from 'next/navigation';
-// import BenefitsOfHolistic from "@/components/BenefitsOfHolistic";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-// import OurClients from "@/components/OurClients";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import SubscribeUs from "@/components/SubscribeUs";
 import BlogsCard from "@/components/BlogsCard";
 import useSWR from 'swr';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
 import FullPageLoader from '@/components/fullPageLoader.js/FullPageLoader';  
 import OurClients from '@/components/OurClients';
-
+import Head from "@/app/[locale]/home/head"; // Import DefaultTags component
 
 // Define fetcher function
 const fetcher = (url) => fetch(url).then((r) => r.json());
@@ -87,8 +83,6 @@ export default function LandingPage() {
   if (isLoading) return <div> <FullPageLoader/></div>;
   if (error) return <div>Error: {error.message}</div>;
 
-  
-
   const benefits = [
     {
       id: 1,
@@ -117,7 +111,8 @@ export default function LandingPage() {
   ];
 
   return (
-    <>
+    <>  
+    <Head/>
       {/* Hero Banner Section */}
       <section className="site-banner bg-site-banner bg-cover 2xl:min-h-[calc(997px-100px)] min-h-[calc(697px-71px)] relative flex items-end justify-center pb-10 lg:bg-center bg-center">
         <div className="2xl:container xl:container lg:container mx-auto px-5">

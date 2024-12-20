@@ -5,10 +5,12 @@ import OurMission from "@/components/AboutUs/OurMission";
 import WhatWeOffer from "@/components/AboutUs/WhatWeOffer";  
 import Commitment from "@/components/AboutUs/Commitment";  
 import OurClients from "@/components/OurClients";
+import Head from "@/app/[locale]/about/head"; // Import DefaultTags component
 
 export default function AboutBanner() {
     return (
       <>
+       <Head/>
         <Banner />
         <OurMission />
         <WhatWeOffer />
