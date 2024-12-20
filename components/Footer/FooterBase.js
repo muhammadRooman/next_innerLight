@@ -17,11 +17,11 @@ export default function FooterBase({locale}) {
             </div>
             <div className="nav-menu flex lg:mb-14 mb-8 justify-center">
               <nav className="flex items-center md:flex-row flex-col">
-                <Link href={`/${locale}/home`} className="text-black py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] me-[30px] text-lg xl:text-lg lg:text-[15px] hover:text-[#1796D8] font-medium">{t("home")}</Link>
-                <Link href={`/${locale}/about`} className="text-black py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] me-[30px] text-lg xl:text-lg lg:text-[15px] hover:text-[#1796D8] font-medium">{t("about")}</Link>
-                <Link href={`/${locale}/benefits`} className="text-black py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] me-[30px] text-lg xl:text-lg lg:text-[15px] hover:text-[#1796D8] font-medium">{t("benefits")}</Link>  
-                <Link href={`/${locale}/contact`} className="text-black py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] me-[30px] text-lg xl:text-lg lg:text-[15px] hover:text-[#1796D8] font-medium">{t("contact")}</Link>
-                <Link href={`/${locale}/event`} className="text-black py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] me-[30px] text-lg xl:text-lg lg:text-[15px] hover:text-[#1796D8] font-medium">{t("events")}</Link>
+                <Link href={`/${locale}/home`} className="tlg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black">{t("home")}</Link>
+                <Link href={`/${locale}/about`} className="tlg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black">{t("about")}</Link>
+                <Link href={`/${locale}/benefits`} className="tlg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black">{t("benefits")}</Link>  
+                <Link href={`/${locale}/contact`} className="tlg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black">{t("contact")}</Link>
+                <Link href={`/${locale}/event`} className="tlg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black">{t("events")}</Link>
               </nav>
             </div>
             <p className="text-lg flex items-center justify-center rtl:flex-row-reverse">

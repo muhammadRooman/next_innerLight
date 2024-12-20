@@ -132,22 +132,22 @@ export default function LandingPage() {
             <div className="social-icon">
               <nav className="flex items-center justify-center mt-6">
                 {cmsWebHeadingData?.facebook && (
-                  <Link href={cmsWebHeadingData.facebook} className="min-w-14 min-h-14 rounded-full border-solid border-2 flex items-center justify-center border-info-color ease-in-out me-2 hover:bg-info-color">
+                  <Link href={cmsWebHeadingData.facebook} target="_blank" className="min-w-14 min-h-14 rounded-full border-solid border-2 flex items-center justify-center border-info-color ease-in-out me-2 hover:bg-info-color">
                     <Image src="/facebook.png" width={25} height={25} alt={t("facebookAlt")} className="" />
                   </Link>
                 )}
                 {cmsWebHeadingData?.twitter && (
-                  <Link href={cmsWebHeadingData.twitter} className="min-w-14 min-h-14 rounded-full border-solid border-2 flex items-center justify-center border-info-color ease-in-out me-2 hover:bg-info-color">
+                  <Link href={cmsWebHeadingData.twitter} target="_blank" className="min-w-14 min-h-14 rounded-full border-solid border-2 flex items-center justify-center border-info-color ease-in-out me-2 hover:bg-info-color">
                     <Image src="/twitter.png" width={25} height={25} alt={t("twitterAlt")} className="" />
                   </Link>
                 )}
                 {cmsWebHeadingData?.linkedin && (
-                  <Link href={cmsWebHeadingData.linkedin} className="min-w-14 min-h-14 rounded-full border-solid border-2 flex items-center justify-center border-info-color ease-in-out me-2 hover:bg-info-color">
+                  <Link href={cmsWebHeadingData.linkedin} target="_blank" className="min-w-14 min-h-14 rounded-full border-solid border-2 flex items-center justify-center border-info-color ease-in-out me-2 hover:bg-info-color">
                     <Image src="/linkedin.png" width={25} height={25} alt={t("linkedinAlt")} className="" />
                   </Link>
                 )}
                 {cmsWebHeadingData?.youtube && (
-                  <Link href={cmsWebHeadingData.youtube} className="min-w-14 min-h-14 rounded-full border-solid border-2 flex items-center justify-center border-info-color ease-in-out me-2 hover:bg-info-color">
+                  <Link href={cmsWebHeadingData.youtube} target="_blank" className="min-w-14 min-h-14 rounded-full border-solid border-2 flex items-center justify-center border-info-color ease-in-out me-2 hover:bg-info-color">
                     <Image src="/playSolid.png" width={25} height={25} alt={t("playSolidAlt")} className="" />
                   </Link>
                 )}
@@ -285,8 +285,8 @@ export default function LandingPage() {
                     />
                   </div>
                   <div className="benefits-content xl:max-w-[307px] mx-auto">
-                    <h5 className="2xl:text-2xl text-xl  font-bold text-info-color lg:py-5 py-3">{benefit.title}</h5>
-                    <p className="text-lg">{benefit.description}</p>
+                    <h5 className="2xl:text-2xl rtl:2xl:text-[32px] text-xl font-bold text-info-color lg:py-5 py-3">{benefit.title}</h5>
+                    <p className="xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal">{benefit.description}</p>
                   </div>
                 </div>
               </div>
@@ -314,8 +314,8 @@ export default function LandingPage() {
               </div>
              </Link>
                 <div className='card-content lg:p-7 p-5 lg:pb-10 pb-7 '>
-                <h4 className="2xl:text-2xl text-xl font-bold max-w-[605px] hover:text-blue-500 mb-4"><Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}>{t("the_mind_body_connection_how_mental_health")}</Link></h4>
-                <p className="lg:text-lg text-sm hover:text-blue-500 mb-4"> <Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}> {language === "en"? truncateText(CmsWebHEventsData[0]?.shortDescription || "No description available")
+                <h4 className="2xl:text-2xl rtl:2xl:text-[40px] text-left text-xl font-bold rtl:max-w-[727px] max-w-[605px] rtl:text-right hover:text-blue-500 mb-4"><Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}>{t("the_mind_body_connection_how_mental_health")}</Link></h4>
+                <p className="xl:text-lg rtl:2xl:text-[30px] rtl:md:text-[28px] font-normal text-sm hover:text-blue-500 mb-4"> <Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}> {language === "en"? truncateText(CmsWebHEventsData[0]?.shortDescription || "No description available")
                : truncateText(CmsWebHEventsData[0]?.shortDescription_ar || "تفصیل موجود نہیں")}
               </Link>
               </p>
@@ -326,7 +326,7 @@ export default function LandingPage() {
                <SubscribeUs cmsWeb={cmsWebHeadingData}/>
               <section className="SubscribeUs-wrap mt-6 lg:mb-0 mb-3">
                 <div className="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-9 lg:px-8 p-5">
-                  <h1 className="2xl:text-2xl text-xl font-bold text-center mb-6">
+                  <h1 className="2xl:text-2xl rtl:2xl:text-[40px] text-xl font-bold text-center mb-6">
                     {t("upcoming_workshop")}
                   </h1>
             
@@ -342,10 +342,10 @@ export default function LandingPage() {
                         alt="Workshop image"
                         width={103}
                         height={94}
-                       className="rounded-10 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                       className="rounded-10 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 w-[103px] h-[94px]"
                       />
                       <div className="mediaContent ml-5 xl:max-w-[307px] max-w-full">
-                        <p className="lg:text-lg text-sm text-left rtl:text-right rtl:mr-3">
+                        <p className="xl:text-lg rtl:2xl:text-[30px] rtl:md:text-[28px] font-normal rtl:mr-3">
                           {language === 'en' ? truncateText(item?.shortDescription || 'No description available'): truncateText(item?.shortDescription_ar || 'تفصیل موجود نہیں')}
                         </p>
                       </div>
@@ -355,7 +355,7 @@ export default function LandingPage() {
                     {
                     CmsWebHEventsData.length > 3 && (
                        <button
-                      className="bg-primary text-black py-2 px-4 rounded mt-4 hover:text-blue-500"
+                      className="bg-primary text-black py-2 px-4 rounded rtl:2xl:text-[32px] text-[22px] hover:text-blue-500"
                       onClick={() => router.push(`/${language}/event`)}
                     >
                       {t("show_more")}
@@ -371,7 +371,6 @@ export default function LandingPage() {
           <BlogsCard />
         </div>
       </section>
-   
 
    <OurClients/>
 
