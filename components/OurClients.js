@@ -28,14 +28,10 @@ export default function OurClients() {
     fetcher
   );
 
-  console.log("data123", data)
   useEffect(() => {
     if (data) {
-      console.log("data", data.testimonials)
       settTestimonialData(data?.testimonials)
-
     }
-    console.log("testimonialData", testimonialData)
     const lang = currentPath.split('/')[1] || 'en';
     setLanguage(lang);
   }, [currentPath, data]);

@@ -4,6 +4,8 @@ import SpiritualEvents from "@/components/Event/SpiritualEvents";
 import SignUpNow from "@/components/Event/SignUpNow";   
 import OurClients from "@/components/OurClients";  
 import { WebinarApi } from "../../../components/api/WebinarApi";
+import Head from "@/app/[locale]/event/head"; // Import DefaultTags component
+
 
 const fetchWebinarData = async () => {
   try {
@@ -19,6 +21,7 @@ export default async function Event() {
   const webinarEvenData = webinarData.events
     return (
       <>
+      <Head/>
         <EventBanner /> 
         <SpiritualEvents webinarEvenData={webinarEvenData} />
         <SignUpNow />
