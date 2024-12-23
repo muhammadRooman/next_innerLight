@@ -24,7 +24,7 @@ export default function UpcomingWorkshop() {
 
   return (
     <section className="SubscribeUs-wrap mt-6 lg:mb-0 mb-3">
-      <div className="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-9 lg:px-8 p-5">
+      <div className="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-4 lg:px-8 p-5">
         <h1 className="2xl:text-2xl rtl:2xl:text-[40px] text-xl font-bold text-center mb-6">{t("upcoming_workshop")}</h1> 
         {workshops.map((workshop) => (
           <div 

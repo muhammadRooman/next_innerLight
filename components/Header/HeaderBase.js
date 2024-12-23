@@ -54,7 +54,7 @@ const Header = ({ locale }) => {
                   width={108}
                   height={86}
                   alt="logo white"
-                  className="brand-logo md:w-[108px] w-[90px] rtl:ml-10"
+                  className="brand-logo md:w-[108px] w-[90px] rtl:ml-28"
                 />
               </Link>
             </div>
@@ -79,7 +79,7 @@ const Header = ({ locale }) => {
                <Link
                key={index}
                href={`/${locale}/${link}`}
-               className={`${activeNavbarName === link ? 'active text-[#1796D8]' : 'lg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black`}
+               className={`${activeNavbarName === link ? 'active text-[#1796D8]' : 'lg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black rtl:xl:me-28`}
                onClick={() => setIsMenuOpen(false)}
                prefetch={true}
              >

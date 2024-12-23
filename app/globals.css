@@ -224,6 +224,16 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
+html[lang="ar"] .event-banner::before,
+html[lang="ar"] .contact-banner::before,
+html[lang="ar"] .about-banner::before,
+html[lang="ar"] .benefits-banner::before {
+  transform: scaleX(-1);
+}
+
+
 .fullpage-loader-holder {
   position: fixed;
   left: 0;
@@ -335,9 +345,3 @@ body {
   left: 15%;
 }
 
-html[lang="ar"] .event-banner::before,
-html[lang="ar"] .contact-banner::before,
-html[lang="ar"] .about-banner::before,
-html[lang="ar"] .benefits-banner::before {
-  transform: scaleX(-1);
-}

@@ -29,7 +29,7 @@ export default function Commitment(){
                         </div>
                         <div  className="col-span-5">
                             <div className="nurturing-img relative lg:min-h-[722px] min-h-[500px] max-w-[634px] mt-20">
-                                <Image src="/assets/images/about/nurturing.png" alt="logo white" layout="fill"  className=" object-cover xl:p-2.5" />
+                                <Image src="/assets/images/about/nurturing.png" alt="logo white" layout="fill"  className="object-cover xl:p-2.5 rtl:scale-x-[-1]" />
                             </div>
                             <p  className="2xl:text-2xl rtl:2xl:text-[40px] max-w-[600px] rtl:leading-[36px] font-semibold md:text-[18px] text-[16px] text-[#753892] my-5" >{t("connect_with_compassionate")}</p>
                             <div className='btn-download flex'>
