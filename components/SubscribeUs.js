@@ -8,7 +8,7 @@ export default function SubscribeUs(props) {
   return (
     <>
      <section className='SubscribeUs-wrap'> 
-        <div class="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-9 lg:px-8 p-5">
+        <div class="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-4 lg:px-8 p-5">
             <h1 className='2xl:text-2xl rtl:2xl:text-[40px] text-xl font-bold text-center mb-6'>{t("subscribeUs")}</h1> 
             <form className='form-group mb-7'>
               <div className='icon-wrap relative'>
