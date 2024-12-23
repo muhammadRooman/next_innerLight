@@ -329,6 +329,7 @@ export default function SignUpNow() {
                       {/* <!-- Hidden Input --> */}
                       <input
                         type="file"
+                        accept="image/jpeg, image/png, image/jpg,image/webp"
                         onChange={(e) => handleImageChange(e)}
                         id="upload_picture"
                         className="hidden"
