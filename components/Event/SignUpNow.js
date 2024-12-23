@@ -16,7 +16,6 @@ export default function SignUpNow() {
   const [language, setLanguage] = useState("");
   const [signUpData, setSignUpData] = useState({
     fullName: "",
-    lastName: "",
     email: "",
   });
   const [otpCode, setOtpCode] = useState("");
@@ -31,7 +30,6 @@ export default function SignUpNow() {
   const [OtpMessage, setOtpMessage] = useState("");
   const [validationErrors, setValidationErrors] = useState({
     fullName: "",
-    lastName: "",
     email: "",
   });
 
@@ -125,9 +123,6 @@ export default function SignUpNow() {
     if (!signUpData?.fullName) {
       errors.fullName = t("full_name_is_required");
     }
-    if (!signUpData?.lastName) {
-      errors.lastName = t("last_name_is_required");
-    }
     if (!signUpData?.email) {
       errors.email = t("email_is_required");
     }
@@ -151,7 +146,6 @@ export default function SignUpNow() {
     try {
       const formData = new FormData();
       formData.append("fullName", signUpData?.fullName);
-      formData.append("lastName", signUpData?.lastName);
       formData.append("phoneNumber", phoneNumber);
       formData.append("email", signUpData?.email);
       formData.append("profileImage", profileImage || "");
@@ -205,22 +199,6 @@ export default function SignUpNow() {
                 />
                 {validationErrors?.fullName && (
                   <p style={{ color: "red" }}>{validationErrors?.fullName}</p>
-                )}
-              </div>
-              <div class="form-group lg:mb-0 mb-4">
-                <input
-                  type="text"
-                  name="LastName"
-                  id="LastName"
-                  value={signUpData?.lastName}
-                  onChange={(e) =>
-                    setSignUpData({ ...signUpData, lastName: e.target.value })
-                  }
-                  className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
-                  placeholder={t("last_name")}
-                />
-                {validationErrors?.lastName && (
-                  <p style={{ color: "red" }}>{validationErrors?.lastName}</p>
                 )}
               </div>
               <div className="form-group lg:mb-0 mb-4">
