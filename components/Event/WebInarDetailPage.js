@@ -143,11 +143,14 @@ const handleImageLoadingComplete = () => {
                 {/* {webinarDetailPage?.shortDescription} */}
                 {language === "en" ? webinarDetailPage?.shortDescription : webinarDetailPage?.shortDescription_ar}
                 </p>
-                <div className="mb-3">
+                {
+                  webinarDetailPage?.type &&  <div className="mb-3">
                   <span className="text-xl font-semibold">{t("price")}:</span>{" "}
-                  <span className="text-xl text-black-600">$199.99</span>
+                  <span className="text-xl text-black-600">{webinarDetailPage?.type}</span>
                 </div>
-                <div className="mb-3">
+                }            
+                {
+                  webinarDetailPage?.date && <div className="mb-3">
                   <span className="text-xl font-semibold">{t("date")}</span>{" "}
                   <span className="text-xl text-black-600">
                 {new Date(webinarDetailPage?.date).toLocaleDateString(language, {
@@ -157,17 +160,22 @@ const handleImageLoadingComplete = () => {
                 })}
               </span>
                 </div>
-                <div className="mb-3">
+                }     
+                {
+                  webinarDetailPage?.time &&  <div className="mb-3">
                   <span className="text-xl font-semibold">Time</span>{" "}
                   <span className="text-xl text-black-600">{webinarDetailPage?.time}</span>
                 </div>
-                <div className="mb-3">
-              <span className="text-xl font-semibold">Outline:</span>
-              <div
-                className="text-xl text-black-600"
-                dangerouslySetInnerHTML={{ __html: webinarDetailPage?.description }}
-              />
-            </div>
+                }    
+                {
+                  webinarDetailPage?.description &&  <div className="mb-3">
+                  <span className="text-xl font-semibold">Outline:</span>
+                  <div
+                    className="text-xl text-black-600"
+                    dangerouslySetInnerHTML={{ __html: webinarDetailPage?.description }}
+                  />
+                </div>
+                }              
                <button
                   onClick={()=>handleSubmit(webinarDetailPage._id)}
                     className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"

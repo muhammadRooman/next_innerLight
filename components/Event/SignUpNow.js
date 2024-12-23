@@ -4,9 +4,14 @@ import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import i18nIsoCountries from 'i18n-iso-countries';
+
+// Register the Arabic locale
+i18nIsoCountries.registerLocale(require('i18n-iso-countries/langs/ar.json'));
 
 export default function SignUpNow() {
   const router = useRouter();
@@ -33,6 +38,15 @@ export default function SignUpNow() {
     email: "",
   });
 
+     // Generate list of countries with Arabic names
+     const countries = i18nIsoCountries.getNames('ar'); // 'ar' for Arabic
+        // Transform the countries into the required format
+       // Create country options for the PhoneInput dropdown
+       const countryOptions = Object.keys(countries).map((countryCode) => ({
+         value: countryCode,
+         label: countries[countryCode], // Arabic country name
+       }));
+
   // fetched cmsWeb
   useEffect(() => {
     const lang = currentPath.split("/")[1] || "en";
@@ -42,7 +56,12 @@ export default function SignUpNow() {
   const handleSendOTP = async () => {
     if (!phoneNumber) {
       setErrorMessage(t("phone_number_is_required"));
-      return;
+      return; // Stop execution if phone number is not provided
+    }
+    // Validate the phone number length (between 8 and 16 digits)
+    if (phoneNumber.length < 8 || phoneNumber.length > 16) {
+      setErrorMessage(t("phone_number_must_be_between_8_and_16_digits"));
+      return; // Stop execution if validation fails
     }
     try {
       const response = await axios.post(
@@ -120,12 +139,21 @@ export default function SignUpNow() {
   const handleSubmit = async () => {
     let errors = {};
 
+     // Validate fullName (maximum length of 150 characters)
     if (!signUpData?.fullName) {
-      errors.fullName = t("full_name_is_required");
+    errors.fullName = t("full_name_is_required");
+    } else if (signUpData.fullName.length > 150) {
+    errors.fullName = t("name_should_not_more_then_150_character");
     }
-    if (!signUpData?.email) {
-      errors.email = t("email_is_required");
+     // Validate email with regex
+   if (!signUpData?.email) {
+    errors.email = t("email_is_required");
+  } else {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(signUpData.email)) {
+      errors.email = t("invalid_email");
     }
+   }
     if (!profileImage) {
       errors.profileImage = t("profile_image_is_required");
       setImageError(t("please_upload_your_profile_picture"));
@@ -170,6 +198,9 @@ export default function SignUpNow() {
    router.push(`/${language}/signin`);
   }
 
+  const handlePhoneChange = (value) => {
+  setPhoneNumber(value); // Set the full phone number with the country code
+  };
   return (
     <>
       <section className=" bg-gray-light  relative flex items-center justify-start py-16 ">
@@ -203,15 +234,29 @@ export default function SignUpNow() {
               </div>
               <div className="form-group lg:mb-0 mb-4">
                 <div className="btn-icon relative">
-                  <PhoneInput
-                    international
-                    defaultCountry="US" // Default country code
-                    value={phoneNumber}
-                    onChange={setPhoneNumber}
-                    disabled={disabledPhoneOTP || OtpMessage}
-                    className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
-                    placeholder={t("phone_number")}
-                  />
+                <PhoneInput
+                international
+                defaultCountry="OM"
+                value={phoneNumber}
+                onChange={handlePhoneChange}
+                disabled={disabledPhoneOTP || OtpMessage}
+                className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
+                placeholder={t("phone_number")}
+                pattern="^\d{8,16}$" // Enforces a minimum of 8 digits and a maximum of 16 digits
+                />
+
+{/* <select
+    onChange={(e) => handlePhoneChange(e.target.value, phoneNumber)}
+    value={phoneNumber}
+    className="bg-white border-solid border-2 border-[#DEDEDE] focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none sm:text-sm/6 mb-5"
+  >
+    {countryOptions.map((country) => (
+      <option key={country.value} value={country.value}>
+        {country.label}
+      </option>
+    ))}
+  </select> */}
+
                   <button
                     disabled={disabledPhoneOTP || OtpMessage}
                     onClick={handleSendOTP}
@@ -351,6 +396,7 @@ export default function SignUpNow() {
           </div>
         </div>
       </section>
+      <ToastContainer/>
     </>
   );
 }
