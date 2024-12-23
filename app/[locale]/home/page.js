@@ -124,11 +124,28 @@ const displayedEvents = showAll
         <div className="2xl:container xl:container lg:container mx-auto px-5">
           <div className="inner-container relative">
             <div className="site-banner-content max-w-[965px] mx-auto">
-              <h5 className="xl:text-40 rtl:xl:text-[100px] lg:text-[30px] text-[22px] text-white font-bold text-center">{language === "en" ? cmsWebHeadingData?.heading_en : cmsWebHeadingData?.heading_ar} </h5>
+              <h5 className="xl:text-40 rtl:xl:text-[100px] lg:text-[30px] text-[22px] text-white font-bold text-center xl:leading-normal">{language === "en" ? cmsWebHeadingData?.heading_en : cmsWebHeadingData?.heading_ar} </h5>
               <div className="relative banner-img 2xl:min-h-[148px] sm:min-h-[120px] min-h-[60px] max-w-full">
-                <Image src="/wellness.png" alt={t("wellnessAlt")} layout="fill" className="max-w-full" />
+                {
+                  language === "en" ? (
+                    <Image
+                      src="/wellness.png"
+                      alt={t("wellnessAlt")}
+                      layout="fill"
+                      className="max-w-full"
+                    />
+                  ) : (
+                    <Image
+                      src="/wellness_arabic.png"
+                      alt={t("wellnessAlt")}
+                      width={485}
+                      height={160}
+                      className='m-auto'                      
+                    />
+                  )
+                }
               </div>
-              <p className="text-center text-white 2xl:text-2xl 2xl:leading-10 rtl:2xl:text-[40px] lg:text-xl">{language === "en" ? cmsWebHeadingData?.description_en : cmsWebHeadingData?.description_ar}</p>
+              <p className="text-center text-white 2xl:text-2xl 2xl:leading-10 rtl:2xl:text-[40px] lg:text-xl mt-6">{language === "en" ? cmsWebHeadingData?.description_en : cmsWebHeadingData?.description_ar}</p>
             </div>
             <div className="social-icon">
               <nav className="flex items-center justify-center mt-6">
@@ -334,7 +351,7 @@ const displayedEvents = showAll
             <div className='col-span-4  '>
                <SubscribeUs cmsWeb={cmsWebHeadingData}/>
               <section className="SubscribeUs-wrap mt-6 lg:mb-0 mb-3">
-                <div className="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-9 lg:px-8 p-5">
+                <div className="SubscribeUs-card shadow-shadow-color rounded-10 lg:py-4 lg:px-8 p-5">
                   <h1 className="2xl:text-2xl rtl:2xl:text-[40px] text-xl font-bold text-center mb-6">
                     {t("upcoming_workshop")}
                   </h1>
