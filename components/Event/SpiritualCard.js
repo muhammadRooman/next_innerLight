@@ -25,11 +25,15 @@ export default function SpiritualCard({ webinarEvenData }) {
     return () => clearTimeout(loaderTimeout);
   }, [currentPath]);
 
+  
   useEffect(() => {
     // Calculate data to display based on current page
+    const reversedData = webinarEvenData.slice().reverse();
     const startIndex = currentPage * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    setVisibleData(webinarEvenData.slice(0, endIndex));
+    
+    // setVisibleData(webinarEvenData.slice(0, endIndex));
+    setVisibleData(reversedData.slice(0, endIndex));
   }, [currentPage, webinarEvenData]);
 
   if (loading) {
@@ -113,7 +117,7 @@ export default function SpiritualCard({ webinarEvenData }) {
           ))}
           {/* Show "More" button only if data is more than current visible data */}
           {webinarEvenData.length > visibleData.length && (
-            <div className="flex justify-center mt-4 ">
+            <div className="flex justify-center mt-4 hover:text-blue-500">
               <button
                 className="bg-primary text-black py-2 px-4 rtl:xl:text-[32px] rtl:md:[26px] rounded text-center hover:text-blue-500"
                 onClick={() => setCurrentPage(currentPage + 1)}

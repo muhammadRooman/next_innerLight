@@ -28,7 +28,13 @@ export default function LandingPage() {
   const [showAll, setShowAll] = useState(false);
 
   {/* Data to be displayed */ }
-  const displayedEvents = showAll ? CmsWebHEventsData : CmsWebHEventsData.slice(0, 3);
+  // const displayedEvents = showAll ? CmsWebHEventsData : CmsWebHEventsData.slice(-3);
+// Reverse the data for latest events
+const displayedEvents = showAll 
+  ? CmsWebHEventsData.slice().reverse() 
+  : CmsWebHEventsData.slice(-3).reverse();
+
+  const latestEvent = [...CmsWebHEventsData].reverse()[0]; 
 
   // Fetch cmsWeb data using SWR
   const { data, error, isLoading } = useSWR(
@@ -297,26 +303,34 @@ export default function LandingPage() {
             <h2 className="xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("blogs_and_upcoming_workshops")}</h2>
           </div>
           <div class="xl:grid xl:grid-cols-12 gap-6">
-            <div className='col-span-8'>
-              <div className='blog-card shadow-shadow-color rounded-10 xl:mb-0 mb-6'>
-              <Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}> <div className="card-img relative xl:min-h-[521px] lg:min-h-[421px] min-h-[300px] overflow-hidden group">
-                  <Image
-                  src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${CmsWebHEventsData[0]?.thumbnailPic}`}
-                  alt="BlogCard1 white"
-                  layout="fill"
-                  className="rounded-10 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-                />
-              </div>
-             </Link>
-                <div className='card-content lg:p-7 p-5 lg:pb-10 pb-7 '>
-                <h4 className="2xl:text-2xl rtl:2xl:text-[40px] text-left text-xl font-bold rtl:max-w-[727px] max-w-[605px] rtl:text-right hover:text-blue-500 mb-4"><Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}>{t("the_mind_body_connection_how_mental_health")}</Link></h4>
-                <p className="xl:text-lg rtl:2xl:text-[30px] rtl:md:text-[28px] font-normal text-sm hover:text-blue-500 mb-4"> <Link href={`/${language}/event/${CmsWebHEventsData[0]?._id}`}> {language === "en"? truncateText(CmsWebHEventsData[0]?.shortDescription || "No description available")
-               : truncateText(CmsWebHEventsData[0]?.shortDescription_ar || "تفصیل موجود نہیں")}
-              </Link>
-              </p>
-                </div>
-              </div>
-            </div>
+          <div className='col-span-8'>
+      <div className='blog-card shadow-shadow-color rounded-10 xl:mb-0 mb-6'>
+    <Link href={`/${language}/event/${latestEvent?._id}`}>
+      <div className="card-img relative xl:min-h-[521px] lg:min-h-[421px] min-h-[300px] overflow-hidden group">
+        <Image
+          src={`${process.env.NEXT_PUBLIC_IMAGE_API}/${latestEvent?.thumbnailPic}`}
+          alt="BlogCard1 white"
+          layout="fill"
+          className="rounded-10 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+        />
+      </div>
+    </Link>
+    <div className='card-content lg:p-7 p-5 lg:pb-10 pb-7'>
+      <h4 className="2xl:text-2xl text-xl font-bold max-w-[605px] hover:text-blue-500 mb-4">
+        <Link href={`/${language}/event/${latestEvent?._id}`}>
+          {t("the_mind_body_connection_how_mental_health")}
+        </Link>
+      </h4>
+      <p className="lg:text-lg text-sm hover:text-blue-500 mb-4">
+        <Link href={`/${language}/event/${latestEvent?._id}`}>
+          {language === "en"
+            ? truncateText(latestEvent?.shortDescription || "No description available")
+            : truncateText(latestEvent?.shortDescription_ar || "تفصیل موجود نہیں")}
+        </Link>
+      </p>
+    </div>
+  </div>
+</div>
             <div className='col-span-4  '>
                <SubscribeUs cmsWeb={cmsWebHeadingData}/>
               <section className="SubscribeUs-wrap mt-6 lg:mb-0 mb-3">
