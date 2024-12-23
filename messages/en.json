@@ -203,7 +203,9 @@
     "file_size_exceeds_5MB": "File size exceeds 5MB",
     "failed_to_Verify_OTP": "Failed to verify OTP",
     "OTP_is_required": "OTP is required",
-    "phone_number_must_be_between_8_and_16_digits":"Phone number must be between 8 and  16 digits"
+    "phone_number_must_be_between_8_and_16_digits":"Phone number must be between 8 and  16 digits",
+    "invalid_email":"Invalid email",
+    "name_should_not_more_then_150_character":"Name should not more then 150 character"
   },
   "SpiritualCard": {
     "price":"Price",

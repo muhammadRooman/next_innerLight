@@ -4,7 +4,8 @@ import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import i18nIsoCountries from 'i18n-iso-countries';
@@ -36,7 +37,6 @@ export default function SignUpNow() {
     fullName: "",
     email: "",
   });
-
 
      // Generate list of countries with Arabic names
      const countries = i18nIsoCountries.getNames('ar'); // 'ar' for Arabic
@@ -139,12 +139,21 @@ export default function SignUpNow() {
   const handleSubmit = async () => {
     let errors = {};
 
+     // Validate fullName (maximum length of 150 characters)
     if (!signUpData?.fullName) {
-      errors.fullName = t("full_name_is_required");
+    errors.fullName = t("full_name_is_required");
+    } else if (signUpData.fullName.length > 150) {
+    errors.fullName = t("name_should_not_more_then_150_character");
     }
-    if (!signUpData?.email) {
-      errors.email = t("email_is_required");
+     // Validate email with regex
+   if (!signUpData?.email) {
+    errors.email = t("email_is_required");
+  } else {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(signUpData.email)) {
+      errors.email = t("invalid_email");
     }
+   }
     if (!profileImage) {
       errors.profileImage = t("profile_image_is_required");
       setImageError(t("please_upload_your_profile_picture"));
@@ -386,6 +395,7 @@ export default function SignUpNow() {
           </div>
         </div>
       </section>
+      <ToastContainer/>
     </>
   );
 }
