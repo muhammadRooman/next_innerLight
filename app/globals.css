@@ -2,17 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: 'Agha Resheeq';
-  src: url('/fonts/agha-resheeq.woff2') format('woff2'),
-       url('/fonts/agha-resheeq.woff') format('woff');
+  font-family: 'AGA Rasheeq V.2';
+  src: url('../public/fonts/AGARasheeqV2.woff2') format('woff2'),
+      url('../public/fonts/AGARasheeqV2.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AGA Rasheeq V.2';
+  src: url('../public/fonts/AGARasheeqV2-Bold.woff2') format('woff2'),
+      url('../public/fonts/AGARasheeqV2-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 .font-agha {
-  font-family: 'Agha Resheeq', sans-serif;
+  font-family: 'AGA Rasheeq V.2';
 }
 
 @font-face {
@@ -64,6 +73,10 @@ body {
   /* RTL-specific styles */
   direction: rtl;
   text-align: right; 
+}
+
+.arabic body{
+  font-family: 'AGA Rasheeq V.2';
 }
  
 .direction{

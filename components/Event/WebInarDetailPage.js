@@ -145,11 +145,11 @@ const handleImageLoadingComplete = () => {
                 </p>
                 <div className="mb-3">
                   <span className="text-xl font-semibold">{t("price")}:</span>{" "}
-                  <span className="text-xl text-green-600">$199.99</span>
+                  <span className="text-xl text-black-600">$199.99</span>
                 </div>
                 <div className="mb-3">
                   <span className="text-xl font-semibold">{t("date")}</span>{" "}
-                  <span className="text-xl text-green-600">
+                  <span className="text-xl text-black-600">
                 {new Date(webinarDetailPage?.date).toLocaleDateString(language, {
                   year: "numeric",
                   month: "long",
@@ -159,12 +159,12 @@ const handleImageLoadingComplete = () => {
                 </div>
                 <div className="mb-3">
                   <span className="text-xl font-semibold">Time</span>{" "}
-                  <span className="text-xl text-green-600">{webinarDetailPage?.time}</span>
+                  <span className="text-xl text-black-600">{webinarDetailPage?.time}</span>
                 </div>
                 <div className="mb-3">
               <span className="text-xl font-semibold">Outline:</span>
               <div
-                className="text-xl text-green-600"
+                className="text-xl text-black-600"
                 dangerouslySetInnerHTML={{ __html: webinarDetailPage?.description }}
               />
             </div>

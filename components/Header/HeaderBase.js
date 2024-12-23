@@ -79,7 +79,7 @@ const Header = ({ locale }) => {
                <Link
                key={index}
                href={`/${locale}/${link}`}
-               className={`${activeNavbarName === link ? 'active text-[#1796D8]' : 'lg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl hover:text-[#1796D8] font-medium`}
+               className={`${activeNavbarName === link ? 'active text-[#1796D8]' : 'lg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black`}
                onClick={() => setIsMenuOpen(false)}
                prefetch={true}
              >
@@ -95,7 +95,7 @@ const Header = ({ locale }) => {
               <select
                 value={locale}
                 onChange={handleLanguageChange}
-                className="rounded-md px-4 py-2 bg-transparent lg:text[15px] lg:text-black font-medium xl:text-xl rtl:ml-5 cursor-pointer"
+                className="rounded-md px-4 py-2 bg-transparent lg:text[15px] lg:text-black font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] rtl:ml-5 cursor-pointer"
               >
                 <option value="en">English</option>
                 <option value="ar">{t("ar")}</option>
@@ -105,7 +105,7 @@ const Header = ({ locale }) => {
               <Link
                 href="https://play.google.com/store/apps/details?id=com.arhamsoft.innerlight.innerlights&hl=en"
                 target="_blank"
-                className="py-2 lg:px-6 px-3 text-white rounded-3xl font-medium xl:text-xl text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]"
+                className="py-2 lg:px-6 px-3 text-white rounded-3xl font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]"
               >
                 {t("download_app")}
               </Link>

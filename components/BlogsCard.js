@@ -43,8 +43,8 @@ export default function BlogsCard() {
               />
             </div>
             <div className="card-content lg:p-6 lg:pb-10 p-5 ">
-              <h4 className="2xl:text-2xl text-xl font-bold mb-3">{card.title}</h4>
-              <p className="lg:text-lg text-sm">{card.description}</p>
+              <h4 className="2xl:text-2xl rtl:2xl:text-[40px] text-xl font-bold max-w-[727px] rtl:text-right">{card.title}</h4>
+              <p className="lg:text-lg text-sm xl:text-lg rtl:2xl:text-[30px] rtl:md:text-[28px] font-normal">{card.description}</p>
             </div>
           </div>
         ))}

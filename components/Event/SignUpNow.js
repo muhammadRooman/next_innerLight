@@ -181,11 +181,11 @@ export default function SignUpNow() {
       <section className=" bg-gray-light  relative flex items-center justify-start py-16 ">
         <div className="2xl:container xl:container lg:container mx-auto lg:max-0  px-5">
           <div className="heading-box text-center xl:mb-11 mb-8">
-            <h5 className="text-info-color 2xl:text-2xl font-black">
+            <h5 className="text-info-color 2xl:text-2xl rtl:2xl:text-[40px] text-xl font-bold">
               {t("moments_of_serenity")}
             </h5>
-            <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("sign_up_now")}</h2>
-            <p className="2xl:text-2xl text-xl font-normal">
+            <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[28px] rtl:text-[24px]">{t("sign_up_now")}</h2>
+            <p className="lg:text-lg text-sm xl:text-lg rtl:2xl:text-[30px] rtl:md:text-[28px] font-normal">
               {t("fill_the_form_below_our_representatives_respond_you")}
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function SignUpNow() {
                   onChange={(e) =>
                     setSignUpData({ ...signUpData, fullName: e.target.value })
                   }
-                  className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg  text-[#11171F]   focus:outline-none sm:text-sm/6"
+                  className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
                   placeholder={t("full_name")}
                 />
                 {validationErrors?.fullName && (
@@ -216,7 +216,7 @@ export default function SignUpNow() {
                   onChange={(e) =>
                     setSignUpData({ ...signUpData, lastName: e.target.value })
                   }
-                  className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE]   outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg  text-[#11171F]   focus:outline-none sm:text-sm/6"
+                  className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
                   placeholder={t("last_name")}
                 />
                 {validationErrors?.lastName && (
@@ -231,13 +231,13 @@ export default function SignUpNow() {
                     value={phoneNumber}
                     onChange={setPhoneNumber}
                     disabled={disabledPhoneOTP || OtpMessage}
-                    className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white  border-solid border-2 border-[#DEDEDE]   outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg  text-[#11171F]   focus:outline-none sm:text-sm/6"
+                    className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
                     placeholder={t("phone_number")}
                   />
                   <button
                     disabled={disabledPhoneOTP || OtpMessage}
                     onClick={handleSendOTP}
-                    className="px-4 py-2 font-semibold lg:text-lg rounded-[3px] bg-[#1796D8] text-white absolute lg:w-[149px] w-[100px] lg:top-2 top-[2px] lg:right-2 right-[2px] lg:min-h-[calc(100%-16px)] min-h-[calc(100%-4px)] shadow-shadow-color"
+                    className="px-4 py-2 font-semibold lg:text-lg rounded-[3px] bg-[#1796D8] text-white absolute rtl:xl:text-[30px] lg:w-[149px] w-[100px] lg:top-2 top-[2px] lg:right-2 right-[2px] lg:min-h-[calc(100%-16px)] min-h-[calc(100%-4px)] shadow-shadow-color"
                   >
                     {t("send_OTP")}
                   </button>
@@ -257,7 +257,7 @@ export default function SignUpNow() {
                       id="otp"
                       disabled={disabledPhoneOTP}
                       onChange={(e) => setOtpCode(e.target.value)}
-                      className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white  border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg  text-[#11171F]   focus:outline-none sm:text-sm/6"
+                      className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
                       placeholder="OTP"
                     />
                     <button
@@ -284,7 +284,7 @@ export default function SignUpNow() {
                   onChange={(e) =>
                     setSignUpData({ ...signUpData, email: e.target.value })
                   }
-                  className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white  border-solid border-2 border-[#DEDEDE]   outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg  text-[#11171F]   focus:outline-none sm:text-sm/6"
+                  className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
                   placeholder={t("email")}
                 />
                 {validationErrors?.email && (
@@ -349,11 +349,11 @@ export default function SignUpNow() {
             </div>
           </div>
           <div className="book-you-button flex-wrap  flex lg:justify-between items-center mt-10 justify-center text-center ">
-            <p className="text-black lg:order-none order-2  text-lg mb-3 lg:mt-0 mt-2 ">
+            <p className="text-black lg:order-none order-2 text-lg mb-3 lg:mt-0 mt-2 rtl:xl:text-[30px] ">
               {t("already_have_an_account")}{" "}
               <button
                onClick={signin}
-               className="py-2.5 px-6 text-[#1796D8] font-medium xl:text-xl text-sm lg:mr-3 lg:text-lg">
+               className="py-2 lg:px-8 px-3 text-white rounded-3xl font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]">
                 {t("sign_in")}
               </button>
 

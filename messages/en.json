@@ -226,7 +226,8 @@
     "enrollnow": "Enroll Now",
     "show_less": "Show less",
     "show_more": "Show More . . . ",
-    "detail":"Detail"
+    "detail":"Detail",
+    "Free" : "Free"
   },
   "Contact": {
     "contact_us": "Contact Us",
