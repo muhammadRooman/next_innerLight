@@ -45,7 +45,7 @@ export default function OurClients() {
             {/* Section Heading */}
             <div className="text-center mb-12">
               <h5 className="text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]">{t("reviews")}</h5>
-              <h2 className="xl:text-40 lg:text-[30px] text-[25px] font-bold">{t("what_our_clients_say_about_us")}</h2>
+              <h2 className="xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("what_our_clients_say_about_us")}</h2>
             </div>
 
             {/* Swiper Slider */}
@@ -80,12 +80,12 @@ export default function OurClients() {
                     <div className="col-span-7">
                       <div className="slider-content xl:max-w-[640px] max-w-full xl:text-left text-center">
                         <div className="mb-5 rtl:text-right">
-                          <h4 className="text-2xl font-medium">{language === "en" ? client?.name_en : client?.name_ar}</h4>
-                          <small className="text-info-color text-lg">
+                          <h4 className="xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal">{language === "en" ? client?.name_en : client?.name_ar}</h4>
+                          <small className="text-info-color text-lg xl:text-lg rtl:2xl:text-[25px] rtl:md:text-[22px] font-normal">
                             {language === "en" ? client?.country_en : client?.country_ar} , {language === "en" ? client?.age_en : client?.age_ar} {t("years_old")}
                           </small>
                         </div>
-                        <p className="text-lg rtl:text-right">{language === "en" ? client?.review_en : client?.review_ar}</p>
+                        <p className="text-lg rtl:text-right xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal">{language === "en" ? client?.review_en : client?.review_ar}</p>
                       </div>
                     </div>
                   </div>

@@ -88,15 +88,15 @@ export default function SpiritualCard({ webinarEvenData }) {
               </div>
               {/* Content Card */}
               <div className="blog-card-content flex-1 xl:max-w-[calc(100%-541px)] lg:max-w-[calc(100%-400px)]  max-w-[100%] shadow-color bg-white rounded-10  py-8 xl:px-12 p-6">
-                <h4 className="xl:text-32  text-[24px]  font-bold">
+                <h4 className="text-[#343434] 2xl:text-2xl rtl:2xl:text-[40px] text-xl font-bold max-w-[727px] rtl:text-right">
                   {language === "en" ? event?.name : event?.name_ar}
                 </h4>
                 <div className="shap bg-shap-bg max-w-[262.97px] bg-no-repeat rtl:rotate-[180deg] min-h-[42px] text-center flex items-center justify-center xl:my-7 my-5">
-                  <p className="mt-0 text-white md:text-lg rtl:rotate-[180deg] px-2">
-                    {event.type}
+                  <p className="mt-0 text-white rtl:xl:text-[30px] md:text-lg rtl:rotate-[180deg] px-2">
+                  {t(event.type)}
                   </p>
                 </div>
-                <p className="text-lg">
+                <p className="lg:text-lg text-sm xl:text-lg rtl:2xl:text-[32px] rtl:max-w-[750px] rtl:md:text-[28px] font-normal">
                   {" "}
                   {language === "en"
                     ? truncateText(event?.shortDescription)
@@ -107,7 +107,7 @@ export default function SpiritualCard({ webinarEvenData }) {
                     onClick={() =>
                       router.push(`/${language}/event/${event._id}`)
                     }
-                    className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"
+                    className="py-2 lg:px-8 px-3 text-white rounded-3xl font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]"
                   >
                     {t("detail")}
                   </button>
@@ -119,7 +119,7 @@ export default function SpiritualCard({ webinarEvenData }) {
           {webinarEvenData.length > visibleData.length && (
             <div className="flex justify-center mt-4 hover:text-blue-500">
               <button
-                className="bg-primary text-black py-2 px-4 rounded text-center "
+                className="bg-primary text-black py-2 px-4 rtl:xl:text-[32px] rtl:md:[26px] rounded text-center hover:text-blue-500"
                 onClick={() => setCurrentPage(currentPage + 1)}
               >
                 {t("show_more")}

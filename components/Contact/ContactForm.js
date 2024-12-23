@@ -46,7 +46,7 @@ export default function ContactUs() {
         <>
             <section className="bg-[#F7F7F7] lg:p-24 md:p-12 p-6">
                 <div className="2xl:container xl:container lg:container mx-auto flex justify-center">
-                    <div className="form-wrapper bg-yoga bg-cover xl:p-16 p-8 rounded-l-lg lg:flex hidden">
+                    <div className="form-wrapper bg-yoga bg-cover xl:p-16 p-8 rtl:rounded-r-lg ltr:rounded-l-lg lg:flex hidden">
                         <div className="box-overlay shadow-shadow-color2 rounded-10 bg-[#F9F9F9] xl:px-24 xl:py-11 px-6 py-6 flex items-center flex-col justify-center">
                             <img src="/mobileimg.png" alt="mobile img" />
                             <h3 className="text-[32px] text-[#343434] font-bold">{t("download")}</h3>
@@ -68,10 +68,10 @@ export default function ContactUs() {
                         </div>
                     </div>
                     <div className="bg-white shadow-lg rounded-lg p-8 xl:w-1/2 lg:w-1/2 w-full">
-                        <h2 className="xl:text-40 lg:text-[30px] text-[25px]  font-bold rtl:2xl:text-[72px] rtl:lg:text-right rtl:xl:text-[50px] rtl:text-[40px]  text-[#0A448F] lg:text-left text-center">
+                        <h2 className="xl:text-40 lg:text-[30px] text-[25px]  font-bold rtl:2xl:text-[72px] rtl:lg:text-right rtl:xl:text-[50px] rtl:text-[40px] leading-[80px] text-[#1796D8] lg:text-left text-center">
                             {t("contact_us")}
                         </h2>
-                        <p className="mb-6 text-[#000000] text text-[18px] font-normal lg:text-left text-center rtl:lg:text-right">
+                        <p className="mb-6 text-[#000000] rtl:2xl:text-[32px] text-[18px] leading-[30px] font-normal lg:text-left text-center rtl:lg:text-right">
                             {t("form")}
                         </p>
 
@@ -83,7 +83,7 @@ export default function ContactUs() {
                                 onChange={handleChange}
                                 placeholder={t("your_name")}
                                 required
-                                className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none sm:text-sm/6 mb-5"
+                                className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
                             />
                             <input
                                 type="email"
@@ -92,7 +92,7 @@ export default function ContactUs() {
                                 onChange={handleChange}
                                 placeholder={t("email")}
                                 required
-                                className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none sm:text-sm/6 mb-5"
+                                className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
                             />
                             <input
                                 type="number"
@@ -101,7 +101,7 @@ export default function ContactUs() {
                                 onChange={handleChange}
                                 required
                                 placeholder={t("contact_no")}
-                                className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none sm:text-sm/6 mb-5"
+                                className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
                             />
                             <textarea
                                 maxlength="1000"
@@ -110,12 +110,12 @@ export default function ContactUs() {
                                 onChange={handleChange}
                                 required
                                 placeholder={t("message")}
-                                className="placeholder:text-[#11171F] w-full p-4 border border-[#DEDEDE] focus:outline-none rounded-lg min-h-[180px] text-[18px] resize-none"
+                                className="placeholder:text-[#11171F] w-full p-4 border border-[#DEDEDE] focus:outline-none rounded-lg min-h-[180px] rtl:xl:text-[32px] text-[18px] resize-none"
                             ></textarea>
                             <div className="btn-wrap text-right rtl:text-left lg:mt-14 mt-10">
                                 <button
                                     type="submit"
-                                    className="py-2.5 px-11 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:text-lg"
+                                    className="py-2 lg:px-8 px-3 text-white rounded-3xl font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]"
                                 >
                                     {t("submit")}
                                 </button>
