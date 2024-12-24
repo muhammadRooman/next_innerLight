@@ -83,7 +83,7 @@ export default function SignUpNow() {
         setErrorMessage("");
       } else {
         toast.error(language === "en" ? response.data.message : response.data.message_ar );
-      setIsOtpSent(false);
+        setIsOtpSent(false);
 
       }
     } catch (error) {
@@ -231,8 +231,7 @@ export default function SignUpNow() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-      console.log("No token found.");
-      return true;
+       return true;
     }
 
     try {
@@ -242,9 +241,7 @@ export default function SignUpNow() {
          localStorage.removeItem("authToken"); // Remove when expired token
         return true;
       } else if (decoded.exp > currentTime) {
-        console.log("decoded.exp",decoded.exp);
-        console.log("currentTime",currentTime);
-       return false;
+        return false;
       }
     } catch (error) {
       localStorage.removeItem("authToken"); // Remove invalid token
@@ -453,7 +450,7 @@ export default function SignUpNow() {
                 <p style={{ color: "red" }}>{validationErrors?.email}</p>
               )}
             </div>
-            {disabledPhoneOTP && (
+            {otpGenerated && (
               <div className="form-group lg:mb-0 mb-4">
                 <div className="flex items-center cursor-pointer placeholder:text-[#11171F]  relative  rounded-[4px] bg-white  border-solid border-2 border-[#DEDEDE]   outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px]   min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg  text-[#11171F]   focus:outline-none sm:text-sm/6">
                   {/* <!-- Label wraps everything --> */}

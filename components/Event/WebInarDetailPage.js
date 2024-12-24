@@ -30,7 +30,6 @@ const WebInarDeatilPage = () => {
     fetcher
   );
 
-
 useEffect(() => {
   if (data) {
     setWebinarDetailPage(data?.event);
@@ -43,8 +42,8 @@ if (isLoading) return <FullPageLoader />;
 if (error) return <div>Error: {error.message}</div>;
 
 const handleSubmit = async (id) => {
+  setLoading(true)
   try {
-    setLoading(true)
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/join-webinar/${id}`,
       {},
@@ -56,12 +55,6 @@ const handleSubmit = async (id) => {
     );
 
    if (response.data.success === 1) {
-      toast.success(
-        language === "en"
-          ? "Webinar joined successfully"
-          : "الانضمام إلى الندوة عبر الإنترنت بنجاح"
-      );
-      setLoading(false)
       router.push(`/${language}/thank-you`);
     } else if (response.data.status === 0) {
       // Token expired or invalid
