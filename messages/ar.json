@@ -230,7 +230,7 @@
     "OTP_is_required": "مطلوب مكتب المدعي العام",
     "phone_number_must_be_between_8_and_16_digits":"يجب أن يتراوح رقم الهاتف بين 8 و16 رقمًا",
     "invalid_email":"البريد الإلكتروني غير صالح",
-    "name_should_not_more_then_150_character":"يجب ألا يزيد الاسم عن 150 حرفًا"
+    "full_name_can_not":"لا يمكن أن يتجاوز الاسم الكامل 150 حرفً "
   },
   "Contact": {
     "contact_us": "اتصل بنا",

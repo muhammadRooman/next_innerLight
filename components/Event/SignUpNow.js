@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'react-phone-number-input/style.css';
 import i18nIsoCountries from 'i18n-iso-countries';
 import { jwtDecode } from "jwt-decode";
+import { countries, arabicCountries } from "../utils/countriesData";
 
 // Register the Arabic locale
 i18nIsoCountries.registerLocale(require('i18n-iso-countries/langs/ar.json'));
@@ -44,33 +45,7 @@ export default function SignUpNow() {
   //  const token = localStorage.getItem('authToken');
   // const [phoneNumber, setPhoneNumber] = useState("");
   const [selectedCountryCode, setSelectedCountryCode] = useState("+1");
-  const countries = [
-    { code: "+1", name: "United States" },
-    { code: "+44", name: "United Kingdom" },
-    { code: "+91", name: "India" },
-    { code: "+92", name: "Pakistan" },
-    { code: "+20", name: "Egypt" },
-    { code: "+966", name: "Saudi Arabia" },
-    { code: "+971", name: "United Arab Emirates" },
-    { code: "+213", name: "Algeria" },
-    { code: "+61", name: "Australia" },
-    { code: "+33", name: "France" },
-    // Add more countries as needed
-  ];
 
-  const arabicCountries = [
-    { code: "+1", name: "الولايات المتحدة" }, // United States in Arabic
-    { code: "+44", name: "المملكة المتحدة" }, // United Kingdom in Arabic
-    { code: "+91", name: "الهند" }, // India in Arabic
-    { code: "+92", name: "باكستان" }, // Pakistan in Arabic
-    { code: "+20", name: "مصر" }, // Egypt in Arabic
-    { code: "+966", name: "المملكة العربية السعودية" }, // Saudi Arabia in Arabic
-    { code: "+971", name: "الإمارات العربية المتحدة" }, // United Arab Emirates in Arabic
-    { code: "+213", name: "الجزائر" }, // Algeria in Arabic
-    { code: "+61", name: "أستراليا" }, // Australia in Arabic
-    { code: "+33", name: "فرنسا" }, // France in Arabic
-    // Add more countries with their Arabic names as needed
-  ];
   
   // fetched cmsWeb
   useEffect(() => {
@@ -180,7 +155,7 @@ export default function SignUpNow() {
       if (!signUpData?.fullName || signUpData.fullName.trim() === "") {
         errors.fullName = t("full_name_is_required");
     } else if (signUpData.fullName.trim().length > 150) {
-        errors.fullName = t("name_should_not_more_then_150_character");
+        errors.fullName = t("full_name_can_not");
     }
 
     // Validate email with regex
@@ -203,6 +178,11 @@ export default function SignUpNow() {
     if (!phoneNumber || phoneNumber.trim() === "") {
         setErrorMessage(t("phone_number_is_required"));
         return;
+    }
+     // Validate the phone number length (between 8 and 16 digits)
+     if (phoneNumber.length < 8 || phoneNumber.length > 16) {
+      setErrorMessage(t("phone_number_must_be_between_8_and_16_digits"));
+      return; // Stop execution if validation fails
     }
 
     // Validate OTP
@@ -286,6 +266,18 @@ export default function SignUpNow() {
   }, []);
 
 
+  const handlePhoneNumberChange = (e) => {
+    const input = e.target.value;
+    // Ensure the input always starts with the selected country code
+    if (!input.startsWith(selectedCountryCode)) {
+      return; // Prevent any update if the user tries to remove the country code
+    }
+    // Extract the phone number (part after the country code)
+    const numberWithoutCode = input.slice(selectedCountryCode.length);
+    // Update the phone number state without affecting the country code
+    setPhoneNumber(numberWithoutCode);
+  };
+
   return (
     <>{
       showSignUp &&    <section className=" bg-gray-light  relative flex items-center justify-start py-16 ">
@@ -352,18 +344,17 @@ export default function SignUpNow() {
                 </div>
                 }
              
-      <div className="relative w-[80%]">
-        <input
-          type="text"
-          name="PhoneNumber"
-          id="PhoneNumber"
-          value={`${selectedCountryCode}${phoneNumber}`}
-          onChange={(e) => setPhoneNumber(e.target.value.replace(selectedCountryCode, ""))}
-          className="pr-[165px] placeholder:text-[#11171F] w-full items-center dir_left-t-right rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
-
-          placeholder="Enter phone number"
-        />
-      </div>
+              <div className="relative w-[80%]">
+            <input
+              type="text"
+              name="PhoneNumber"
+              id="PhoneNumber"
+              value={`${selectedCountryCode}${phoneNumber}`} // Always shows country code + phone number
+              onChange={handlePhoneNumberChange} // Handles updates without breaking country code
+              className="pr-[165px] placeholder:text-[#11171F] w-full items-center dir_left-t-right rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
+              placeholder="Enter phone number"
+            />
+             </div>
               {/* <input
                     type="text"
                     name="PhoneNumber"
