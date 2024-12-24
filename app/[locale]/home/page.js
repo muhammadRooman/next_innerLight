@@ -335,7 +335,9 @@ const displayedEvents = showAll
     <div className='card-content lg:p-7 p-5 lg:pb-10 pb-7'>
       <h4 className="2xl:text-2xl text-xl font-bold max-w-[605px] hover:text-blue-500 mb-4">
         <Link href={`/${language}/event/${latestEvent?._id}`}>
-          {t("the_mind_body_connection_how_mental_health")}
+           {language === "en"
+            ? truncateText(latestEvent?.name || "No description available")
+            : truncateText(latestEvent?.name_ar || "تفصیل موجود نہیں")}
         </Link>
       </h4>
       <p className="lg:text-lg text-sm hover:text-blue-500 mb-4">

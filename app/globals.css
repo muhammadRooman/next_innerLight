@@ -225,6 +225,9 @@ body {
   background-repeat: no-repeat;
 }
 
+.dir_left-t-right{
+  direction: ltr;
+}
 
 html[lang="ar"] .event-banner::before,
 html[lang="ar"] .contact-banner::before,
@@ -233,6 +236,9 @@ html[lang="ar"] .benefits-banner::before {
   transform: scaleX(-1);
 }
 
+html[lang="ar"] .btn-icon.select_country {
+  flex-direction: row-reverse;
+}
 
 .fullpage-loader-holder {
   position: fixed;
