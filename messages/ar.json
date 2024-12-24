@@ -139,7 +139,9 @@
   "SubscribeUs": {
     "subscribeUs": "اشترك معنا",
     "enter_email_address": "أدخل عنوان البريد الإلكتروني",
-    "follow_us": "تابعنا"
+    "follow_us": "تابعنا",
+    "subscription_successful":"تم الاشتراك بنجاح! تحقق من بريدك الإلكتروني للتحديثات",
+    "already_subscribed":"هذا البريد الإلكتروني مشترك بالفعل."
   },
   "UpComingWorkShop": {
     "discuss_how_support_groups": "ناقش كيف يمكن لمجموعات الدعم والاتصالات المجتمعية أن تعزز عملية الشفاء.",
