@@ -11,7 +11,6 @@ import 'react-phone-number-input/style.css';
 import i18nIsoCountries from 'i18n-iso-countries';
 import { jwtDecode } from "jwt-decode";
 
-
 // Register the Arabic locale
 i18nIsoCountries.registerLocale(require('i18n-iso-countries/langs/ar.json'));
 
@@ -43,22 +42,44 @@ export default function SignUpNow() {
     otpCode: "",
   });
   //  const token = localStorage.getItem('authToken');
+  // const [phoneNumber, setPhoneNumber] = useState("");
+  const [selectedCountryCode, setSelectedCountryCode] = useState("+1");
+  const countries = [
+    { code: "+1", name: "United States" },
+    { code: "+44", name: "United Kingdom" },
+    { code: "+91", name: "India" },
+    { code: "+92", name: "Pakistan" },
+    { code: "+20", name: "Egypt" },
+    { code: "+966", name: "Saudi Arabia" },
+    { code: "+971", name: "United Arab Emirates" },
+    { code: "+213", name: "Algeria" },
+    { code: "+61", name: "Australia" },
+    { code: "+33", name: "France" },
+    // Add more countries as needed
+  ];
 
-     // Generate list of countries with Arabic names
-     const countries = i18nIsoCountries.getNames('ar'); // 'ar' for Arabic
-        // Transform the countries into the required format
-       // Create country options for the PhoneInput dropdown
-       const countryOptions = Object.keys(countries).map((countryCode) => ({
-         value: countryCode,
-         label: countries[countryCode], // Arabic country name
-       }));
-
+  const arabicCountries = [
+    { code: "+1", name: "الولايات المتحدة" }, // United States in Arabic
+    { code: "+44", name: "المملكة المتحدة" }, // United Kingdom in Arabic
+    { code: "+91", name: "الهند" }, // India in Arabic
+    { code: "+92", name: "باكستان" }, // Pakistan in Arabic
+    { code: "+20", name: "مصر" }, // Egypt in Arabic
+    { code: "+966", name: "المملكة العربية السعودية" }, // Saudi Arabia in Arabic
+    { code: "+971", name: "الإمارات العربية المتحدة" }, // United Arab Emirates in Arabic
+    { code: "+213", name: "الجزائر" }, // Algeria in Arabic
+    { code: "+61", name: "أستراليا" }, // Australia in Arabic
+    { code: "+33", name: "فرنسا" }, // France in Arabic
+    // Add more countries with their Arabic names as needed
+  ];
+  
   // fetched cmsWeb
   useEffect(() => {
     const lang = currentPath.split("/")[1] || "en";
     setLanguage(lang);
   }, [currentPath]);
 
+  const [isOtpSent, setIsOtpSent] = useState(false);
+  const [isOtpVerify, setIsOtpVerify] = useState(false);
   const handleSendOTP = async () => {
     if (!phoneNumber) {
       setErrorMessage(t("phone_number_is_required"));
@@ -69,6 +90,7 @@ export default function SignUpNow() {
       setErrorMessage(t("phone_number_must_be_between_8_and_16_digits"));
       return; // Stop execution if validation fails
     }
+    setIsOtpSent(true);
     try {
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/auth/generate-otp`,
@@ -86,17 +108,22 @@ export default function SignUpNow() {
         setErrorMessage("");
       } else {
         toast.error(language === "en" ? response.data.message : response.data.message_ar );
+      setIsOtpSent(false);
+
       }
     } catch (error) {
       console.error("Error generating OTP:", error);
+      setIsOtpSent(false);
+
     }
   };
 
   const handleVerifyOTP = async () => {
     if (!otpCode) {
-      setErrorVerifyMessage(t("OTP_is_required"));
-      return;
+        setErrorVerifyMessage(t("OTP_is_required"));
+        return;
     }
+    setIsOtpVerify(true)
     try {
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/auth/verify-otp`,
@@ -111,10 +138,14 @@ export default function SignUpNow() {
         setErrorVerifyMessage("");
         setDisabledPhoneOTP(true);
       } else {
-        toast.success(language === "en" ? response.data.message : response.data.message_ar );
+        toast.error(language === "en" ? response.data.message : response.data.message_ar );
+    setIsOtpVerify(false)
+
       }
     } catch (error) {
       toast.error(t("failed_to_Verify_OTP"));
+     setIsOtpVerify(false)
+
     }
   };
 
@@ -145,32 +176,39 @@ export default function SignUpNow() {
   const handleSubmit = async () => {
     let errors = {};
 
-     // Validate fullName (maximum length of 150 characters)
-    if (!signUpData?.fullName) {
-    errors.fullName = t("full_name_is_required");
-    } else if (signUpData.fullName.length > 150) {
-    errors.fullName = t("name_should_not_more_then_150_character");
+      // Validate fullName (maximum length of 150 characters)
+      if (!signUpData?.fullName || signUpData.fullName.trim() === "") {
+        errors.fullName = t("full_name_is_required");
+    } else if (signUpData.fullName.trim().length > 150) {
+        errors.fullName = t("name_should_not_more_then_150_character");
     }
-     // Validate email with regex
-   if (!signUpData?.email) {
-    errors.email = t("email_is_required");
-  } else {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(signUpData.email)) {
-      errors.email = t("invalid_email");
+
+    // Validate email with regex
+    if (!signUpData?.email || signUpData.email.trim() === "") {
+        errors.email = t("email_is_required");
+    } else {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(signUpData.email.trim())) {
+            errors.email = t("invalid_email");
+        }
     }
-   }
+
+    // Validate profile image
     if (!profileImage) {
-      errors.profileImage = t("profile_image_is_required");
-      setImageError(t("please_upload_your_profile_picture"));
+        errors.profileImage = t("profile_image_is_required");
+        setImageError(t("please_upload_your_profile_picture"));
     }
-    if (!phoneNumber) {
-      setErrorMessage(t("phone_number_is_required"));
-      return;
+
+    // Validate phone number
+    if (!phoneNumber || phoneNumber.trim() === "") {
+        setErrorMessage(t("phone_number_is_required"));
+        return;
     }
+
+    // Validate OTP
     if (!otpCode) {
-      setErrorVerifyMessage(t("OTP_is_required"));
-      return;
+        setErrorVerifyMessage(t("OTP_is_required"));
+        return;
     }
     // If there are validation errors, show them and stop the form submission
     if (Object.keys(errors).length > 0) {
@@ -224,6 +262,8 @@ export default function SignUpNow() {
          localStorage.removeItem("authToken"); // Remove when expired token
         return true;
       } else if (decoded.exp > currentTime) {
+        console.log("decoded.exp",decoded.exp);
+        console.log("currentTime",currentTime);
        return false;
       }
     } catch (error) {
@@ -283,9 +323,48 @@ export default function SignUpNow() {
              )}
             </div>
             <div className="form-group lg:mb-0 mb-4">
-              <div className="btn-icon relative">
+              <div className="btn-icon select_country relative flex align-baseline">
+                {
+                  language ==="en" ? <div>
+                  <select
+                    value={selectedCountryCode}
+                    onChange={(e) => setSelectedCountryCode(e.target.value)}
+                    className="max-w-[154px] placeholder:text-[#11171F] w-full items-center dir_left-t-right rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
+                  >
+                    {countries.map((country, index) => (
+                      <option key={index} value={country.code}>
+                        {country.name} ({country.code})
+                      </option>
+                    ))}
+                  </select>
+                </div> : <div>
+                  <select
+                    value={selectedCountryCode}
+                    onChange={(e) => setSelectedCountryCode(e.target.value)}
+                    className=" max-w-[154px] placeholder:text-[#11171F] w-full items-center dir_left-t-right rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
+                  >
+                    {arabicCountries.map((country, index) => (
+                      <option key={index} value={country.code}>
+                        {country.name} ({country.code})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                }
+             
+      <div className="relative w-[80%]">
+        <input
+          type="text"
+          name="PhoneNumber"
+          id="PhoneNumber"
+          value={`${selectedCountryCode}${phoneNumber}`}
+          onChange={(e) => setPhoneNumber(e.target.value.replace(selectedCountryCode, ""))}
+          className="pr-[165px] placeholder:text-[#11171F] w-full items-center dir_left-t-right rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
 
-              <input
+          placeholder="Enter phone number"
+        />
+      </div>
+              {/* <input
                     type="text"
                     name="PhoneNumber"
                     id="PhoneNumber"
@@ -293,7 +372,7 @@ export default function SignUpNow() {
                     onChange={(e) => setPhoneNumber(e.target.value)}
                     className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white  border-solid border-2 border-[#DEDEDE]   outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg  text-[#11171F]   focus:outline-none sm:text-sm/6"
                     placeholder={t("phone_number")}
-                  />
+                  /> */}
 
               {/* <PhoneInput
               international
@@ -306,28 +385,28 @@ export default function SignUpNow() {
               pattern="^\d{8,16}$" // Enforces a minimum of 8 digits and a maximum of 16 digits
               /> */}
 
-{/* <select
-  onChange={(e) => handlePhoneChange(e.target.value, phoneNumber)}
-  value={phoneNumber}
-  className="bg-white border-solid border-2 border-[#DEDEDE] focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none sm:text-sm/6 mb-5"
->
-  {countryOptions.map((country) => (
-    <option key={country.value} value={country.value}>
-      {country.label}
-    </option>
-  ))}
-</select> */}
+            {/* <select
+              onChange={(e) => handlePhoneChange(e.target.value, phoneNumber)}
+              value={phoneNumber}
+              className="bg-white border-solid border-2 border-[#DEDEDE] focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none sm:text-sm/6 mb-5"
+            >
+              {countryOptions.map((country) => (
+                <option key={country.value} value={country.value}>
+                  {country.label}
+                </option>
+              ))}
+            </select> */}
 
-                <button
-                  disabled={disabledPhoneOTP || OtpMessage}
-                  onClick={handleSendOTP}
-                  className="px-4 py-2 font-semibold lg:text-lg rounded-[3px] bg-[#1796D8] text-white absolute rtl:xl:text-[30px] lg:w-[149px] w-[100px] lg:top-2 top-[2px] lg:right-2 right-[2px] lg:min-h-[calc(100%-16px)] min-h-[calc(100%-4px)] shadow-shadow-color"
-                >
-                  {t("send_OTP")}
-                </button>
+            <button
+              disabled={isOtpSent || disabledPhoneOTP || OtpMessage} // Disable immediately on click
+              onClick={handleSendOTP}
+              className="px-4 py-2 font-semibold lg:text-lg rounded-[3px] bg-[#1796D8] text-white absolute rtl:xl:text-[30px] lg:w-[149px] w-[100px] lg:top-2 top-[2px] lg:right-2 right-[2px] lg:min-h-[calc(100%-35px)] min-h-[calc(100%-4px)] shadow-shadow-color"
+            >
+              {t("send_OTP")}
+            </button>
               </div>
               {
-              !phoneNumber && errorMessage && (
+               errorMessage && (
                 <span className="text-red-500 text-sm mt-2">
                   {errorMessage}
                 </span>
@@ -341,13 +420,13 @@ export default function SignUpNow() {
                     type="text"
                     name="otp"
                     id="otp"
-                    disabled={disabledPhoneOTP}
-                    onChange={(e) => setOtpCode(e.target.value)}
+                    // disabled={disabledPhoneOTP}
+                    onChange={(e) => setOtpCode(e.target.value.trim())}
                     className="placeholder:text-[#11171F] w-full items-center rounded-[4px] bg-white border-solid border-2 border-[#DEDEDE] outline-1 -outline-offset-1 outline-[#DEDEDE] focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-[#11171F] lg:min-h-[70px] min-h-[50px] block min-w-0 grow py-1.5 pr-5 pl-5 lg:text-lg text-[#11171F] focus:outline-none rtl:xl:text-[32px] sm:text-sm/6 mb-5"
                     placeholder="OTP"
                   />
                   <button
-                    disabled={disabledPhoneOTP}
+                    disabled={isOtpVerify}
                     onClick={handleVerifyOTP}
                     class="px-4 py-2 font-semibold lg:text-lg rounded-[3px] bg-[#1796D8] text-white absolute w-[101px] lg:top-2 top-[2px] lg:right-2 right-[2px] lg:min-h-[calc(100%-16px)] min-h-[calc(100%-4px)] shadow-shadow-color"
                   >
@@ -449,7 +528,6 @@ export default function SignUpNow() {
              className="py-2 lg:px-8 px-3 text-white rounded-3xl font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]">
               {t("sign_in")}
             </button>
-
           </p>
           <button
             // disabled={!disabledPhoneOTP}
@@ -465,9 +543,7 @@ export default function SignUpNow() {
         </div>
       </div>
     </section> 
-    }
-  
-     
+    }  
       <ToastContainer/>
     </>
   );
