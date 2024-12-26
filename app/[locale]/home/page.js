@@ -145,7 +145,7 @@ export default function LandingPage() {
                   )
                 }
               </div>
-              <p className="text-center text-white 2xl:text-2xl lg:text-xl md:text-[16] md:max-w-[650px] sm:text-[14px] text-[12px] 2xl:leading-10 rtl:2xl:text-[40px] mt-6">{language === "en" ? cmsWebHeadingData?.description_en : cmsWebHeadingData?.description_ar}</p>
+              <p className="text-center text-white 2xl:text-2xl lg:text-xl md:text-[16] md:max-w-[650px] xl:max-w-[956px] sm:text-[14px] text-[12px] 2xl:leading-10 rtl:2xl:text-[40px] mt-6">{language === "en" ? cmsWebHeadingData?.description_en : cmsWebHeadingData?.description_ar}</p>
             </div>
             <div className="social-icon">
               <nav className="flex items-center justify-center mt-6">
