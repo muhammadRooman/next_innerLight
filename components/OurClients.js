@@ -40,12 +40,12 @@ export default function OurClients() {
     <>
       {
         testimonialData.length > 0 &&
-        <section className="bg-SubscriptionPlan-bg lg:pt-10 lg:pb-17 py-10 bg-cover bg-center">
+        <section className="bg-SubscriptionPlan-bg md:pt-10 md:pb-17 py-5 bg-cover bg-center">
           <div className="2xl:container xl:container lg:container mx-auto px-4">
             {/* Section Heading */}
-            <div className="text-center mb-12">
+            <div className="text-center md:mb-12 xs:mb-6 small:mb-3">
               <h5 className="text-info-color 2xl:text-2xl font-black rtl:2xl:text-[56px] rtl:xl:text-[40px] rtl:text-[30px]">{t("reviews")}</h5>
-              <h2 className="xl:text-[40px] lg:text-[30px] text-[25px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("what_our_clients_say_about_us")}</h2>
+              <h2 className="xl:text-[40px] lg:text-[30px] text-[18px] font-bold rtl:2xl:text-[72px] rtl:xl:text-[50px] rtl:text-[40px]">{t("what_our_clients_say_about_us")}</h2>
             </div>
 
             {/* Swiper Slider */}
@@ -81,11 +81,11 @@ export default function OurClients() {
                       <div className="slider-content xl:max-w-[640px] max-w-full xl:text-left text-center">
                         <div className="mb-5 rtl:text-right">
                           <h4 className="xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal">{language === "en" ? client?.name_en : client?.name_ar}</h4>
-                          <small className="text-info-color text-lg xl:text-lg rtl:2xl:text-[25px] rtl:md:text-[22px] font-normal">
+                          <small className="text-info-color xl:text-lg rtl:2xl:text-[25px] md:text-[20px] text-[14px] rtl:md:text-[22px] font-normal">
                             {language === "en" ? client?.country_en : client?.country_ar} , {language === "en" ? client?.age_en : client?.age_ar} {t("years_old")}
                           </small>
                         </div>
-                        <p className="text-lg rtl:text-right xl:text-lg rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal">{language === "en" ? client?.review_en : client?.review_ar}</p>
+                        <p className="text-lg rtl:text-right xl:text-lg md:text-[16px] small:text-[14px] rtl:2xl:text-[32px] rtl:md:text-[28px] font-normal">{language === "en" ? client?.review_en : client?.review_ar}</p>
                       </div>
                     </div>
                   </div>
@@ -94,7 +94,7 @@ export default function OurClients() {
               {/* Custom Pagination and Navigation */}
               <div className="flex justify-center items-center xl:mt-0 mt-6">
                 <button
-                  className="custom-prev custom-prev-btn absolute top-[44%] translate-y-[-44%] left-0 z-20"
+                  className="custom-prev custom-prev-btn absolute xs:top-[44%] top-[46%] xs:translate-y-[-44%] translate-y-[-40%] left-0 z-20"
                   aria-label="Previous"
                 >
                   <Image src="/left.svg" alt="left" width={40} height={39} />
@@ -109,7 +109,7 @@ export default function OurClients() {
                   </button>
                 </div>
                 <button
-                  className="custom-next custom-next-btn absolute right-0 z-20 top-[44%] translate-y-[-44%]"
+                  className="custom-next custom-next-btn absolute right-0 z-20 xs:top-[44%] top-[46%] xs:translate-y-[-44%] translate-y-[-40%]"
                   aria-label="Next"
                 >
                   <Image src="/right.svg" alt="right" width={40} height={39} />
