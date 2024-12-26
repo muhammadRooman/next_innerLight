@@ -148,7 +148,7 @@ body {
       margin-inline-end: 0px;
   }
 }
-@media (min-width: 991px) {
+@media (max-width: 991px) {
   .lg\:text-black {
       --tw-text-opacity: 1;
       color: rgb(0 0 0 / var(--tw-text-opacity, 1));
@@ -188,6 +188,10 @@ body {
   .our-value-inner .nurturing-img{
     margin-bottom: 25px;
   }
+  .object-cover {
+    object-fit: cover;
+    object-position: top;
+}
 } 
 @media (max-width: 480px) {
   .WhatWeOffer-card .WhatWeOffer-img img { 
