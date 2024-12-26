@@ -6,5 +6,9 @@ export default createMiddleware({
 });
 
 export const config = {
-  matcher: ["/", "/(ar|en)/:path*"],
+  // matcher: ["/", "/(ar|en)/:path*"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico).*)", // Ignore static files
+    "/(ar|en)/:path*", // Locale-based routing
+  ],
 };

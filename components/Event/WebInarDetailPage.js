@@ -21,6 +21,7 @@ const WebInarDeatilPage = () => {
   const [language, setLanguage] = useState('')
   const [webinarDetailPage, setWebinarDetailPage] = useState(null)
   const [loading,setLoading]=useState(false);
+  const [isSend,setIsSend]=useState(false);
   const token = localStorage.getItem("authToken");
   const [isImageLoading, setIsImageLoading] = useState(true);
 
@@ -43,6 +44,7 @@ if (error) return <div>Error: {error.message}</div>;
 
 const handleSubmit = async (id) => {
   setLoading(true)
+  setIsSend(true)
   try {
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_BASE_API_FRONT}/webinars/join-webinar/${id}`,
@@ -175,6 +177,7 @@ const handleImageLoadingComplete = () => {
                     </div>
                     }              
                    <button
+                   disabled={isSend}
                       onClick={()=>handleSubmit(webinarDetailPage._id)}
                         className="py-2.5 px-6 text-white rounded-3xl font-medium xl:text-xl text-sm bg-btn-gradient hover:bg-btn-gradient-hover lg:mr-8 lg:text-lg"
                       >
