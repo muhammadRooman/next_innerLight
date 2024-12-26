@@ -481,16 +481,18 @@ export default function LandingPage() {
                   </Link>
                   <div className='card-content lg:p-7 p-5 lg:pb-10 pb-7'>
                     <h4 className="2xl:text-2xl font-bold max-w-[605px] hover:text-blue-500 mb-4 text-[14px] lg:text-[16px] xl:text-[18px] leading-[20px] sm:leading-[20px] lg:leading-[24px] xl:leading-[28px]">
-                      <Link href={`/${language}/event/${latestEvent?._id}`}>
-                        {t("the_mind_body_connection_how_mental_health")}
-                      </Link>
+                    <Link href={`/${language}/event/${latestEvent?._id}`}>
+                      {language === "en"
+                        ? truncateText(latestEvent?.name || "No description available")
+                        : truncateText(latestEvent?.name_ar || "تفصیل موجود نہیں")}
+                    </Link>
                     </h4>
                     <p className="lg:text-lg text-sm hover:text-blue-500 mb-4 text-[14px] sm:text-[14px] lg:text-[16px] xl:text-[18px] leading-[18px] sm:leading-[18px] lg:leading-[22px] xl:leading-[24px]">
-                      <Link href={`/${language}/event/${latestEvent?._id}`}>
-                        {language === "en"
-                          ? truncateText(latestEvent?.shortDescription || "No description available")
-                          : truncateText(latestEvent?.shortDescription_ar || "تفصیل موجود نہیں")}
-                      </Link>
+                    <Link href={`/${language}/event/${latestEvent?._id}`}>
+                      {language === "en"
+                        ? truncateText(latestEvent?.shortDescription || "No description available")
+                        : truncateText(latestEvent?.shortDescription_ar || "تفصیل موجود نہیں")}
+                    </Link>
                     </p>
                   </div>
                 </div>
