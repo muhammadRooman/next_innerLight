@@ -28,11 +28,11 @@ export default function BlogsCard() {
 
   return (
     <section className="blog-wrap bg-gray-light xl:py-9 py-6">
-      <div className="lg:grid lg:grid-cols-3 gap-6 ">
+      <div className="grid md:grid-cols-3 gap-6 ">
         {blogCards.map((card) => (
           <div
             key={card.id}
-            className="blog-card shadow-shadow-color rounded-10 mb-6"
+            className="blog-card shadow-shadow-color rounded-10 md:mb-6 small:mb-0 xs:mb-3"
           >
             <div className="card-img relative lg:min-h-[243px] min-h-[200px] ">
               <Image
@@ -43,8 +43,8 @@ export default function BlogsCard() {
               />
             </div>
             <div className="card-content lg:p-6 lg:pb-10 p-5 ">
-              <h4 className="2xl:text-2xl rtl:2xl:text-[40px] text-xl font-bold max-w-[727px] rtl:text-right">{card.title}</h4>
-              <p className="lg:text-lg text-sm xl:text-lg rtl:2xl:text-[30px] rtl:md:text-[28px] font-normal">{card.description}</p>
+              <h4 className="2xl:text-2xl rtl:2xl:text-[40px] text-[16px] font-bold max-w-[727px] rtl:text-right">{card.title}</h4>
+              <p className="lg:text-lg text-[12px] xl:text-lg rtl:2xl:text-[30px] rtl:md:text-[28px] font-normal">{card.description}</p>
             </div>
           </div>
         ))}

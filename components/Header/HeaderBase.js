@@ -46,8 +46,8 @@ const Header = ({ locale }) => {
         className={`sticky top-0 z-20 transition-colors duration-300 ${isScrolled ? "bg-[#EBEBEB] shadow-shadow-color" : "bg-[#F7F7F7]"
           }`}
       >
-        <div className="2xl:container xl:container lg:container mx-auto">
-          <div className="header-inner flex justify-between items-center xl:px-5 px-3 xl:py-2 lg:py-2">
+        <div className="2xl:container xl:container md:container mx-auto">
+          <div className="header-inner flex justify-between items-center xl:px-5 px-3 xl:py-2 md:py-2 py-2">
             {/* Logo */}
             <div className="logo">
               <Link href={`/${locale}/home`}>
@@ -56,32 +56,37 @@ const Header = ({ locale }) => {
                   width={108}
                   height={86}
                   alt="logo white"
-                  className="brand-logo md:w-[108px] w-[90px] rtl:ml-28"
+                  className="brand-logo sm:w-[60px] md:w-[90px] xl:w-[106px] w-[50px] rtl:ml-28"
                 />
               </Link>
             </div>
 
             {/* Navigation */}
             <nav
-              className={`ml-auto fixed top-0 left-0 w-full h-full bg-white z-10 lg:relative lg:bg-transparent lg:w-auto lg:h-auto flex flex-col lg:flex-row justify-center items-center transition-transform duration-300 ${isMenuOpen
+              className={`ml-auto fixed top-0 left-0 w-full h-full bg-white z-10 md:relative md:bg-transparent md:w-auto md:h-auto flex flex-col md:flex-row justify-center items-center transition-transform duration-300 ${isMenuOpen
                 ? "translate-x-0 bg-btn-gradient"
-                : "-translate-x-full lg:translate-x-0"
+                : "-translate-x-full md:translate-x-0"
                 }`}
             >
               {/* Close Button for Mobile */}
               <button
-                className="absolute top-10 right-10 lg:hidden text-black focus:outline-none"
+                className="absolute top-10 right-10 md:hidden text-black focus:outline-none"
                 aria-label="Close Menu"
                 onClick={toggleMenu}
               >
-                <Image src="/close.svg" alt="Close" width={30} height={30} />
+                <Image src="/close.svg" 
+                alt="Close" 
+                width={30} 
+                height={30}
+                className="sm:w-[18px] sm:h-[15px] w-4 h-3"
+                 />
               </button>
               {/* Menu Links */}
               {["home", "about", "benefits", "contact", "event"].map((link, index) => (
                <Link
                key={index}
                href={`/${locale}/${link}`}
-               className={`${activeNavbarName === link ? 'active text-[#1796D8]' : 'lg:text-black text-white'} py-1.5 lg:py-1 2xl:me-[88px] xl:me-[60px] lg:me-[40px] text-base lg:text-[15px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black rtl:xl:me-28`}
+               className={`${activeNavbarName === link ? 'active text-[#1796D8]' : 'md:text-black text-white'} py-1.5 md:py-1 2xl:me-[88px] xl:me-[60px] md:me-[40px] sm:text-[12px] md:text-[14px] xl:text-xl rtl:xl:text-[32px] hover:text-[#1796D8] font-medium rtl:font-black rtl:xl:me-28 rtl:md:me-20`}
                onClick={() => setIsMenuOpen(false)}
                prefetch={true}
              >
@@ -97,7 +102,7 @@ const Header = ({ locale }) => {
               <select
                 value={locale}
                 onChange={handleLanguageChange}
-                className="rounded-md px-4 py-2 bg-transparent lg:text[15px] lg:text-black font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] rtl:ml-5 cursor-pointer"
+                className="rounded-md px-4 py-2 bg-transparent md:text-[14px] sm:text-[12px] text-[10px] md:text-black font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] rtl:ml-5 cursor-pointer"
               >
                 <option value="en">English</option>
                 <option value="ar">{t("ar")}</option>
@@ -107,14 +112,14 @@ const Header = ({ locale }) => {
               <Link
                 href="https://play.google.com/store/apps/details?id=com.arhamsoft.innerlight.innerlights&hl=en"
                 target="_blank"
-                className="py-2 lg:px-6 px-3 text-white rounded-3xl font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]"
+                className="py-2 md:px-6 px-3 text-white rounded-3xl font-medium rtl:font-black xl:text-xl md:text-[15px] sm:text-[10px] rtl:xl:text-[32px] text-[9px] bg-btn-gradient hover:bg-btn-gradient-hover ml-4 rtl:text-[12px]"
               >
                 {t("download_app")}
               </Link>
 
               {/* Hamburger Menu for Mobile */}
               <button
-                className="ml-4 lg:hidden text-black focus:outline-none xl:mr-0 mr-3"
+                className="ml-4 md:hidden text-black focus:outline-none xl:mr-0 mr-3"
                 aria-label="Toggle Menu"
                 onClick={toggleMenu}
               >
@@ -123,6 +128,7 @@ const Header = ({ locale }) => {
                   alt="Menu"
                   width={30}
                   height={30}
+                  className="sm:w-[18px] sm:h-[15px] w-4 h-3"
                 />
               </button>
             </div>

@@ -8,12 +8,12 @@ import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 // import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
-import i18nIsoCountries from 'i18n-iso-countries';
+// import i18nIsoCountries from 'i18n-iso-countries';
 import { jwtDecode } from "jwt-decode";
 import { countries, arabicCountries } from "../utils/countriesData";
 
 // Register the Arabic locale
-i18nIsoCountries.registerLocale(require('i18n-iso-countries/langs/ar.json'));
+// i18nIsoCountries.registerLocale(require('i18n-iso-countries/langs/ar.json'));
 
 export default function SignUpNow() {
   const router = useRouter();
@@ -513,7 +513,7 @@ export default function SignUpNow() {
             {t("already_have_an_account")}{" "}
             <button
              onClick={signin}
-             className="py-2 lg:px-8 px-3 text-white rounded-3xl font-medium rtl:font-black xl:text-xl rtl:xl:text-[32px] text-[12px] bg-btn-gradient hover:bg-btn-gradient-hover lg:ml-4 rtl:text-[12px]">
+             className="text-info-color font-bold ml-3">
               {t("sign_in")}
             </button>
           </p>

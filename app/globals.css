@@ -153,6 +153,20 @@ body {
       --tw-text-opacity: 1;
       color: rgb(0 0 0 / var(--tw-text-opacity, 1));
   }
+  .WhatWeOffer-card .WhatWeOffer-img img {
+    position: relative !important;
+    width: 100% !important;
+    height: 190px !important;
+  }
+}
+
+@media (max-width: 776px) {
+
+  .WhatWeOffer-card .WhatWeOffer-img img {
+    position: relative !important;
+    width: 100% !important;
+    height: 190px !important;
+  }
 }
 
 
@@ -224,6 +238,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.nurturing-img::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('../public/assets/images/about/nurturing.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .dir_left-t-right{
   direction: ltr;
@@ -232,7 +255,8 @@ body {
 html[lang="ar"] .event-banner::before,
 html[lang="ar"] .contact-banner::before,
 html[lang="ar"] .about-banner::before,
-html[lang="ar"] .benefits-banner::before {
+html[lang="ar"] .benefits-banner::before,
+html[lang="ar"] .nurturing-img::before {
   transform: scaleX(-1);
 }
 

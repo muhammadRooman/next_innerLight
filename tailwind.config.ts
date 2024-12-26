@@ -59,9 +59,11 @@ module.exports = {
        
       },
       screens: {
-        'xl': '1367px',
-        'lg': '1280px',
-        'md': '991px',
+        'small': '370px',    
+        'xs': '475px',       
+        'md': '991px',        
+        'lg': '1280px',       
+        'xl': '1367px',      
       },
     },
   },
